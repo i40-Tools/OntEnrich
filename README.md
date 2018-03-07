@@ -15,10 +15,10 @@ For enriching the ontology, first specify all the properties in the options.json
 
 | Name | Description | Example |
 | ---- | ----------- | ------- |
-| input_file | Path to the ontology in .ttl fromat | "ttl/sto.ttl" |
-| whitelist | List of predicates to fetch from DBpeia while enriching | [ "<http://purl.org/dc/terms/subject>" ] |
-| blacklist | List of predicates to exclude from enriching process | [ "http://purl.org/voc/vrank#hasRank" ] |
-| prefixes | List of prefixes to assign to the resulting ontology | [ { "prfx": "deo", "uri": "http://purl.org/spar/deo/" } ] |
+| input_file | Path to the ontology in .ttl fromat | `"ttl/sto.ttl"` |
+| whitelist | List of predicates to fetch from DBpeia while enriching | `[ "<http://purl.org/dc/terms/subject>" ]` |
+| blacklist | List of predicates to exclude from enriching process | `[ "http://purl.org/voc/vrank#hasRank" ]` |
+| prefixes | List of prefixes to assign to the resulting ontology | `[ { "prfx": "deo", "uri": "http://purl.org/spar/deo/" } ]` |
 
 Next, execute `enrich.py` with `options.json` as a parameter.
 ```bash
