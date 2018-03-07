@@ -11,7 +11,7 @@ python -m pip install requirements.txt
 ```
 
 ## Usage
-For enriching the ontology, first specify all the properties in the options.json file:
+For enriching the ontology, first specify all the properties in the `options.json` file:
 
 | Name | Description | Example |
 | ---- | ----------- | ------- |
