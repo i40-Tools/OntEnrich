@@ -19,6 +19,8 @@ def main(options_path):
         }
     """
     print('...starting enrichment process')
+    trip_num = 0
+    subj_num = 0
     for row in ont.query(ont_query):
         subject = row[0]
         resource = get_resource(row[1])
@@ -34,13 +36,16 @@ def main(options_path):
 
         print('/', sep=' ', end='', flush=True)
         ont = set_blacklist(ont, options["blacklist"])
-        ont.enrich(subject, dbpedia_result)
+        logs = ont.enrich(subject, dbpedia_result)
+        trip_num += len(logs["trip"])
+        subj_num += 1
     
     ont = set_prefixes(ont, options["prefixes"])
     filename = get_filename(options["input_file"])
     ont.export(filename + '(enriched).ttl')
     print('') # for moving to the next line in the command line
     print('...saving file as "' + filename + '(enriched).ttl"')
+    print('Enriched ' + str(subj_num) + ' subjects  with ' + str(trip_num) + ' triples.')
 
 
 def get_filename(path):

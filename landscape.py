@@ -96,9 +96,16 @@ class Ontology(object):
 
     def enrich(self, sub, source):
         """Enriches the ontology based on existing subject and its triples from other source.
+        Returns information regarding the number of enriched entities.
         """
+        logs = {
+            "subj": '',
+            "trip": []
+        }
+        logs["subj"] = sub
         for triple in source:
             pred = triple['pred']['value']
+            logs["trip"].append(pred)
             if pred not in self.blacklist:
                 if sub is None:
                     sub = URIRef(triple['sub']['value'])
@@ -128,3 +135,4 @@ class Ontology(object):
                     self.graph.add([sub, pred, BNode(obj_val)])
                 else:
                     print('---UNKNOWN OBJECT TYPE ' + obj_type + ' FOR ' + sub + '---')
+        return logs
