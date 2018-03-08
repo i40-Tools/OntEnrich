@@ -25,5 +25,12 @@ Next, execute `enrich.py` with `options.json` as a parameter:
 python enrich.py options.json
 ```
 
+## Example
+Using a Turtle format of the [Standard Ontology (STO)](https://github.com/i40-Tools/StandardOntology) as an input for the app, without specifying `whitelist` and `blacklist` in the `options.json` (fetching everything), the following results can be achieved:
+
+| # of linked subjects | # of added triples |
+| -------------------- | ------------------ |
+| 78 | 8268 |
+
 ## License
 MIT License. Copyright (c) 2018 Maxim Maltsev.
