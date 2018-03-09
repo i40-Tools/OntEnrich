@@ -26,11 +26,13 @@ python enrich.py options.json
 ```
 
 ## Example
-Using a Turtle format of the [Standard Ontology (STO)](https://github.com/i40-Tools/StandardOntology) as an input for the app, without specifying `whitelist` and `blacklist` in the `options.json` (fetching everything), the following results can be achieved:
+Using a Turtle format of the [Standard Ontology (STO)](https://github.com/i40-Tools/StandardOntology) as an input without specifying `whitelist` and `blacklist` in the `options.json`, i.e., fetching all possile , the following results can be achieved:
 
-| # of linked subjects | # of added triples |
-| -------------------- | ------------------ |
+| # of DBpedia links | # of added triples |
+| ------------------ | ------------------ |
 | 78 | 8268 |
+
+You can check out input and resulting files [here](/examples)
 
 ## License
 MIT License. Copyright (c) 2018 Maxim Maltsev.
