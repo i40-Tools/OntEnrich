@@ -26,7 +26,7 @@ python enrich.py options.json
 ```
 
 ## Example
-Using a Turtle format of the [Standard Ontology (STO)](https://github.com/i40-Tools/StandardOntology) as an input without specifying `whitelist` and `blacklist` in the `options.json`, i.e., fetching all possile , the following results can be achieved:
+Using a Turtle format of the [Standard Ontology (STO)](https://github.com/i40-Tools/StandardOntology) as an input without specifying `whitelist` and `blacklist` in the `options.json`, i.e., fetching all reachable data from [DBpedia](http://wiki.dbpedia.org/), the following results can be achieved:
 
 | # of DBpedia links | # of added triples |
 | ------------------ | ------------------ |
