@@ -1,5 +1,5 @@
 # OntEnrich
-Application for ontology enrichment through linking with DBpedia.
+Application for knowledge graph enrichment through linking with DBpedia.
 
 ## Setup
 ```bash
@@ -32,7 +32,7 @@ Using a Turtle format of the [Standard Ontology (STO)](https://github.com/i40-To
 | ------------------ | ------------------ |
 | 78 | 8268 |
 
-You can check out input and resulting files [here](/examples).
+You can check out the input and the resulting file [here](/examples).
 
 ## License
 MIT License. Copyright (c) 2018 Maxim Maltsev.
