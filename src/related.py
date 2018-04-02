@@ -1,4 +1,5 @@
 from landscape import Ontology, DBpedia
+import numpy as np
 
 
 def main():
@@ -9,59 +10,65 @@ def main():
             ?sub sto:relatedTo ?obj .
         }
     """
-    related = {}
+    relations = {}
+    standards = []
     for row in ont.query(ont_query):
         sub = str(row[0])
         obj = str(row[1])
-        if sub not in related:
-          related[sub] = []
-        related[sub].append(obj)
+        if sub not in standards:
+            standards.append(sub)
+            relations[sub] = []
+        if obj not in standards:
+            standards.append(obj)
+            relations[obj] = []
+        relations[sub].append(obj)
     
-    related_simm = related.copy()
-    cnt = 0
-    for sub in related:
-        for obj in related[sub]:
-            if obj in related_simm:
-                if sub not in related_simm[obj]:
-                    related_simm[obj].append(sub)
-                    cnt += 1
-            else:
-                related_simm[obj] = [sub]
-
-    related_tran = related.copy()
-    ind = 0
-    for sub in related_tran:
-        deep(sub, related_tran, related_tran[sub])
+    # creating adjacency matrix out of query result
+    std_num = len(standards)
+    mtx_raw = np.zeros((std_num, std_num))
+    for ind, std_sub in enumerate(standards):
+        for jnd, std_obj in enumerate(standards):
+            if std_obj in relations[std_sub]:
+                mtx_raw[ind, jnd] = 1
     
-    print(cnt, ind)
+    # updating matrix by implementing symmetric operator
+    mtx = mtx_raw.astype(bool)
+    mtx = np.bitwise_or(mtx, mtx.T)
 
-    for sub in related_tran:
-        for obj in related_tran[sub]:
-            triple = {
-                'sub': {
-                    'value': sub,
-                },
-                'pred': {
-                    'value': 'https://w3id.org/i40/sto#relatedTo',
-                },
-                'obj': {
-                    'value': obj,
-                    'type': 'uri',
+    # updating matrix with transitive closures
+    # Floyd Warshall algorythm is used
+    reach = [i[:] for i in mtx]
+    for k in range(std_num):
+        for i in range(std_num):
+            for j in range(std_num):
+                reach[i][j] = reach[i][j] or (reach[i][k] and reach[k][j])
+    
+    # removing relations of standards to themselves
+    np.fill_diagonal(mtx, False)
+
+    # enriching ontology with new triples
+    for i in range(std_num):
+        for j in range(std_num):
+            if mtx[i][j]:
+                triple = {
+                    'sub': {
+                        'value': standards[i],
+                    },
+                    'pred': {
+                        'value': 'https://w3id.org/i40/sto#relatedTo',
+                    },
+                    'obj': {
+                        'value': standards[j],
+                        'type': 'uri',
+                    }
                 }
-            }
-            ont.enrich(None, [triple])
-    
-    print('Property sto:relatedTo added to ' + str(len(related_tran) - len(related)) + ' standards')
+                ont.enrich(None, [triple])
     ont.export('ttl/sto(full).ttl')
 
-
-def deep(sub, related_tran, st_related_tran):
-    for st in st_related_tran:
-        if st != sub:
-            if st not in related_tran[sub]:
-                related_tran[sub].append(st)
-            related_tran = deep(st, related_tran, related_tran[st])
-    return related_tran
+    # counting number of updated standards
+    mtx_diff = mtx.astype(int) - mtx_raw
+    diff_cnt = np.count_nonzero(mtx_diff)
+    print('Number of enriched standards: ', diff_cnt)
 
 if __name__ == '__main__':
     main()
