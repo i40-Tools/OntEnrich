@@ -99,10 +99,10 @@ class Ontology(object):
         Returns information regarding the number of enriched entities.
         """
         logs = {
-            "subj": '',
+            "subj": sub,
             "trip": []
         }
-        logs["subj"] = sub
+        
         for triple in source:
             pred = triple['pred']['value']
             logs["trip"].append(pred)
@@ -116,7 +116,8 @@ class Ontology(object):
                 lang = 'xml:lang'
 
                 if obj_type == 'uri':
-                    self.graph.add([sub, pred, URIRef(obj_val)])
+                    if not self.is_excep(obj_val):
+                        self.graph.add([sub, pred, URIRef(obj_val)])
                 elif obj_type == 'literal':
                     if lang in obj:
                         obj_lang = obj['xml:lang']
@@ -136,3 +137,10 @@ class Ontology(object):
                 else:
                     print('---UNKNOWN OBJECT TYPE ' + obj_type + ' FOR ' + sub + '---')
         return logs
+
+    def is_excep(self, obj_val):
+        obj_excep_list = ['http://rdf.freebase.com/ns/']
+        for obj_excep in obj_excep_list:
+            if obj_val.find(obj_excep) > -1:
+                return True
+        return False

@@ -1,0 +1,1182 @@
+pred,obj,cnt
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,https://w3id.org/i40/sto#Standard,100
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://www.w3.org/2002/07/owl#NamedIndividual,100
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/Abstraction100002137,42
+https://w3id.org/i40/sto#publisher,https://w3id.org/i40/sto#IEC,42
+https://w3id.org/i40/sto#publisher,https://w3id.org/i40/sto#ISO,39
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/SystemOfMeasurement113577171,37
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/Measure100033615,37
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/Standard107260623,37
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/Communication100033020,21
+https://w3id.org/i40/sto#hasClassification,https://w3id.org/i40/rami#ControlDevice,20
+https://w3id.org/i40/sto#hasClassification,https://w3id.org/i40/rami#Product,17
+https://w3id.org/i40/sto#hasClassification,https://w3id.org/i40/rami#FieldDevice,17
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/Message106598915,17
+https://w3id.org/i40/sto#hasDomain,https://w3id.org/i40/sto#IndustrialAutomation,15
+https://w3id.org/i40/sto#hasClassification,https://w3id.org/i40/rami#Station,14
+https://w3id.org/i40/sto#hasClassification,https://w3id.org/i40/rami#Engineering,14
+https://w3id.org/i40/sto#hasClassification,https://w3id.org/i40/rami#WorkCenter,12
+http://purl.org/dc/terms/license,Private,11
+http://purl.org/linguistics/gold/hypernym,http://dbpedia.org/resource/Standard,10
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/WikicatIECStandards,10
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/ontology/Software,10
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/ontology/Work,10
+https://w3id.org/i40/sto#hasClassification,https://w3id.org/i40/rami#Enterprise,9
+http://purl.org/dc/terms/subject,http://dbpedia.org/resource/Category:IEC_standards,9
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/Protocol106665108,9
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/Rule106652242,9
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/Direction106786629,9
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/WikicatISOStandards,8
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/WikicatXML-basedStandards,8
+http://purl.org/dc/terms/subject,http://dbpedia.org/resource/Category:ISO_standards,8
+https://w3id.org/i40/sto#hasClassification,https://w3id.org/i40/rami#Asset,8
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/Format106636806,7
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/PsychologicalFeature100023100,7
+https://w3id.org/i40/sto#hasClassification,https://w3id.org/i40/rami#Safety,7
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/Information106634376,7
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://www.w3.org/2002/07/owl#Thing,7
+https://w3id.org/i40/sto#hasClassification,https://w3id.org/i40/rami#Integration,6
+http://purl.org/dc/terms/subject,http://dbpedia.org/resource/Category:Automation,6
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/Whole100003553,6
+https://w3id.org/i40/sto#relatedTo,https://w3id.org/i40/sto#IEC_62541,6
+https://w3id.org/i40/sto#hasClassification,https://w3id.org/i40/sto#ProductionSystemModelData,6
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/PhysicalEntity100001930,6
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/WikicatNetworkProtocols,6
+https://w3id.org/i40/sto#hasClassification,https://w3id.org/i40/sto#ModelingPractice,6
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/Object100002684,6
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/Relation100031921,6
+https://w3id.org/i40/sto#hasClassification,https://w3id.org/i40/rami#Communication,6
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/LanguageUnit106284225,5
+http://purl.org/dc/terms/subject,http://dbpedia.org/resource/Category:XML-based_standards,5
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/WikicatWorldWideWebConsortiumStandards,5
+https://w3id.org/i40/sto#hasDomain,https://w3id.org/i40/sto#M2M,5
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/Cognition100023271,5
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/Artifact100021939,5
+https://w3id.org/i40/sto#hasClassification,https://w3id.org/i40/rami#Configuration,5
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/ontology/Language,5
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/WikicatComputerFileFormats,5
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/Word106286395,5
+http://purl.org/dc/terms/subject,http://dbpedia.org/resource/Category:Industrial_computing,5
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/Part113809207,5
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/Instrumentality103575240,5
+https://w3id.org/i40/sto#relatedTo,https://w3id.org/i40/sto#eClass,4
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/Event100029378,4
+https://w3id.org/i40/sto#hasClassification,https://w3id.org/i40/rami#Functional,4
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/WikicatMarkupLanguages,4
+http://purl.org/linguistics/gold/hypernym,http://dbpedia.org/resource/Language,4
+http://purl.org/linguistics/gold/hypernym,http://dbpedia.org/resource/Family,4
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/MarkupLanguage106787835,4
+https://w3id.org/i40/sto#hasClassification,https://w3id.org/i40/rami#Business,4
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/Act100030358,4
+https://w3id.org/i40/sto#publisher,https://w3id.org/i40/sto#W3C,4
+http://purl.org/dc/terms/subject,http://dbpedia.org/resource/Category:World_Wide_Web_Consortium_standards,4
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/YagoPermanentlyLocatedEntity,4
+http://purl.org/dc/terms/license,Public,4
+http://purl.org/dc/terms/subject,http://dbpedia.org/resource/Category:Manufacturing,4
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/Terminology106304059,4
+https://w3id.org/i40/sto#hasDomain,https://w3id.org/i40/sto#CAD,4
+https://w3id.org/i40/sto#hasClassification,https://w3id.org/i40/rami#Information,4
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/Language106282651,4
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/WikicatStandards,4
+https://w3id.org/i40/sto#hasClassification,https://w3id.org/i40/sto#ProductLifeCycleManagement,4
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/Work100575741,3
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/Structure105726345,3
+https://w3id.org/i40/sto#hasClassification,https://w3id.org/i40/rami#Identifikation,3
+https://w3id.org/i40/sto#hasClassification,https://w3id.org/i40/sto#ProductModelDataExchange,3
+https://w3id.org/i40/sto#isPartOf,https://w3id.org/i40/sto#IEC_62714,3
+http://purl.org/dc/terms/subject,http://dbpedia.org/resource/Category:ANSI_standards,3
+http://purl.org/dc/terms/subject,http://dbpedia.org/resource/Category:Industry-specific_XML-based_standards,3
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/ontology/Organisation,3
+http://purl.org/linguistics/gold/hypernym,http://dbpedia.org/resource/Format,3
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/WikicatWebServices,3
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/WikicatANSIStandards,3
+http://purl.org/dc/terms/subject,http://dbpedia.org/resource/Category:Semantic_Web,3
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/Design105728678,3
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/Service100577525,3
+https://w3id.org/i40/sto#hasClassification,https://w3id.org/i40/rami#GeneralAdminShell,3
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/ontology/ProgrammingLanguage,3
+https://w3id.org/i40/sto#publisher,https://w3id.org/i40/sto#ETSI,3
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/WikicatIndustry-specificXML-basedStandards,3
+http://purl.org/dc/terms/subject,http://dbpedia.org/resource/Category:Safety,3
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/System104377057,3
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/Configuration105731779,3
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/Activity100407535,3
+https://w3id.org/i40/sto#hasClassification,https://w3id.org/i40/sto#BusinessProcessExecution,3
+https://w3id.org/i40/sto#developer,https://w3id.org/i40/sto#ETSI,3
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/WikicatElectricalStandards,3
+https://w3id.org/i40/sto#hasClassification,https://w3id.org/i40/sto#ProductionSystemEngineering,3
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/Arrangement105726596,3
+https://w3id.org/i40/sto#hasClassification,https://w3id.org/i40/rami#Conditional_Monitoring,3
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/WikicatComputerBuses,3
+https://w3id.org/i40/sto#hasClassification,https://w3id.org/i40/rami#Security,3
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/Topology105730365,3
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/BusTopology105730591,3
+https://w3id.org/i40/sto#relatedTo,https://w3id.org/i40/sto#IEC_61360,3
+http://purl.org/dc/terms/subject,http://dbpedia.org/resource/Category:Resource_Description_Framework,3
+http://purl.org/dc/terms/subject,http://dbpedia.org/resource/Category:Serial_buses,3
+https://w3id.org/i40/sto#hasClassification,https://w3id.org/i40/sto#CrossLevel,3
+https://w3id.org/i40/sto#hasClassification,https://w3id.org/i40/rami#ConnectedWorld,3
+https://w3id.org/i40/sto#relatedTo,https://w3id.org/i40/sto#IEC_61158,3
+http://purl.org/dc/terms/subject,http://dbpedia.org/resource/Category:Electrical_standards,3
+http://purl.org/dc/terms/subject,http://dbpedia.org/resource/Category:Computer_file_formats,3
+http://purl.org/linguistics/gold/hypernym,http://dbpedia.org/resource/Specification,2
+https://w3id.org/i40/sto#motivation,Standard data elements (properties) are used as elements in administration shell,2
+http://purl.org/linguistics/gold/hypernym,http://dbpedia.org/resource/Implementation,2
+http://purl.org/dc/terms/subject,http://dbpedia.org/resource/Category:CAD_file_formats,2
+https://w3id.org/i40/sto#publisher,https://w3id.org/i40/sto#OASIS,2
+https://w3id.org/i40/sto#relatedTo,https://w3id.org/i40/sto#ISO_ASTM_52915,2
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/ProgrammingLanguage106898352,2
+https://w3id.org/i40/sto#hasPublicationDate,2017-07-01,2
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/Bus102924116,2
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/WikicatISO/IECStandards,2
+https://w3id.org/i40/sto#hasOfficialResource,https://webstore.iec.ch/publication/4550,2
+https://w3id.org/i40/sto#hasClassification,https://w3id.org/i40/rami#LifecycleStatus,2
+http://purl.org/dc/terms/subject,http://dbpedia.org/resource/Category:Computer_standards,2
+https://w3id.org/i40/sto#hasOfficialResource,https://www.iso.org/iso-9001-quality-management.html,2
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/WikicatComputerStandards,2
+https://w3id.org/i40/sto#hasClassification,https://w3id.org/i40/rami#AdminShellGeneral,2
+https://w3id.org/i40/sto#relatedTo,https://w3id.org/i40/sto#W3C_RDF,2
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/Form106290637,2
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://www.wikidata.org/entity/Q9143,2
+http://purl.org/dc/terms/subject,http://dbpedia.org/resource/Category:Specification_languages,2
+https://w3id.org/i40/sto#publisher,https://w3id.org/i40/sto#OMG,2
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://www.wikidata.org/entity/Q315,2
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/ComputerNetwork103085333,2
+https://w3id.org/i40/sto#hasOfficialResource,https://webstore.iec.ch/publication/24433,2
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/WikicatENStandards,2
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/Abbreviation107091587,2
+https://w3id.org/i40/sto#publisher,https://w3id.org/i40/sto#ISA,2
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/ontology/Place,2
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/Datum105816622,2
+http://purl.org/dc/terms/subject,http://dbpedia.org/resource/Category:ISO/IEC_standards,2
+https://w3id.org/i40/sto#hasClassification,https://w3id.org/i40/sto#SCM,2
+http://purl.org/dc/terms/subject,http://dbpedia.org/resource/Category:Mobile_telecommunications_standards,2
+https://w3id.org/i40/sto#relatedTo,https://w3id.org/i40/sto#IEC_61499,2
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/WikicatCADFileFormats,2
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/WikicatSerialBuses,2
+https://w3id.org/i40/sto#developer,https://w3id.org/i40/sto#ANSI,2
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/WikicatWebStandards,2
+https://w3id.org/i40/sto#hasDomain,https://w3id.org/i40/sto#IndustrialProcessMeasurementControl,2
+https://w3id.org/i40/sto#developer,https://w3id.org/i40/sto#OMG,2
+https://w3id.org/i40/sto#hasPublicationDate,2015-12-01,2
+http://purl.org/dc/terms/subject,http://dbpedia.org/resource/Category:XML_markup_languages,2
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/WikicatGraphicsFileFormats,2
+https://w3id.org/i40/sto#motivation,Defines the functional safety requirements established by IEC 61508 in process industry sector terminology,2
+http://purl.org/dc/terms/subject,http://dbpedia.org/resource/Category:Data_modeling_languages,2
+http://purl.org/dc/terms/subject,http://dbpedia.org/resource/Category:Workflow_technology,2
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/WikicatAbbreviations,2
+http://purl.org/dc/terms/subject,http://dbpedia.org/resource/Category:Production_and_manufacturing,2
+https://w3id.org/i40/sto#developer,https://w3id.org/i40/sto#ISA,2
+https://w3id.org/i40/sto#hasClassification,https://w3id.org/i40/sto#EnterpriseLevel,2
+http://purl.org/dc/terms/license,Open,2
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/Information105816287,2
+https://w3id.org/i40/sto#relatedTo,https://w3id.org/i40/sto#ETSI_DECT,2
+https://w3id.org/i40/sto#hasOfficialResource,https://www.iso.org/standard/45240.html,2
+http://purl.org/dc/terms/subject,http://dbpedia.org/resource/Category:Declarative_programming_languages,2
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/Network103820728,2
+https://w3id.org/i40/sto#hasClassification,https://w3id.org/i40/rami#Assest,2
+https://w3id.org/i40/sto#relatedTo,https://w3id.org/i40/sto#ISO_13584,2
+http://purl.org/dc/terms/subject,http://dbpedia.org/resource/Category:Supply_chain_management,2
+http://purl.org/dc/terms/subject,http://dbpedia.org/resource/Category:Systems_engineering,2
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/WikicatDataModelingLanguages,2
+https://w3id.org/i40/sto#hasOfficialResource,https://www.iso.org/standard/60572.html,2
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/PublicTransport104019101,2
+http://purl.org/linguistics/gold/hypernym,http://dbpedia.org/resource/Protocol,2
+http://purl.org/dc/terms/subject,http://dbpedia.org/resource/Category:Industrial_automation,2
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://www.wikidata.org/entity/Q34770,2
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://schema.org/Language,2
+https://w3id.org/i40/sto#relatedTo,https://w3id.org/i40/sto#ISO_15926,2
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/CommandLanguage106899446,2
+http://purl.org/dc/terms/subject,http://dbpedia.org/resource/Category:Electric_power,2
+http://purl.org/dc/terms/subject,http://dbpedia.org/resource/Category:Network_protocols,2
+https://w3id.org/i40/sto#publisher,https://w3id.org/i40/sto#MESA,2
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/WikicatApplicationLayerProtocols,2
+https://w3id.org/i40/sto#relatedTo,https://w3id.org/i40/sto#IEC_62443,2
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/WikicatMobileTelecommunicationsStandards,2
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/Conveyance103100490,2
+https://w3id.org/i40/sto#hasOfficialResource,https://www.iso.org/standard/61131.html,2
+http://purl.org/dc/terms/subject,http://dbpedia.org/resource/Category:Electric_power_distribution,2
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/ArtificialLanguage106894544,2
+http://purl.org/dc/terms/subject,http://dbpedia.org/resource/Category:Message-oriented_middleware,2
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/SourceLanguage106283912,2
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/ontology/Company,2
+https://w3id.org/i40/sto#hasClassification,https://w3id.org/i40/sto#ProductCatalogData,2
+https://w3id.org/i40/sto#publisher,https://w3id.org/i40/sto#ANSI,2
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/WikicatQueryLanguages,2
+http://www.w3.org/2002/07/owl#sameAs,http://nl.dbpedia.org/resource/Web_Ontology_Language,1
+https://w3id.org/i40/sto#hasDBpediaResource,http://dbpedia.org/resource/Resource_Description_Framework,1
+https://w3id.org/i40/sto#hasDBpediaResource,http://dbpedia.org/page/ISO/IEC_42010,1
+https://w3id.org/i40/sto#hasPublicationDate,2017-05-18,1
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/WikicatContactlessSmartCards,1
+https://w3id.org/i40/sto#hasWikipediaArticle,https://en.wikipedia.org/wiki/Supply-chain_operations_reference,1
+https://w3id.org/i40/sto#hasClassification,https://w3id.org/i40/sto#DeviceLevel,1
+http://www.w3.org/2004/02/skos/core#altLabel,ISA 99,1
+https://w3id.org/i40/sto#hasOfficialResource,https://www.iso.org/standard/60774.html,1
+https://w3id.org/i40/sto#hasOfficialResource,https://www.iso.org/standard/54497.html,1
+https://w3id.org/i40/sto#hasTag,IEC Fieldbus (Profibus),1
+http://www.w3.org/2002/07/owl#sameAs,http://www.wikidata.org/entity/Q5970200,1
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/YagoLegalActorGeo,1
+https://w3id.org/i40/sto#hasWikipediaArticle,https://en.wikipedia.org/wiki/IEC_62061,1
+https://w3id.org/i40/sto#hasWikipediaArticle,https://en.wikipedia.org/wiki/WirelessHART,1
+http://www.w3.org/2002/07/owl#sameAs,http://pt.dbpedia.org/resource/MQTT,1
+https://w3id.org/i40/sto#relatedTo,https://w3id.org/i40/sto#IEC_61511,1
+http://purl.org/dc/terms/subject,http://dbpedia.org/resource/Category:Enterprise_modelling,1
+https://w3id.org/i40/sto#hasTag,IEC Common Data Dictionary,1
+https://w3id.org/i40/sto#hasDBpediaResource,http://dbpedia.org/resource/IEC_27000,1
+http://www.w3.org/2002/07/owl#sameAs,http://d-nb.info/gnd/4381782-8,1
+http://www.w3.org/2002/07/owl#sameAs,http://de.dbpedia.org/resource/SCOR-Modell,1
+http://www.w3.org/2000/01/rdf-schema#label,ModBus,1
+https://w3id.org/i40/sto#relatedTo,https://w3id.org/i40/sto#IEC_62890,1
+http://www.w3.org/2002/07/owl#sameAs,http://yago-knowledge.org/resource/ISO/IEC_14443,1
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/Credit113378518,1
+http://www.w3.org/2002/07/owl#sameAs,http://fr.dbpedia.org/resource/Standard_pour_l'échange_de_données_de_produit,1
+https://w3id.org/i40/sto#developer,https://w3id.org/i40/sto#DIN,1
+http://www.w3.org/2002/07/owl#sameAs,http://fr.dbpedia.org/resource/ISO_19439,1
+http://www.w3.org/2002/07/owl#sameAs,http://it.dbpedia.org/resource/TR-069,1
+http://www.w3.org/2002/07/owl#sameAs,http://wikidata.dbpedia.org/resource/Q1017620,1
+http://www.w3.org/2000/01/rdf-schema#label,ISO 13849,1
+https://w3id.org/i40/sto#hasOfficialResource,https://www.iso.org/standard/60042.html,1
+https://w3id.org/i40/sto#publisher,https://w3id.org/i40/sto#ASAM,1
+http://purl.org/dc/terms/subject,http://dbpedia.org/resource/Category:Computer_networks,1
+http://www.w3.org/2002/07/owl#sameAs,http://de.dbpedia.org/resource/EbXML,1
+http://purl.org/dc/terms/subject,http://dbpedia.org/resource/Category:Software-defined_radio,1
+https://w3id.org/i40/sto#hasTag,Information technology -- Automatic identification and data capture techniques -- Unique identification,1
+http://www.w3.org/2002/07/owl#sameAs,http://wikidata.dbpedia.org/resource/Q5970200,1
+http://purl.org/dc/terms/subject,http://dbpedia.org/resource/Category:Wireless_sensor_network,1
+http://www.w3.org/2002/07/owl#sameAs,http://yago-knowledge.org/resource/IEC_61158,1
+https://w3id.org/i40/sto#publisher,https://w3id.org/i40/sto#SE,1
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/Organism100004475,1
+https://w3id.org/i40/sto#hasTag,IEC 62890,1
+http://purl.org/dc/terms/subject,http://dbpedia.org/resource/Category:Web_service_specifications,1
+https://w3id.org/i40/sto#hasOfficialResource,http://portals.omg.org/dds/,1
+https://w3id.org/i40/sto#relatedTo,https://w3id.org/i40/sto#IEC_62714,1
+http://www.w3.org/2002/07/owl#sameAs,http://yago-knowledge.org/resource/CAEX,1
+http://www.w3.org/2002/07/owl#sameAs,http://pl.dbpedia.org/resource/ISO_9000,1
+http://www.w3.org/2000/01/rdf-schema#isDefinedBy,http://qifstandards.org/about-qif/,1
+http://www.w3.org/2002/07/owl#sameAs,http://fr.dbpedia.org/resource/Electronic_Business_using_eXtensible_Markup_Language,1
+http://www.w3.org/2000/01/rdf-schema#label,ISA 95,1
+https://w3id.org/i40/sto#developer,https://w3id.org/i40/sto#OASIS,1
+http://www.w3.org/2002/07/owl#sameAs,http://wikidata.dbpedia.org/resource/Q2117885,1
+http://www.w3.org/2002/07/owl#sameAs,http://nl.dbpedia.org/resource/ANSI/ISA-88,1
+http://www.w3.org/2002/07/owl#sameAs,http://eu.dbpedia.org/resource/ISO_9000,1
+https://w3id.org/i40/sto#hasClassification,https://w3id.org/i40/rami#Asst,1
+http://www.w3.org/2002/07/owl#sameAs,http://www.wikidata.org/entity/Q6718422,1
+http://www.w3.org/2002/07/owl#sameAs,http://it.dbpedia.org/resource/SCOR,1
+http://www.w3.org/2002/07/owl#sameAs,http://pl.dbpedia.org/resource/Business_Process_Modeling_Notation,1
+http://www.w3.org/2002/07/owl#sameAs,http://ja.dbpedia.org/resource/ISO_13485,1
+https://w3id.org/i40/sto#hasWikipediaArticle,https://en.wikipedia.org/wiki/Modbus,1
+http://purl.org/linguistics/gold/hypernym,http://dbpedia.org/resource/Control,1
+https://w3id.org/i40/sto#hasDBpediaResource,http://dbpedia.org/resource/COLLADA,1
+https://w3id.org/i40/sto#hasWikipediaArticle,https://en.wikipedia.org/wiki/B2MML,1
+http://purl.org/dc/terms/subject,http://dbpedia.org/resource/Category:World_Wide_Web,1
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/Possession100032613,1
+http://www.w3.org/2002/07/owl#sameAs,http://ja.dbpedia.org/resource/ISO/IEC_14443,1
+https://w3id.org/i40/sto#hasDBpediaResource,http://dbpedia.org/resource/IEC_62061,1
+https://w3id.org/i40/sto#hasPublicationDate,2011-12-01,1
+http://www.w3.org/2002/07/owl#sameAs,http://it.dbpedia.org/resource/ISO_10303,1
+http://www.w3.org/2002/07/owl#sameAs,http://yago-knowledge.org/resource/IEC_61508,1
+http://www.w3.org/2002/07/owl#sameAs,http://fr.dbpedia.org/resource/Resource_Description_Framework,1
+http://www.w3.org/2002/07/owl#sameAs,http://de.dbpedia.org/resource/ISA-88,1
+https://w3id.org/i40/sto#hasDBpediaResource,http://dbpedia.org/page/ISO_9000,1
+https://w3id.org/i40/sto#hasPublicationDate,2012-02-22,1
+http://www.w3.org/2002/07/owl#sameAs,http://yago-knowledge.org/resource/IEC_62061,1
+http://purl.org/dc/terms/subject,http://dbpedia.org/resource/Category:Graphics_standards,1
+https://w3id.org/i40/sto#relatedTo,https://w3id.org/i40/sto#IEC_61512,1
+http://www.w3.org/2002/07/owl#sameAs,http://yago-knowledge.org/resource/SPARQL,1
+http://www.w3.org/2004/02/skos/core#note,TODO - Split properly and classify it - check the NIST paper,1
+http://www.w3.org/2002/07/owl#sameAs,http://fr.dbpedia.org/resource/MQTT,1
+https://w3id.org/i40/sto#hasOfficialResource,https://webstore.iec.ch/publication/5878,1
+https://w3id.org/i40/sto#hasOfficialResource,https://webstore.iec.ch/publication/6225,1
+https://w3id.org/i40/sto#relatedTo,https://w3id.org/i40/sto#ISO_19439,1
+http://www.w3.org/2000/01/rdf-schema#label,ISO 10303,1
+http://www.w3.org/2002/07/owl#sameAs,http://ko.dbpedia.org/resource/CAN_bus,1
+https://w3id.org/i40/sto#hasTag,Enterprise-Control System Integration,1
+http://www.w3.org/2002/07/owl#sameAs,http://yago-knowledge.org/resource/MTConnect,1
+https://w3id.org/i40/sto#hasWikipediaArticle,https://en.wikipedia.org/wiki/Data_Distribution_Service,1
+http://purl.org/dc/terms/subject,http://dbpedia.org/resource/Category:Industrial_processes,1
+http://www.w3.org/2002/07/owl#sameAs,http://yago-knowledge.org/resource/WirelessHART,1
+https://w3id.org/i40/sto#hasWikipediaArticle,https://en.wikipedia.org/wiki/MQTT,1
+http://www.w3.org/2002/07/owl#sameAs,http://es.dbpedia.org/resource/ISO_50001,1
+http://www.w3.org/2000/01/rdf-schema#label,IEC 61400,1
+https://w3id.org/i40/sto#publisher,https://w3id.org/i40/sto#OAGi,1
+http://www.w3.org/2002/07/owl#sameAs,http://de.dbpedia.org/resource/ISO_13485,1
+https://w3id.org/i40/sto#hasDBpediaResource,http://dbpedia.org/page/ISO_50001,1
+http://www.w3.org/2000/01/rdf-schema#label,IEC 62337,1
+http://www.w3.org/2002/07/owl#sameAs,http://it.dbpedia.org/resource/Modbus,1
+http://www.w3.org/2002/07/owl#sameAs,http://id.dbpedia.org/resource/ISO_9000,1
+http://www.w3.org/2000/01/rdf-schema#label,BPMN,1
+http://www.w3.org/2002/07/owl#sameAs,http://it.dbpedia.org/resource/DECT,1
+https://w3id.org/i40/sto#hasTag,EDDL,1
+https://w3id.org/i40/sto#hasOfficialResource,https://webstore.iec.ch/publication/7446,1
+http://www.w3.org/2002/07/owl#sameAs,http://www.wikidata.org/entity/Q17146026,1
+https://w3id.org/i40/sto#hasTag,Enterprise control systems,1
+http://purl.org/dc/terms/subject,http://dbpedia.org/resource/Category:Control_engineering,1
+http://www.w3.org/2002/07/owl#sameAs,http://es.dbpedia.org/resource/ISO_10303,1
+http://www.w3.org/2002/07/owl#sameAs,http://de.dbpedia.org/resource/CAEX,1
+https://w3id.org/i40/sto#hasOfficialResource,http://www.iso-architecture.org/ieee-1471/,1
+https://w3id.org/i40/sto#hasDBpediaResource,http://dbpedia.org/resource/Device_Description_Language,1
+https://w3id.org/i40/sto#relatedTo,https://w3id.org/i40/sto#ISA-95,1
+https://w3id.org/i40/sto#hasClassification,https://w3id.org/i40/rami#ConditionMonitoring,1
+https://w3id.org/i40/sto#hasOfficialResource,https://www.iso.org/standard/57914.html,1
+https://w3id.org/i40/sto#hasPublicationDate,2013-04-01,1
+https://w3id.org/i40/sto#developer,https://w3id.org/i40/sto#MTConnect_Institute,1
+http://www.w3.org/2002/07/owl#sameAs,http://wikidata.dbpedia.org/resource/Q533123,1
+http://www.w3.org/2002/07/owl#sameAs,http://es.dbpedia.org/resource/ISO/IEC/IEEE_42010,1
+https://w3id.org/i40/sto#hasOfficialResource,https://www.iso.org/standard/69466.html,1
+http://www.w3.org/2000/01/rdf-schema#label,IEC 15459,1
+http://purl.org/dc/terms/subject,http://dbpedia.org/resource/Category:Query_languages,1
+http://www.w3.org/2002/07/owl#sameAs,http://sw.cyc.com/concept/Mx4r1cSkZhRsQdiElMDPRDyNxw,1
+http://www.w3.org/2002/07/owl#sameAs,http://yago-knowledge.org/resource/Business_Process_Execution_Language,1
+https://w3id.org/i40/sto#hasDBpediaResource,http://dbpedia.org/page/ISO_13485,1
+https://w3id.org/i40/sto#hasPublicationDate,2011-01-12,1
+http://www.w3.org/2002/07/owl#sameAs,http://yago-knowledge.org/resource/IEC_60870,1
+https://w3id.org/i40/sto#hasOfficialResource,http://www.etsi.org/technologies-clusters/technologies/low-throughput-networks,1
+http://www.w3.org/2002/07/owl#sameAs,http://wikidata.dbpedia.org/resource/Q728183,1
+https://w3id.org/i40/sto#hasTag,Data Distribution Service for real-time systems,1
+http://www.w3.org/2002/07/owl#sameAs,http://de.dbpedia.org/resource/Web_Ontology_Language,1
+http://purl.org/dc/terms/subject,http://dbpedia.org/resource/Category:Computer-aided_manufacturing,1
+https://w3id.org/i40/sto#hasWikipediaArticle,https://de.wikipedia.org/wiki/ECl@ss,1
+https://w3id.org/i40/sto#hasWikipediaArticle,https://en.wikipedia.org/wiki/IEC_61511,1
+http://www.w3.org/2000/01/rdf-schema#label,ISO 5459,1
+http://www.w3.org/2000/01/rdf-schema#label,ISO 14306,1
+https://w3id.org/i40/sto#hasTag,19439,1
+http://www.w3.org/2002/07/owl#sameAs,http://www.wikidata.org/entity/Q287228,1
+http://purl.org/dc/terms/subject,http://dbpedia.org/resource/Category:Systems_Modeling_Language,1
+http://purl.org/dc/terms/subject,http://dbpedia.org/resource/Category:Electronic_engineering,1
+http://www.w3.org/2000/01/rdf-schema#label,ISO 20922,1
+https://w3id.org/i40/sto#hasOfficialResource,https://www.iso.org/standard/33834.html,1
+https://w3id.org/i40/sto#hasWikipediaArticle,https://en.wikipedia.org/wiki/SPARQL,1
+http://www.w3.org/2002/07/owl#sameAs,http://ja.dbpedia.org/resource/ビジネスプロセスモデリング表記法,1
+http://www.w3.org/2000/01/rdf-schema#label,IEC 61512,1
+https://w3id.org/i40/sto#hasDBpediaResource,http://dbpedia.org/resource/Business_Process_Execution_Language,1
+http://www.w3.org/2002/07/owl#sameAs,http://de.dbpedia.org/resource/Device_Description_Language,1
+http://www.w3.org/2002/07/owl#sameAs,http://yago-knowledge.org/resource/IEC_61511,1
+http://www.w3.org/2002/07/owl#sameAs,http://pl.dbpedia.org/resource/OPC_Unified_Architecture,1
+https://w3id.org/i40/sto#hasDBpediaResource,http://dbpedia.org/resource/ANSI/ISA-95,1
+http://purl.org/dc/terms/subject,http://dbpedia.org/resource/Category:Networking_standards,1
+http://www.w3.org/2002/07/owl#sameAs,http://www.wikidata.org/entity/Q16976659,1
+http://www.w3.org/2002/07/owl#sameAs,http://wikidata.dbpedia.org/resource/Q1135322,1
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/Wikicat3DGraphicsFileFormats,1
+http://purl.org/linguistics/gold/hypernym,http://dbpedia.org/resource/Technology,1
+http://www.w3.org/2000/01/rdf-schema#label,OMG DDS,1
+https://w3id.org/i40/sto#hasWikipediaArticle,https://en.wikipedia.org/wiki/Resource_Description_Framework,1
+https://w3id.org/i40/sto#hasTag,Enterprise-control system integration,1
+http://www.w3.org/2000/01/rdf-schema#label,ISO 15926,1
+http://www.w3.org/2002/07/owl#sameAs,http://wikidata.dbpedia.org/resource/Q787190,1
+https://w3id.org/i40/sto#hasDomain,Enterprise Control,1
+https://w3id.org/i40/sto#hasTag,Information Security Management Systems,1
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/Code106667317,1
+http://www.w3.org/2000/01/rdf-schema#label,IEC 29182-1,1
+http://www.w3.org/2002/07/owl#sameAs,http://fr.dbpedia.org/resource/SPARQL,1
+https://w3id.org/i40/sto#hasDBpediaResource,http://dbpedia.org/resource/ISA-88,1
+http://www.w3.org/2002/07/owl#sameAs,http://it.dbpedia.org/resource/PROFIBUS,1
+http://www.w3.org/2002/07/owl#sameAs,http://pl.dbpedia.org/resource/Resource_Description_Framework,1
+http://purl.org/dc/terms/subject,http://dbpedia.org/resource/Category:Quality,1
+http://www.w3.org/2002/07/owl#sameAs,http://fr.dbpedia.org/resource/ISA88,1
+https://w3id.org/i40/sto#hasOfficialResource,https://www.iso.org/standard/63505.html,1
+https://w3id.org/i40/sto#hasTag,Functional safety - Safety instrumented systems for the process industry sector,1
+http://www.w3.org/2000/01/rdf-schema#label,ISO/IEC 27000,1
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/Gear103431243,1
+https://w3id.org/i40/sto#hasOfficialResource,https://www.iso.org/standard/45261.html,1
+http://www.w3.org/2002/07/owl#sameAs,http://www.wikidata.org/entity/Q5974096,1
+http://www.w3.org/2002/07/owl#sameAs,http://pl.dbpedia.org/resource/MQTT,1
+http://www.w3.org/2002/07/owl#sameAs,http://yago-knowledge.org/resource/IEC_61499,1
+http://www.w3.org/2002/07/owl#sameAs,http://eu.dbpedia.org/resource/RDF,1
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/WikicatOntologyLanguages,1
+http://www.w3.org/2002/07/owl#sameAs,http://wikidata.dbpedia.org/resource/Q54872,1
+http://purl.org/dc/terms/subject,http://dbpedia.org/resource/Category:Building_automation,1
+https://w3id.org/i40/sto#relatedTo,https://w3id.org/i40/sto#IEC_61131,1
+http://www.w3.org/2002/07/owl#sameAs,http://www.wikidata.org/entity/Q168160,1
+http://www.w3.org/2002/07/owl#sameAs,http://it.dbpedia.org/resource/Data_Distribution_Service,1
+http://www.w3.org/2002/07/owl#sameAs,http://www.wikidata.org/entity/Q787190,1
+http://www.w3.org/2002/07/owl#sameAs,http://pt.dbpedia.org/resource/ISO_9000,1
+http://www.w3.org/2000/01/rdf-schema#label,IEC 60839-5-2,1
+https://w3id.org/i40/sto#hasDBpediaResource,http://dbpedia.org/resource/Rule_Interchange_Format,1
+http://www.w3.org/2002/07/owl#sameAs,http://ja.dbpedia.org/resource/IEC_60364,1
+http://www.w3.org/2002/07/owl#sameAs,http://es.dbpedia.org/resource/Normas_ISO_9000,1
+https://w3id.org/i40/sto#hasPublicationDate,2016-02-03,1
+http://www.w3.org/2002/07/owl#sameAs,http://it.dbpedia.org/resource/ANSI/ISA-95,1
+http://www.w3.org/2002/07/owl#sameAs,http://cs.dbpedia.org/resource/Fieldbus,1
+https://w3id.org/i40/sto#relatedTo,https://w3id.org/i40/sto#IEC_61784,1
+http://www.w3.org/2002/07/owl#sameAs,http://yago-knowledge.org/resource/B2MML,1
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/WikicatWebServiceSpecifications,1
+https://w3id.org/i40/sto#hasDBpediaResource,http://dbpedia.org/page/Modbus,1
+https://w3id.org/i40/sto#motivation,Stations need to describe their operational state and performance parameters towards superior I4.0-Components,1
+http://www.w3.org/2002/07/owl#sameAs,http://yago-knowledge.org/resource/CAN_bus_monitor,1
+http://www.w3.org/2000/01/rdf-schema#label,SPARQL,1
+http://www.w3.org/2000/01/rdf-schema#label,IEC 60061,1
+http://purl.org/dc/terms/subject,http://dbpedia.org/resource/Category:Metadata,1
+https://w3id.org/i40/sto#hasTag,FBs distributed systems,1
+http://www.w3.org/2002/07/owl#sameAs,http://yago-knowledge.org/resource/ISO_11898,1
+http://www.w3.org/2002/07/owl#sameAs,http://yago-knowledge.org/resource/IEC_61400,1
+http://www.w3.org/2002/07/owl#sameAs,http://de.dbpedia.org/resource/Controller_Area_Network,1
+https://w3id.org/i40/sto#relatedTo,https://w3id.org/i40/sto#ISO_13374,1
+http://www.w3.org/2002/07/owl#sameAs,http://de.dbpedia.org/resource/IEC_61508,1
+https://w3id.org/i40/sto#hasDBpediaResource,http://dbpedia.org/resource/B2MML,1
+https://w3id.org/i40/sto#hasOfficialResource,https://webstore.iec.ch/publication/24120,1
+http://www.w3.org/2002/07/owl#sameAs,http://de.dbpedia.org/resource/Rule_Interchange_Format,1
+http://www.w3.org/2002/07/owl#sameAs,http://pt.dbpedia.org/resource/Modelo_SCOR,1
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/WikicatGraphicsStandards,1
+https://w3id.org/i40/sto#hasTag,MTConnect,1
+http://www.w3.org/2000/01/rdf-schema#label,BBF TR-069,1
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/Open-endCredit113375323,1
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/Worker109632518,1
+https://w3id.org/i40/sto#publisher,https://w3id.org/i40/sto#MTConnect_Institute,1
+http://www.w3.org/2002/07/owl#sameAs,http://yago-knowledge.org/resource/Rule_Interchange_Format,1
+http://www.w3.org/2002/07/owl#sameAs,https://w3id.org/i40/sto#ISO_14443,1
+https://w3id.org/i40/sto#hasPublicationDate,2014-08-19,1
+https://w3id.org/i40/sto#hasOfficialResource,http://sysml.org/,1
+http://www.w3.org/2002/07/owl#sameAs,http://de.dbpedia.org/resource/Qualitätsmanagementnorm,1
+https://w3id.org/i40/sto#hasPublicationDate,2012-02-01,1
+http://www.w3.org/2002/07/owl#sameAs,http://id.dbpedia.org/resource/Modbus,1
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/Evidence106643408,1
+http://www.w3.org/2002/07/owl#sameAs,http://www.wikidata.org/entity/Q1017620,1
+http://purl.org/dc/terms/subject,http://dbpedia.org/resource/Category:Web_services,1
+https://w3id.org/i40/sto#hasOfficialResource,https://www.iso.org/standard/66777.html,1
+http://www.w3.org/2000/01/rdf-schema#label,ISO 15704,1
+http://www.w3.org/2002/07/owl#sameAs,http://de.dbpedia.org/resource/Resource_Description_Framework,1
+http://www.w3.org/2000/01/rdf-schema#label,ISO ASTM 52915,1
+https://w3id.org/i40/sto#hasOfficialResource,https://webstore.iec.ch/publication/7326,1
+http://www.w3.org/2002/07/owl#sameAs,https://w3id.org/i40/sto#ISO_29161,1
+https://w3id.org/i40/sto#hasOfficialResource,https://www.iso.org/standard/54948.html,1
+https://w3id.org/i40/sto#hasOfficialResource,http://www.iso.org/iso/catalogue_detail.htm?csnumber=63740,1
+http://www.w3.org/2002/07/owl#sameAs,http://d-nb.info/gnd/4396527-1,1
+http://www.w3.org/2002/07/owl#sameAs,http://www.wikidata.org/entity/Q1653426,1
+http://purl.org/dc/terms/subject,http://dbpedia.org/resource/Category:Robert_Bosch_GmbH,1
+http://www.w3.org/2002/07/owl#sameAs,http://ja.dbpedia.org/resource/OWL,1
+https://w3id.org/i40/sto#hasDBpediaResource,http://dbpedia.org/page/Data_Distribution_Service,1
+https://w3id.org/i40/sto#hasClassification,https://w3id.org/i40/rami#Lifecycle_Status,1
+http://www.w3.org/2000/01/rdf-schema#label,ISO 8062-4,1
+http://www.w3.org/2002/07/owl#sameAs,http://wikidata.dbpedia.org/resource/Q1149607,1
+https://w3id.org/i40/sto#hasWikipediaArticle,https://en.wikipedia.org/wiki/IEC_61499,1
+https://w3id.org/i40/sto#relatedTo,https://w3id.org/i40/sto#ISO_14306,1
+http://purl.org/dc/terms/subject,http://dbpedia.org/resource/Category:RDF_data_access,1
+http://www.w3.org/2002/07/owl#sameAs,http://es.dbpedia.org/resource/TR-069,1
+http://www.w3.org/2002/07/owl#sameAs,http://d-nb.info/gnd/7693644-2,1
+https://w3id.org/i40/sto#hasTag,62837,1
+http://www.w3.org/2000/01/rdf-schema#label,ISO 20140-5,1
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/HeatEngine103507963,1
+https://w3id.org/i40/sto#hasOfficialResource,https://www.w3.org/TR/rif-overview/,1
+http://www.w3.org/2002/07/owl#sameAs,http://yago-knowledge.org/resource/ISO_50001,1
+https://w3id.org/i40/sto#hasTag,ISO/IEC/IEEE 42010,1
+https://w3id.org/i40/sto#developer,https://w3id.org/i40/sto#OPC_Foundation,1
+https://w3id.org/i40/sto#hasOfficialResource,https://www.iso.org/standard/57308.html,1
+http://www.w3.org/2000/01/rdf-schema#label,ISO 19629,1
+http://www.w3.org/2002/07/owl#sameAs,http://yago-knowledge.org/resource/IEC_61850,1
+https://w3id.org/i40/sto#motivation,"The standards for Digital Factory define methods and information models, which are required for self description of I40-components. IEC TS 62832 defines methods, which allow to validate or plan connections between assets.",1
+https://w3id.org/i40/sto#hasDBpediaResource,http://dbpedia.org/page/Profibus,1
+http://www.w3.org/2000/01/rdf-schema#label,ISO 50001,1
+https://w3id.org/i40/sto#relatedTo,https://w3id.org/i40/sto#ISO_13849,1
+http://www.w3.org/2002/07/owl#sameAs,http://it.dbpedia.org/resource/COLLADA,1
+https://w3id.org/i40/sto#hasWikipediaArticle,https://en.wikipedia.org/wiki/ISO_19439,1
+http://www.w3.org/2002/07/owl#sameAs,http://nl.dbpedia.org/resource/Controller_Area_Network,1
+https://w3id.org/i40/sto#hasWikipediaArticle,https://en.wikipedia.org/wiki/TR-069,1
+http://www.w3.org/2002/07/owl#sameAs,http://ko.dbpedia.org/resource/TR-069,1
+http://purl.org/linguistics/gold/hypernym,http://dbpedia.org/resource/Organization,1
+http://www.w3.org/2002/07/owl#sameAs,http://ko.dbpedia.org/resource/WS-BPEL,1
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/Statement106722453,1
+https://w3id.org/i40/sto#hasOfficialResource,https://webstore.iec.ch/publication/7040,1
+https://w3id.org/i40/sto#hasWikipediaArticle,https://en.wikipedia.org/wiki/Digital_Enhanced_Cordless_Telecommunications,1
+https://w3id.org/i40/sto#publisher,https://w3id.org/i40/sto#BBF,1
+http://www.w3.org/2000/01/rdf-schema#label,IEC 62264,1
+http://www.w3.org/2002/07/owl#sameAs,http://fr.dbpedia.org/resource/Systems_Modeling_Language,1
+http://www.w3.org/2002/07/owl#sameAs,http://es.dbpedia.org/resource/Data_Distribution_Service,1
+http://purl.org/dc/terms/subject,http://dbpedia.org/resource/Category:Energy_economics,1
+https://w3id.org/i40/sto#hasWikipediaArticle,https://en.wikipedia.org/wiki/MTConnect,1
+https://w3id.org/i40/sto#hasWikipediaArticle,https://en.wikipedia.org/wiki/ISO/IEC_14443,1
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/Sequence108459252,1
+https://w3id.org/i40/sto#hasClassification,https://w3id.org/i40/rami#safety,1
+http://www.w3.org/2000/01/rdf-schema#label,ISO 15746,1
+http://www.w3.org/2002/07/owl#sameAs,http://nl.dbpedia.org/resource/Profibus,1
+https://w3id.org/i40/sto#hasOfficialResource,https://webstore.iec.ch/publication/5528,1
+https://w3id.org/i40/sto#hasTag,Systems Modeling Language,1
+http://www.w3.org/2000/01/rdf-schema#label,ISO 29002,1
+http://www.w3.org/2002/07/owl#sameAs,http://es.dbpedia.org/resource/IEC_61131,1
+http://www.w3.org/2002/07/owl#sameAs,http://ja.dbpedia.org/resource/Data_Distribution_Service,1
+http://www.w3.org/2002/07/owl#sameAs,http://www.wikidata.org/entity/Q3146921,1
+http://purl.org/dc/terms/subject,http://dbpedia.org/resource/Category:IEEE_standards,1
+http://www.w3.org/2002/07/owl#sameAs,http://www.wikidata.org/entity/Q1351784,1
+http://purl.org/dc/terms/subject,http://dbpedia.org/resource/Category:XML,1
+http://www.w3.org/2002/07/owl#sameAs,http://www.wikidata.org/entity/Q8026813,1
+http://www.w3.org/2002/07/owl#sameAs,http://es.dbpedia.org/resource/Profibus,1
+http://www.w3.org/2002/07/owl#sameAs,http://de.dbpedia.org/resource/Standard_for_the_exchange_of_product_model_data,1
+https://w3id.org/i40/sto#hasWikipediaArticle,https://en.wikipedia.org/wiki/DECT_Ultra_Low_Energy,1
+http://www.w3.org/2000/01/rdf-schema#label,SysML,1
+https://w3id.org/i40/sto#hasOfficialResource,http://www.iso.org/iso/home/store/catalogue_tc/catalogue_detail.htm?csnumber=69883,1
+https://w3id.org/i40/sto#hasClassification,https://w3id.org/i40/sto#Communication,1
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/YagoLegalActor,1
+https://w3id.org/i40/sto#hasWikipediaArticle,https://en.wikipedia.org/wiki/ASME_Y14.41>,1
+https://w3id.org/i40/sto#hasTag,Energy Efficiency,1
+http://www.w3.org/2002/07/owl#sameAs,http://ja.dbpedia.org/resource/ISO_9000,1
+https://w3id.org/i40/sto#hasPublicationDate,2016-08-01,1
+https://w3id.org/i40/sto#hasWikipediaArticle,https://en.wikipedia.org/wiki/ISO_9000,1
+http://www.w3.org/2000/01/rdf-schema#label,ETSI LTN,1
+http://www.w3.org/2000/01/rdf-schema#label,ISO 27000,1
+http://www.w3.org/2002/07/owl#sameAs,http://wikidata.dbpedia.org/resource/Q3146921,1
+http://www.w3.org/2000/01/rdf-schema#label,eClass,1
+http://www.w3.org/2002/07/owl#sameAs,http://ja.dbpedia.org/resource/IEC_61508,1
+https://w3id.org/i40/sto#hasTag,OPC UA,1
+http://www.w3.org/2000/01/rdf-schema#label,IEC 60870,1
+https://w3id.org/i40/sto#motivation,Properties and LOPs as an informational representation of the features of measuring equipment. The referenced standards define general principles (e.g. part 11) as well as specific LOPs for specific device types. These international standards also may serve as examples for description of products.,1
+http://www.w3.org/2002/07/owl#sameAs,http://fr.dbpedia.org/resource/Business_Process_Execution_Language,1
+http://www.w3.org/2000/01/rdf-schema#label,Quality Information Framework,1
+https://w3id.org/i40/sto#hasWikipediaArticle,https://en.wikipedia.org/wiki/Web_Ontology_Language?oldformat=true,1
+https://w3id.org/i40/sto#hasWikipediaArticle,https://en.wikipedia.org/wiki/IEC_60870,1
+http://www.w3.org/2000/01/rdf-schema#label,ISO 1302,1
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/Group100031264,1
+https://w3id.org/i40/sto#hasDBpediaResource,http://dbpedia.org/page/CAN_bus,1
+http://www.w3.org/2002/07/owl#sameAs,http://wikidata.dbpedia.org/resource/Q431851,1
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/WikicatBibliographyFileFormats,1
+https://w3id.org/i40/sto#hasWikipediaArticle,https://en.wikipedia.org/wiki/CAEX,1
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/Action100037396,1
+http://purl.org/dc/terms/subject,http://dbpedia.org/resource/Category:Wind_turbines,1
+https://w3id.org/i40/sto#hasOfficialResource,https://webstore.iec.ch/publication/7033,1
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/Transmission104472243,1
+http://www.w3.org/2002/07/owl#sameAs,http://de.dbpedia.org/resource/EN_61499,1
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/ontology/Person,1
+http://www.w3.org/2002/07/owl#sameAs,http://yago-knowledge.org/resource/CAN_bus,1
+http://www.w3.org/2002/07/owl#sameAs,http://fr.dbpedia.org/resource/Profibus,1
+http://www.w3.org/2002/07/owl#sameAs,http://pt.dbpedia.org/resource/IEC_60870-5-103,1
+http://www.w3.org/2002/07/owl#sameAs,http://fr.dbpedia.org/resource/ISA95,1
+https://w3id.org/i40/sto#relatedTo,https://w3id.org/i40/sto#IEC_62337,1
+http://www.w3.org/2002/07/owl#sameAs,http://ja.dbpedia.org/resource/ISO_10303,1
+https://w3id.org/i40/sto#hasOfficialResource,https://webstore.iec.ch/publication/5506,1
+http://www.w3.org/2000/01/rdf-schema#label,RDF,1
+https://w3id.org/i40/sto#hasClassification,https://w3id.org/i40/rami#EnergyEfficiency,1
+http://www.w3.org/2002/07/owl#sameAs,http://pl.dbpedia.org/resource/Modbus,1
+http://www.w3.org/2000/01/rdf-schema#label,ISO 1101,1
+https://w3id.org/i40/sto#hasTag,Functional Safety of Electrical/Electronic/Programmable Electronic Safety-related Systems,1
+http://www.w3.org/2000/01/rdf-schema#label,ASAM ODS,1
+http://purl.org/dc/terms/subject,http://dbpedia.org/resource/Category:Digital_subscriber_line,1
+http://www.w3.org/2002/07/owl#sameAs,http://yago-knowledge.org/resource/Digital_Enhanced_Cordless_Telecommunications,1
+http://www.w3.org/2002/07/owl#sameAs,http://de.dbpedia.org/resource/Collada_(Speicherformat),1
+http://www.w3.org/2002/07/owl#sameAs,http://pt.dbpedia.org/resource/COLLADA,1
+http://www.w3.org/2002/07/owl#sameAs,http://ja.dbpedia.org/resource/BPEL,1
+http://www.w3.org/2002/07/owl#sameAs,http://nl.dbpedia.org/resource/Digital_Enhanced_Cordless_Telecommunications,1
+https://w3id.org/i40/sto#hasTag,Network and system security for industrial-process measurement and control,1
+http://www.w3.org/2002/07/owl#sameAs,http://pl.dbpedia.org/resource/Business_Process_Execution_Language,1
+http://www.w3.org/2002/07/owl#sameAs,http://it.dbpedia.org/resource/Business_Process_Execution_Language,1
+http://www.w3.org/2002/07/owl#sameAs,http://ja.dbpedia.org/resource/Resource_Description_Framework,1
+http://www.w3.org/2000/01/rdf-schema#label,MTConnect,1
+http://purl.org/dc/terms/subject,http://dbpedia.org/resource/Category:Data_transmission,1
+http://www.w3.org/2002/07/owl#sameAs,http://www.wikidata.org/entity/Q1135322,1
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/Motor103789946,1
+https://w3id.org/i40/sto#developer,https://w3id.org/i40/sto#IEC,1
+http://www.w3.org/2000/01/rdf-schema#label,ISO 14739-1,1
+http://www.w3.org/2002/07/owl#sameAs,http://wikidata.dbpedia.org/resource/Q603967,1
+https://w3id.org/i40/sto#hasTag,COLLADA,1
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/Assets113329641,1
+http://purl.org/dc/terms/subject,http://dbpedia.org/resource/Category:Regulation_of_medical_devices,1
+http://www.w3.org/2002/07/owl#sameAs,http://www.wikidata.org/entity/Q431851,1
+https://w3id.org/i40/sto#hasClassification,https://w3id.org/i40/sto#ProcessPlanning,1
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/WikicatComputerLanguages,1
+http://www.w3.org/2002/07/owl#sameAs,http://nl.dbpedia.org/resource/ISO_9000,1
+http://www.w3.org/2002/07/owl#sameAs,http://www.wikidata.org/entity/Q533123,1
+http://www.w3.org/2002/07/owl#sameAs,http://www.wikidata.org/entity/Q1857202,1
+http://www.w3.org/2002/07/owl#sameAs,http://pt.dbpedia.org/resource/TR-069,1
+https://w3id.org/i40/sto#hasDBpediaResource,http://dbpedia.org/resource/Systems_Modeling_Language,1
+http://www.w3.org/2002/07/owl#sameAs,http://wikidata.dbpedia.org/resource/Q1017605,1
+http://www.w3.org/2002/07/owl#sameAs,http://nl.dbpedia.org/resource/Rule_Interchange_Format,1
+http://www.w3.org/2000/01/rdf-schema#label,IEC 62714,1
+http://purl.org/linguistics/gold/hypernym,http://dbpedia.org/resource/Recommendation,1
+https://w3id.org/i40/sto#hasDBpediaResource,http://dbpedia.org/resource/Digital_Enhanced_Cordless_Telecommunications,1
+https://w3id.org/i40/sto#hasOfficialResource,https://www.iso.org/standard/28144.html,1
+http://www.w3.org/2000/01/rdf-schema#label,ETSI DECT,1
+http://www.w3.org/2002/07/owl#sameAs,http://wikidata.dbpedia.org/resource/Q498344,1
+https://w3id.org/i40/sto#hasWikipediaArticle,https://en.wikipedia.org/wiki/OPC_Unified_Architecture,1
+http://www.w3.org/2002/07/owl#sameAs,http://de.dbpedia.org/resource/Business_Process_Model_and_Notation,1
+https://w3id.org/i40/sto#hasClassification,https://w3id.org/i40/sto#ProductionLifeCycleDataManagement,1
+http://www.w3.org/2000/01/rdf-schema#label,IEC 62837,1
+https://w3id.org/i40/sto#hasTag,SCOR,1
+https://w3id.org/i40/sto#hasWikipediaArticle,https://en.wikipedia.org/wiki/ISO_13849,1
+http://www.w3.org/2002/07/owl#sameAs,http://www.wikidata.org/entity/Q728183,1
+https://w3id.org/i40/sto#hasOfficialResource,http://qifstandards.org/,1
+http://www.w3.org/2002/07/owl#sameAs,http://www.wikidata.org/entity/Q1206769,1
+https://w3id.org/i40/sto#hasTag,Ultra Low Energy,1
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/Extension106335162,1
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/Indication106797169,1
+http://www.w3.org/2000/01/rdf-schema#label,IEC 61784,1
+http://www.w3.org/2002/07/owl#sameAs,http://yago-knowledge.org/resource/Resource_Description_Framework,1
+https://w3id.org/i40/sto#hasDBpediaResource,http://dbpedia.org/resource/IEC_61511,1
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/Series108457976,1
+http://www.w3.org/2000/01/rdf-schema#label,IEC TS 62237,1
+https://w3id.org/i40/sto#hasOfficialResource,https://webstore.iec.ch/publication/6626,1
+http://www.w3.org/2000/01/rdf-schema#label,ISO PAS 17506,1
+http://www.w3.org/2002/07/owl#sameAs,http://wikidata.dbpedia.org/resource/Q17146026,1
+http://www.w3.org/2002/07/owl#sameAs,http://nl.dbpedia.org/resource/Resource_Description_Framework,1
+http://www.w3.org/2002/07/owl#sameAs,http://cs.dbpedia.org/resource/Business_Process_Model_and_Notation,1
+https://w3id.org/i40/sto#hasWikipediaArticle,https://en.wikipedia.org/wiki/ISO/IEC_27000,1
+http://www.w3.org/2002/07/owl#sameAs,http://yago-knowledge.org/resource/ULE_-_Ultra_Low_Energy,1
+http://www.w3.org/2002/07/owl#sameAs,http://www.wikidata.org/entity/Q1275526,1
+http://purl.org/dc/terms/subject,http://dbpedia.org/resource/Category:Technical_communication,1
+http://purl.org/linguistics/gold/hypernym,http://dbpedia.org/resource/Commission,1
+https://w3id.org/i40/sto#hasDBpediaResource,http://dbpedia.org/page/ISO_10303,1
+http://purl.org/dc/terms/subject,http://dbpedia.org/resource/Category:Wireless_networking,1
+https://w3id.org/i40/sto#developer,https://w3id.org/i40/sto#APICS,1
+https://w3id.org/i40/sto#hasTag,Condition Monitoring,1
+http://www.w3.org/2002/07/owl#sameAs,http://nl.dbpedia.org/resource/SPARQL,1
+http://www.w3.org/2002/07/owl#sameAs,http://wikidata.dbpedia.org/resource/Q5974206,1
+http://www.w3.org/2002/07/owl#sameAs,http://wikidata.dbpedia.org/resource/Q54871,1
+http://www.w3.org/2002/07/owl#sameAs,http://fr.dbpedia.org/resource/Modbus,1
+https://w3id.org/i40/sto#relatedTo,https://w3id.org/i40/sto#IEC_TS_62832,1
+https://w3id.org/i40/sto#hasDBpediaResource,http://dbpedia.org/resource/IEC_62264,1
+https://w3id.org/i40/sto#hasOfficialResource,https://webstore.iec.ch/publication/5380,1
+http://www.w3.org/2002/07/owl#sameAs,http://ja.dbpedia.org/resource/Modbus,1
+http://www.w3.org/2002/07/owl#sameAs,http://pl.dbpedia.org/resource/Model_referencyjny_łańcucha_dostaw,1
+http://www.w3.org/2002/07/owl#sameAs,http://yago-knowledge.org/resource/ISO_13584,1
+http://www.w3.org/2002/07/owl#sameAs,http://wikidata.dbpedia.org/resource/Q16976659,1
+https://w3id.org/i40/sto#hasOfficialResource,http://www.mtconnect.org/standard-documents,1
+http://www.w3.org/2002/07/owl#sameAs,http://ja.dbpedia.org/resource/Controller_Area_Network,1
+http://www.w3.org/2000/01/rdf-schema#label,IEC 62443,1
+http://purl.org/dc/terms/subject,http://dbpedia.org/resource/Category:2004_software,1
+https://w3id.org/i40/sto#hasWikipediaArticle,https://en.wikipedia.org/wiki/IEC_61508,1
+http://www.w3.org/2000/01/rdf-schema#label,ISO 16739,1
+https://w3id.org/i40/sto#hasClassification,https://w3id.org/i40/rami#Other,1
+http://www.w3.org/2002/07/owl#sameAs,http://de.dbpedia.org/resource/ISO/IEC_14443,1
+http://www.w3.org/2002/07/owl#sameAs,http://www.wikidata.org/entity/Q826165,1
+http://www.w3.org/2002/07/owl#sameAs,http://es.dbpedia.org/resource/Resource_Description_Framework,1
+https://w3id.org/i40/sto#publisher,https://w3id.org/i40/sto#ASME,1
+http://www.w3.org/2002/07/owl#sameAs,http://yago-knowledge.org/resource/ISO_10303,1
+http://www.w3.org/2002/07/owl#sameAs,http://www.wikidata.org/entity/Q498344,1
+http://www.w3.org/2002/07/owl#sameAs,http://it.dbpedia.org/resource/IEC_60870,1
+https://w3id.org/i40/sto#hasTag,BPMN,1
+http://www.w3.org/2002/07/owl#sameAs,http://www.wikidata.org/entity/Q1654689,1
+http://www.w3.org/2002/07/owl#sameAs,http://wikidata.dbpedia.org/resource/Q287228,1
+http://www.w3.org/2000/01/rdf-schema#label,DIN SPEC 16592,1
+http://www.w3.org/2002/07/owl#sameAs,http://www.wikidata.org/entity/Q5970174,1
+http://www.w3.org/2002/07/owl#sameAs,http://de.dbpedia.org/resource/OPC_Unified_Architecture,1
+http://www.w3.org/2000/01/rdf-schema#label,IEC 42010,1
+https://w3id.org/i40/sto#hasOfficialResource,http://www.omgsysml.org/what-is-sysml.htm,1
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/WikicatSafetyCodes,1
+http://www.w3.org/2000/01/rdf-schema#label,IEC 61499,1
+https://w3id.org/i40/sto#hasPublicationDate,2014-12-01,1
+http://www.w3.org/2000/01/rdf-schema#label,IEC 60904,1
+http://www.w3.org/2000/01/rdf-schema#label,IEC 60364,1
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/WikicatElectricPowerTransmissionSystems,1
+https://w3id.org/i40/sto#hasOfficialResource,http://www.apics.org/apics-for-business/products-and-services/apics-scc-frameworks/scor,1
+http://www.w3.org/2000/01/rdf-schema#seeAlso,https://en.wikipedia.org/wiki/B2MML,1
+http://purl.org/dc/terms/subject,http://dbpedia.org/resource/Category:Safety_codes,1
+http://www.w3.org/2002/07/owl#sameAs,http://pt.dbpedia.org/resource/Fieldbus,1
+https://w3id.org/i40/sto#hasWikipediaArticle,https://en.wikipedia.org/wiki/IEC_60364,1
+http://www.w3.org/2002/07/owl#sameAs,http://wikidata.dbpedia.org/resource/Q1654689,1
+https://w3id.org/i40/sto#hasOfficialResource,https://webstore.iec.ch/publication/7029,1
+http://purl.org/dc/terms/subject,http://dbpedia.org/resource/Category:Quality_management,1
+https://w3id.org/i40/sto#hasTag,Message Queue Telemetry Transport,1
+http://www.w3.org/2002/07/owl#sameAs,http://wikidata.dbpedia.org/resource/Q10322548,1
+https://w3id.org/i40/sto#hasDBpediaResource,http://dbpedia.org/resource/OPC_Unified_Architecture,1
+http://www.w3.org/2002/07/owl#sameAs,http://es.dbpedia.org/resource/WS-BPEL,1
+https://w3id.org/i40/sto#hasOfficialResource,https://www.w3.org/OWL/,1
+https://w3id.org/i40/sto#hasOfficialResource,https://www.iso.org/standard/51622.html,1
+http://purl.org/dc/terms/subject,http://dbpedia.org/resource/Category:Diagrams,1
+http://www.w3.org/2002/07/owl#sameAs,http://yago-knowledge.org/resource/COLLADA,1
+http://www.w3.org/2002/07/owl#sameAs,http://wikidata.dbpedia.org/resource/Q1512301,1
+http://www.w3.org/2000/01/rdf-schema#label,ISO TS 14649-201,1
+http://www.w3.org/2000/01/rdf-schema#label,IEC 62424,1
+https://w3id.org/i40/sto#hasPublicationDate,2013-06-01,1
+https://w3id.org/i40/sto#hasDBpediaResource,http://dbpedia.org/page/IEC_61131,1
+http://purl.org/linguistics/gold/hypernym,http://dbpedia.org/resource/Vehicle,1
+http://www.w3.org/2002/07/owl#sameAs,http://www.wikidata.org/entity/Q302726,1
+https://w3id.org/i40/sto#relatedTo,https://w3id.org/i40/sto#W3C_OWL,1
+http://purl.org/linguistics/gold/hypernym,http://dbpedia.org/resource/Systems,1
+http://www.w3.org/2002/07/owl#sameAs,http://yago-knowledge.org/resource/Web_Ontology_Language,1
+https://w3id.org/i40/sto#hasOfficialResource,https://webstore.iec.ch/publication/22797,1
+https://w3id.org/i40/sto#hasOfficialResource,https://www.iso.org/standard/53617.html,1
+http://www.w3.org/2002/07/owl#sameAs,http://es.dbpedia.org/resource/Bus_CAN,1
+http://www.w3.org/2002/07/owl#sameAs,http://wikidata.dbpedia.org/resource/Q1060017,1
+https://w3id.org/i40/sto#hasTag,OWL,1
+http://www.w3.org/2002/07/owl#sameAs,http://www.wikidata.org/entity/Q188109,1
+http://www.w3.org/2002/07/owl#sameAs,http://pt.dbpedia.org/resource/Controller_Area_Network,1
+http://www.w3.org/2002/07/owl#sameAs,http://pt.dbpedia.org/resource/Resource_Description_Framework,1
+https://w3id.org/i40/sto#hasTag,DF/TR,1
+https://w3id.org/i40/sto#hasOfficialResource,https://www.iso.org/standard/33833.html,1
+http://www.w3.org/2002/07/owl#sameAs,http://yago-knowledge.org/resource/IEC_62264,1
+http://www.w3.org/2002/07/owl#sameAs,http://cs.dbpedia.org/resource/Modbus,1
+http://www.w3.org/2002/07/owl#sameAs,http://ja.dbpedia.org/resource/EbXML,1
+https://w3id.org/i40/sto#hasDBpediaResource,http://dbpedia.org/page/IEC_61400,1
+http://www.w3.org/2000/01/rdf-schema#label,IEC TS 62832,1
+http://www.w3.org/2002/07/owl#sameAs,http://wikidata.dbpedia.org/resource/Q1275526,1
+http://www.w3.org/2000/01/rdf-schema#label,IEC 27000,1
+http://www.w3.org/2002/07/owl#sameAs,http://www.wikidata.org/entity/Q1017605,1
+http://www.w3.org/2000/01/rdf-schema#label,IEC 62890,1
+https://w3id.org/i40/sto#hasTag,STEP,1
+http://www.w3.org/2002/07/owl#sameAs,http://it.dbpedia.org/resource/Resource_Description_Framework,1
+http://www.w3.org/2002/07/owl#sameAs,http://de.dbpedia.org/resource/EN_61131,1
+http://www.w3.org/2002/07/owl#sameAs,http://fr.dbpedia.org/resource/ISO_50001,1
+http://www.w3.org/2002/07/owl#sameAs,http://de.dbpedia.org/resource/ISO_50001,1
+https://w3id.org/i40/sto#hasClassification,https://w3id.org/i40/sto#Prodcut,1
+http://www.w3.org/2000/01/rdf-schema#label,IEC 20140,1
+https://w3id.org/i40/sto#hasPublicationDate,2004-10-01,1
+https://w3id.org/i40/sto#hasOfficialResource,https://webstore.iec.ch/publication/5380%0Ahttp://www.iso.org/iso/catalogue_detail.htm?csnumber=43423,1
+http://www.w3.org/2002/07/owl#sameAs,http://ja.dbpedia.org/resource/Systems_Modeling_Language,1
+http://www.w3.org/2002/07/owl#sameAs,http://d-nb.info/gnd/7537632-5,1
+https://w3id.org/i40/sto#hasWikipediaArticle,https://en.wikipedia.org/wiki/IEC_62264,1
+https://w3id.org/i40/sto#hasTag,AML,1
+http://www.w3.org/2002/07/owl#sameAs,http://wikidata.dbpedia.org/resource/Q8026813,1
+http://www.w3.org/2002/07/owl#sameAs,http://es.dbpedia.org/resource/OWL,1
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/WikicatSmartCards,1
+https://w3id.org/i40/sto#hasTag,MANDATE,1
+http://www.w3.org/2002/07/owl#sameAs,http://yago-knowledge.org/resource/AutomationML,1
+http://www.w3.org/2002/07/owl#sameAs,http://pl.dbpedia.org/resource/ISO/IEC_14443,1
+http://www.w3.org/2000/01/rdf-schema#label,IEC 29161,1
+https://w3id.org/i40/sto#hasOfficialResource,https://www.iso.org/standard/63648.html,1
+https://w3id.org/i40/sto#hasDBpediaResource,http://dbpedia.org/page/Cyber_security_standards#ISA/IEC-62443_(formerly_ISA-99),1
+https://w3id.org/i40/sto#hasDomain,https://w3id.org/i40/sto#EnterpriseIntegration,1
+https://w3id.org/i40/sto#relatedTo,https://w3id.org/i40/sto#IEC_61850,1
+https://w3id.org/i40/sto#hasTag,FDT,1
+https://w3id.org/i40/sto#hasDBpediaResource,http://dbpedia.org/resource/TR-069,1
+https://w3id.org/i40/sto#hasTag,Digital Enhanced Cordless Telecommunications,1
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/LivingThing100004258,1
+https://w3id.org/i40/sto#developer,https://w3id.org/i40/sto#BBF,1
+https://w3id.org/i40/sto#motivation,"The standard sought to address the following problems: lack of a universal model for batch control, difficulty in communicating user requirement, integration among batch automation suppliers, difficulty in batch control configuration.",1
+https://w3id.org/i40/sto#hasDBpediaResource,http://dbpedia.org/resource/CAEX,1
+https://w3id.org/i40/sto#hasClassification,https://w3id.org/i40/sto#ManufacturingModelData,1
+http://purl.org/dc/terms/subject,http://dbpedia.org/resource/Category:Process_management,1
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/Accomplishment100035189,1
+http://www.w3.org/2002/07/owl#sameAs,http://pt.dbpedia.org/resource/STEP,1
+http://www.w3.org/2002/07/owl#sameAs,http://wikidata.dbpedia.org/resource/Q188109,1
+http://www.w3.org/2000/01/rdf-schema#label,ETSI ULE,1
+https://w3id.org/i40/sto#hasClassification,https://w3id.org/i40/rami#Work_Centers,1
+https://w3id.org/i40/sto#hasDBpediaResource,http://dbpedia.org/resource/MQTT,1
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/Machine103699975,1
+https://w3id.org/i40/sto#hasOfficialResource,https://www.iso.org/standard/54779.html,1
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/WikicatWindTurbines,1
+http://www.w3.org/2002/07/owl#sameAs,http://www.wikidata.org/entity/Q1022724,1
+https://w3id.org/i40/sto#hasOfficialResource,https://www.iso.org/standard/56865.html,1
+https://w3id.org/i40/sto#hasOfficialResource,https://webstore.iec.ch/publication/6871,1
+http://www.w3.org/2004/02/skos/core#altLabel,STEP,1
+https://w3id.org/i40/sto#hasOfficialResource,http://cdd.iec.ch/cdd/iec61360/iec61360.nsf,1
+http://www.w3.org/2002/07/owl#sameAs,http://yago-knowledge.org/resource/TR-069,1
+https://w3id.org/i40/sto#relatedTo,https://w3id.org/i40/sto#IEC_61987_X,1
+http://www.w3.org/2004/02/skos/core#altLabel,RAMI 4.0,1
+http://www.w3.org/2002/07/owl#sameAs,https://w3id.org/i40/sto#ISO_15459,1
+https://w3id.org/i40/sto#hasWikipediaArticle,https://en.wikipedia.org/wiki/ISO_13584,1
+https://w3id.org/i40/sto#hasOfficialResource,https://www.iso.org/standard/70170.html,1
+http://purl.org/dc/terms/subject,http://dbpedia.org/resource/Category:Smart_grid,1
+http://www.w3.org/2002/07/owl#sameAs,http://ja.dbpedia.org/resource/COLLADA,1
+https://w3id.org/i40/sto#hasOfficialResource,https://webstore.iec.ch/publication/3881,1
+http://www.w3.org/2002/07/owl#sameAs,http://yago-knowledge.org/resource/ISO_13849,1
+https://w3id.org/i40/sto#motivation,"Global identification, semantic description and automatic product classification",1
+https://w3id.org/i40/sto#hasPublicationDate,2014-01-01,1
+http://www.w3.org/2002/07/owl#sameAs,http://it.dbpedia.org/resource/ISO/IEC_14443,1
+https://w3id.org/i40/sto#hasOfficialResource,https://www.broadband-forum.org/standards-and-software/technical-specifications/tr-069-files-tools,1
+http://www.w3.org/2002/07/owl#sameAs,http://www.wikidata.org/entity/Q1141640,1
+http://www.w3.org/2002/07/owl#sameAs,http://wikidata.dbpedia.org/resource/Q1206769,1
+https://w3id.org/i40/sto#hasWikipediaArticle,https://en.wikipedia.org/wiki/Business_Process_Execution_Language,1
+https://w3id.org/i40/sto#hasDBpediaResource,http://dbpedia.org/resource/ISO_13584,1
+https://w3id.org/i40/sto#hasTag,eClass,1
+https://w3id.org/i40/sto#hasWikipediaArticle,https://en.wikipedia.org/wiki/Rule_Interchange_Format,1
+http://www.w3.org/2000/01/rdf-schema#label,ISO 13584,1
+http://www.w3.org/2002/07/owl#sameAs,http://www.wikidata.org/entity/Q1060017,1
+http://purl.org/dc/terms/subject,http://dbpedia.org/resource/Category:Electric_power_transmission_systems,1
+https://w3id.org/i40/sto#hasTag,Fieldbus,1
+http://www.w3.org/2000/01/rdf-schema#label,IEC 61360,1
+http://www.w3.org/2002/07/owl#sameAs,http://www.wikidata.org/entity/Q5970189,1
+http://www.w3.org/2002/07/owl#sameAs,http://www.wikidata.org/entity/Q1514790,1
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/Device103183080,1
+http://purl.org/dc/terms/subject,http://dbpedia.org/resource/Category:Bibliography_file_formats,1
+http://www.w3.org/2000/01/rdf-schema#label,IEC 61334,1
+https://w3id.org/i40/sto#developer,https://w3id.org/i40/sto#eClassAssoc,1
+https://w3id.org/i40/sto#hasClassification,https://w3id.org/i40/rami#LifeCycle_Status,1
+http://www.w3.org/2002/07/owl#sameAs,http://yago-knowledge.org/resource/Data_Distribution_Service,1
+http://www.w3.org/2002/07/owl#sameAs,http://de.dbpedia.org/resource/Digital_Enhanced_Cordless_Telecommunications,1
+https://w3id.org/i40/sto#hasTag,MQTT,1
+https://w3id.org/i40/sto#hasWikipediaArticle,https://en.wikipedia.org/wiki/ISO/IEC_42010,1
+https://w3id.org/i40/sto#hasOfficialResource,https://www.w3.org/RDF/,1
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/Assistant109815790,1
+http://www.w3.org/2002/07/owl#sameAs,http://d-nb.info/gnd/4737512-7,1
+https://w3id.org/i40/sto#hasDBpediaResource,http://dbpedia.org/page/IEC_60870,1
+https://w3id.org/i40/sto#hasOfficialResource,https://www.iso.org/standard/28777.html,1
+http://www.w3.org/2000/01/rdf-schema#label,ISO 22400,1
+https://w3id.org/i40/sto#hasTag,ebXML,1
+http://www.w3.org/2000/01/rdf-schema#label,ISO 9000,1
+https://w3id.org/i40/sto#hasPublicationDate,2016-02-01,1
+https://w3id.org/i40/sto#hasDBpediaResource,http://dbpedia.org/page/IEC_61850,1
+https://w3id.org/i40/sto#developer,https://w3id.org/i40/sto#IBM,1
+http://www.w3.org/2000/01/rdf-schema#label,B2MML,1
+http://www.w3.org/2002/07/owl#sameAs,http://wikidata.dbpedia.org/resource/Q1141640,1
+http://www.w3.org/2002/07/owl#sameAs,http://yago-knowledge.org/resource/ISO/IEC_42010,1
+https://w3id.org/i40/sto#publisher,https://w3id.org/i40/sto#VDMA,1
+https://w3id.org/i40/sto#hasTag,Industrial automation systems and integration,1
+http://www.w3.org/2002/07/owl#sameAs,http://wikidata.dbpedia.org/resource/Q302726,1
+http://www.w3.org/2002/07/owl#sameAs,http://wikidata.dbpedia.org/resource/Q5970174,1
+https://w3id.org/i40/sto#hasOfficialResource,https://webstore.iec.ch/publication/25442,1
+http://www.w3.org/2002/07/owl#sameAs,http://www.wikidata.org/entity/Q5974206,1
+https://w3id.org/i40/sto#publisher,https://w3id.org/i40/sto#DMSC,1
+https://w3id.org/i40/sto#hasTag,Open Applications Group Integration Specification,1
+http://www.w3.org/ns/prov#wasDerivedFrom,https://w3id.org/i40/sto#IEC_62541,1
+http://www.w3.org/2002/07/owl#sameAs,http://de.dbpedia.org/resource/Modbus,1
+http://www.w3.org/2002/07/owl#sameAs,http://fr.dbpedia.org/resource/CEI_61508,1
+http://www.w3.org/2000/01/rdf-schema#label,ISO 19439,1
+http://www.w3.org/2002/07/owl#sameAs,http://yago-knowledge.org/resource/Supply-chain_operations_reference,1
+https://w3id.org/i40/sto#hasPublicationDate,2016-10-01,1
+https://w3id.org/i40/sto#hasPublicationDate,2017-03-07,1
+http://www.w3.org/2002/07/owl#sameAs,http://yago-knowledge.org/resource/Profibus,1
+https://w3id.org/i40/sto#hasDBpediaResource,http://dbpedia.org/resource/ISO_13849,1
+http://www.w3.org/2002/07/owl#sameAs,http://pl.dbpedia.org/resource/Controller_Area_Network,1
+https://w3id.org/i40/sto#hasDBpediaResource,http://dbpedia.org/resource/ULE_-_Ultra_Low_Energy,1
+http://purl.org/dc/terms/subject,http://dbpedia.org/resource/Category:Local_loop,1
+https://w3id.org/i40/sto#hasOfficialResource,https://www.iso.org/standard/59902.html,1
+http://www.w3.org/2002/07/owl#sameAs,http://yago-knowledge.org/resource/OPC_Unified_Architecture,1
+https://w3id.org/i40/sto#hasDBpediaResource,http://dbpedia.org/resource/ISO/IEC_14443,1
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/RotaryEngine104110654,1
+https://w3id.org/i40/sto#hasTag,CPE WAN Management Protocol,1
+http://www.w3.org/2002/07/owl#sameAs,http://wikidata.dbpedia.org/resource/Q1857202,1
+http://www.w3.org/2002/07/owl#sameAs,http://ko.dbpedia.org/resource/필드버스,1
+http://www.w3.org/2000/01/rdf-schema#label,ISO 11898-1,1
+https://w3id.org/i40/sto#hasPublicationDate,2010-04-01,1
+http://www.w3.org/2002/07/owl#sameAs,http://www.wikidata.org/entity/Q54872,1
+http://www.w3.org/2002/07/owl#sameAs,http://yago-knowledge.org/resource/BPEL4People,1
+http://www.w3.org/2002/07/owl#sameAs,http://pl.dbpedia.org/resource/ISO_50001,1
+http://www.w3.org/2002/07/owl#sameAs,http://de.dbpedia.org/resource/IEC_61850,1
+https://w3id.org/i40/sto#hasTag,CAN Bus,1
+http://www.w3.org/2002/07/owl#sameAs,http://de.dbpedia.org/resource/SPARQL,1
+https://w3id.org/i40/sto#hasWikipediaArticle,https://en.wikipedia.org/wiki/EbXML,1
+https://w3id.org/i40/sto#motivation,"Cyber attacks threat the industry and can cause damage to property and personal injury and affect the image of companies. The Standard allows to define procedures for implementing electronically secure Industrial Automation and Control Systems (IACS). This guidance applies to end-users, system integrators, security practitioners, and control systems manufacturers responsible for manufacturing, designing, implementing, or managing industrial automation and control systems",1
+http://www.w3.org/2002/07/owl#sameAs,http://wikidata.dbpedia.org/resource/Q15994907,1
+http://www.w3.org/2002/07/owl#sameAs,http://ja.dbpedia.org/resource/MQ_Telemetry_Transport,1
+https://w3id.org/i40/sto#hasPublicationDate,2011-08-01,1
+https://w3id.org/i40/sto#hasOfficialResource,http://www.iec.ch/functionalsafety/,1
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/ontology/Agent,1
+http://www.w3.org/2000/01/rdf-schema#label,ASME Y14.41,1
+http://www.w3.org/2002/07/owl#sameAs,http://cs.dbpedia.org/resource/CAN_bus,1
+https://w3id.org/i40/sto#hasOfficialResource,https://webstore.iec.ch/publication/24241,1
+https://w3id.org/i40/sto#hasDBpediaResource,http://dbpedia.org/page/ISO_19439,1
+http://purl.org/dc/terms/subject,http://dbpedia.org/resource/Category:Application_programming_interfaces,1
+http://www.w3.org/2000/01/rdf-schema#label,IEC 14443,1
+http://www.w3.org/2002/07/owl#sameAs,http://wikidata.dbpedia.org/resource/Q168160,1
+http://www.w3.org/2000/01/rdf-schema#label,ISO 15531,1
+http://www.w3.org/2002/07/owl#sameAs,http://de.dbpedia.org/resource/WS-Business_Process_Execution_Language,1
+http://www.w3.org/2002/07/owl#sameAs,http://it.dbpedia.org/resource/SPARQL,1
+https://w3id.org/i40/sto#hasDBpediaResource,http://dbpedia.org/resource/SPARQL,1
+http://www.w3.org/2002/07/owl#sameAs,http://wikidata.dbpedia.org/resource/Q1275552,1
+http://www.w3.org/2002/07/owl#sameAs,http://pl.dbpedia.org/resource/EbXML,1
+http://www.w3.org/2002/07/owl#sameAs,http://www.wikidata.org/entity/Q2117885,1
+http://www.w3.org/2000/01/rdf-schema#label,ISO 22745-11,1
+https://w3id.org/i40/sto#publisher,https://w3id.org/i40/sto#eClassAssoc,1
+http://www.w3.org/2000/01/rdf-schema#label,IEC 62541,1
+http://www.w3.org/2002/07/owl#sameAs,http://wikidata.dbpedia.org/resource/Q206008,1
+https://w3id.org/i40/sto#hasDBpediaResource,http://dbpedia.org/resource/IEC_61499,1
+http://www.w3.org/2004/02/skos/core#note,Is implemented in XML,1
+http://www.w3.org/2002/07/owl#sameAs,http://wikidata.dbpedia.org/resource/Q126231,1
+https://w3id.org/i40/sto#motivation,"The standards for Digital Factory define methods and information models, which are required for self description of I40-components. ",1
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/Model110324560,1
+https://w3id.org/i40/sto#hasOfficialResource,https://www.iso.org/standard/28089.html,1
+http://www.w3.org/2002/07/owl#sameAs,http://yago-knowledge.org/resource/IEC_61131,1
+http://www.w3.org/2002/07/owl#sameAs,http://fr.dbpedia.org/resource/Data_Distribution_Service,1
+https://w3id.org/i40/sto#relatedTo,https://w3id.org/i40/sto#IEC_62453,1
+https://w3id.org/i40/sto#hasTag,DF/TS,1
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/WikicatOSIProtocols,1
+http://www.w3.org/2002/07/owl#sameAs,http://yago-knowledge.org/resource/IEC_60364,1
+http://www.w3.org/2002/07/owl#sameAs,http://www.wikidata.org/entity/Q54871,1
+http://www.w3.org/2002/07/owl#sameAs,http://wikidata.dbpedia.org/resource/Q623244,1
+https://w3id.org/i40/sto#hasTag,CAEX,1
+http://www.w3.org/2002/07/owl#sameAs,http://d-nb.info/gnd/4338572-2,1
+http://www.w3.org/2000/01/rdf-schema#label,IEC 62591,1
+http://www.w3.org/2002/07/owl#sameAs,http://it.dbpedia.org/resource/EbXML,1
+http://www.w3.org/2000/01/rdf-schema#label,SCOR,1
+http://www.w3.org/2002/07/owl#sameAs,http://fr.dbpedia.org/resource/Business_Process_Model_and_Notation,1
+http://www.w3.org/2000/01/rdf-schema#label,IEC 61850,1
+http://www.w3.org/2000/01/rdf-schema#label,ISO 16792,1
+https://w3id.org/i40/sto#hasOfficialResource,https://webstore.iec.ch/publication/7433,1
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/WikicatSpecificationLanguages,1
+http://www.w3.org/2002/07/owl#sameAs,http://it.dbpedia.org/resource/Norme_della_serie_ISO_9000,1
+http://www.w3.org/ns/prov#wasDerivedFrom,https://w3id.org/i40/sto#IEC_62714,1
+http://www.w3.org/2002/07/owl#sameAs,http://yago-knowledge.org/resource/ISA-88,1
+http://www.w3.org/2002/07/owl#sameAs,http://yago-knowledge.org/resource/Data_distribution_service,1
+http://www.w3.org/2000/01/rdf-schema#label,IEC 60508,1
+http://www.w3.org/2002/07/owl#sameAs,http://fr.dbpedia.org/resource/Bus_de_terrain,1
+https://w3id.org/i40/sto#publisher,https://w3id.org/i40/sto#UN-CEFACT,1
+http://www.w3.org/2002/07/owl#sameAs,http://www.wikidata.org/entity/Q206008,1
+https://w3id.org/i40/sto#isImplementationOf,https://w3id.org/i40/sto#ISA-95,1
+https://w3id.org/i40/sto#hasWikipediaArticle,https://en.wikipedia.org/wiki/IEC_61850,1
+http://www.w3.org/2002/07/owl#sameAs,http://de.dbpedia.org/resource/Profibus,1
+http://www.w3.org/2002/07/owl#sameAs,http://nl.dbpedia.org/resource/Business_Process_Model_and_Notation,1
+http://www.w3.org/2000/01/rdf-schema#label,IEC 81714,1
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/Internal-combustionEngine103579982,1
+https://w3id.org/i40/sto#hasWikipediaArticle,https://en.wikipedia.org/wiki/Fieldbus,1
+https://w3id.org/i40/sto#hasDBpediaResource,http://dbpedia.org/page/IEC_60364,1
+http://www.w3.org/2002/07/owl#sameAs,http://www.wikidata.org/entity/Q787631,1
+https://w3id.org/i40/sto#hasPublicationDate,2003-12-01,1
+http://purl.org/dc/terms/subject,http://dbpedia.org/resource/Category:Telemetry,1
+https://w3id.org/i40/sto#motivation,Informational representation of MES and ERP models.,1
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/SmartCard113377003,1
+http://www.w3.org/2002/07/owl#sameAs,http://de.dbpedia.org/resource/Data_Distribution_Service,1
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/WikicatInternetStandards,1
+https://w3id.org/i40/sto#hasTag,Electronically secure Industrial Automation and Control Systems,1
+http://www.w3.org/2002/07/owl#sameAs,http://wikidata.dbpedia.org/resource/Q163701,1
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/Mechanism103738472,1
+http://purl.org/dc/terms/subject,http://dbpedia.org/resource/Category:3D_graphics_file_formats,1
+https://w3id.org/i40/sto#hasDomain,Automatic identification and data capture techniques,1
+http://www.w3.org/2002/07/owl#sameAs,http://www.wikidata.org/entity/Q15994907,1
+http://www.w3.org/2004/02/skos/core#note,TODO,1
+http://www.w3.org/2002/07/owl#sameAs,http://wikidata.dbpedia.org/resource/Q1351784,1
+http://purl.org/dc/terms/subject,http://dbpedia.org/resource/Category:Contactless_smart_cards,1
+http://www.w3.org/2002/07/owl#sameAs,http://ko.dbpedia.org/resource/RDF,1
+http://www.w3.org/2002/07/owl#sameAs,http://yago-knowledge.org/resource/Modbus,1
+http://purl.org/linguistics/gold/hypernym,http://dbpedia.org/resource/Representation,1
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/WikicatFilenameExtensions,1
+https://w3id.org/i40/sto#hasOfficialResource,https://www.iso.org/standard/53999.html,1
+http://purl.org/dc/terms/subject,http://dbpedia.org/resource/Category:Programmable_logic_controllers,1
+https://w3id.org/i40/sto#hasDomain,Electrotechnical,1
+http://www.w3.org/2002/07/owl#sameAs,http://yago-knowledge.org/resource/ISO_9000,1
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/WindTurbine104591517,1
+http://www.w3.org/2002/07/owl#sameAs,http://yago-knowledge.org/resource/MQ_Telemetry_Transport,1
+http://www.w3.org/2002/07/owl#sameAs,http://www.wikidata.org/entity/Q603967,1
+http://www.w3.org/2002/07/owl#sameAs,http://wikidata.dbpedia.org/resource/Q5970189,1
+http://purl.org/linguistics/gold/hypernym,http://dbpedia.org/resource/Communication,1
+http://www.w3.org/2002/07/owl#sameAs,http://yago-knowledge.org/resource/ISO_9001,1
+https://w3id.org/i40/sto#hasDBpediaResource,http://dbpedia.org/page/Supply-chain_operations_reference,1
+http://www.w3.org/2000/01/rdf-schema#label,IEC TR 62794,1
+https://w3id.org/i40/sto#hasTag,RIF,1
+http://www.w3.org/2002/07/owl#sameAs,http://ko.dbpedia.org/resource/데이터_분산_서비스,1
+http://www.w3.org/2002/07/owl#sameAs,http://it.dbpedia.org/resource/Controller_Area_Network,1
+https://w3id.org/i40/sto#hasDBpediaResource,http://dbpedia.org/resource/IEC_61508,1
+https://w3id.org/i40/sto#hasDBpediaResource,http://dbpedia.org/resource/MTConnect,1
+http://purl.org/dc/terms/subject,http://dbpedia.org/resource/Category:Medical_equipment,1
+http://www.w3.org/2002/07/owl#sameAs,http://de.dbpedia.org/resource/IEC_61400,1
+https://w3id.org/i40/sto#hasOfficialResource,https://www.iso.org/standard/40358.html,1
+https://w3id.org/i40/sto#hasPublicationDate,2017-02-01,1
+https://w3id.org/i40/sto#hasOfficialResource,https://services.mesa.org/ResourceLibrary/ShowResource/0f47758b-60f0-40c6-a71b-fa7b2363fb3a,1
+http://purl.org/linguistics/gold/hypernym,http://dbpedia.org/resource/Industry,1
+http://www.w3.org/2002/07/owl#sameAs,http://yago-knowledge.org/resource/IEC_61334,1
+http://www.w3.org/2002/07/owl#sameAs,http://pl.dbpedia.org/resource/Digital_Enhanced_Cordless_Telecommunications,1
+https://w3id.org/i40/sto#hasOfficialResource,https://www.w3.org/SPARQL,1
+http://purl.org/linguistics/gold/hypernym,http://dbpedia.org/resource/IEC,1
+https://w3id.org/i40/sto#hasWikipediaArticle,https://en.wikipedia.org/wiki/Systems_Modeling_Language,1
+https://w3id.org/i40/sto#hasDBpediaResource,http://dbpedia.org/resource/EbXML,1
+https://w3id.org/i40/sto#hasClassification,https://w3id.org/i40/rami#Communications,1
+https://w3id.org/i40/sto#hasTag,Modbus,1
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/WikicatOpenFormats,1
+http://www.w3.org/2002/07/owl#sameAs,http://es.dbpedia.org/resource/Digital_Enhanced_Cordless_Telecommunications,1
+http://www.w3.org/2000/01/rdf-schema#label,IEC 61804,1
+http://www.w3.org/2000/01/rdf-schema#label,IEC PAS 63088,1
+https://w3id.org/i40/sto#hasTag,BPEL,1
+https://w3id.org/i40/sto#hasDBpediaResource,http://dbpedia.org/page/Business_Process_Model_and_Notation,1
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/ontology/MeanOfTransportation,1
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/WikicatComputerNetworks,1
+http://www.w3.org/2002/07/owl#sameAs,http://fr.dbpedia.org/resource/ISO_13485,1
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/ComputerLanguage106899633,1
+http://www.w3.org/2002/07/owl#sameAs,http://es.dbpedia.org/resource/Modbus,1
+http://www.w3.org/2002/07/owl#sameAs,http://pl.dbpedia.org/resource/ISO_13485,1
+http://www.w3.org/2002/07/owl#sameAs,http://de.dbpedia.org/resource/MQ_Telemetry_Transport,1
+http://www.w3.org/2002/07/owl#sameAs,http://www.wikidata.org/entity/Q1275552,1
+https://w3id.org/i40/sto#hasDomain,Safety of machinery,1
+http://www.w3.org/2002/07/owl#sameAs,http://www.wikidata.org/entity/Q623244,1
+https://w3id.org/i40/sto#hasWikipediaArticle,https://en.wikipedia.org/wiki/ANSI/ISA-95,1
+http://www.w3.org/2002/07/owl#sameAs,http://yago-knowledge.org/resource/ISO_13485,1
+http://purl.org/dc/terms/subject,http://dbpedia.org/resource/Category:Unified_Modeling_Language,1
+http://www.w3.org/2002/07/owl#sameAs,http://fr.dbpedia.org/resource/Série_des_normes_ISO_9000,1
+https://w3id.org/i40/sto#motivation,Information description and communication mapping for fieldbus profiles,1
+http://www.w3.org/2000/01/rdf-schema#label,IEC 62453,1
+http://www.w3.org/2004/02/skos/core#altLabel,IEC 62264,1
+http://www.w3.org/2002/07/owl#sameAs,http://ja.dbpedia.org/resource/Profibus,1
+https://w3id.org/i40/sto#hasWikipediaArticle,https://en.wikipedia.org/wiki/ISO_10303,1
+https://w3id.org/i40/sto#relatedTo,https://w3id.org/i40/sto#IEC_62061,1
+https://w3id.org/i40/sto#hasClassification,https://w3id.org/i40/rami#CommunicationSubModel,1
+http://www.w3.org/2002/07/owl#sameAs,http://nl.dbpedia.org/resource/ANSI/ISA-95,1
+https://w3id.org/i40/sto#motivation,FDT is an interface for integration of devices into a system (e.g. control system or engineering system). The standard supports factory automation as well as process automation with a wide range of fieldbus protocols. The interface defines fieldbus-independent mechanisms for accessing data and functions of the devices.,1
+http://purl.org/dc/terms/subject,http://dbpedia.org/resource/Category:Business_process_modelling,1
+http://www.w3.org/2002/07/owl#sameAs,http://yago-knowledge.org/resource/ANSI/ISA-95,1
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/WideAreaNetwork104583477,1
+http://www.w3.org/2000/01/rdf-schema#label,RIF,1
+http://www.w3.org/2000/01/rdf-schema#label,IEC 61158,1
+http://www.w3.org/2002/07/owl#sameAs,http://pt.dbpedia.org/resource/Business_Process_Modeling_Notation,1
+http://www.w3.org/2002/07/owl#sameAs,http://de.dbpedia.org/resource/ISA-95,1
+https://w3id.org/i40/sto#hasOfficialResource,https://wiki.asam.net/display/STANDARDS/ASAM+ODS,1
+https://w3id.org/i40/sto#hasOfficialResource,https://www.iso.org/standard/40134.html,1
+http://purl.org/dc/terms/subject,http://dbpedia.org/resource/Category:Internet_Standards,1
+https://w3id.org/i40/sto#hasTag,RDF,1
+https://w3id.org/i40/sto#hasTag,Safety of machinery,1
+http://www.w3.org/2002/07/owl#sameAs,http://cs.dbpedia.org/resource/COLLADA,1
+http://purl.org/dc/terms/subject,http://dbpedia.org/resource/Category:Business_models,1
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/CreditLine113379413,1
+https://w3id.org/i40/sto#hasPublicationDate,2002-02-01,1
+http://purl.org/linguistics/gold/hypernym,http://dbpedia.org/resource/Model,1
+http://www.w3.org/2002/07/owl#sameAs,http://pt.dbpedia.org/resource/Profibus,1
+https://w3id.org/i40/sto#hasPublicationDate,2007-12-01,1
+http://purl.org/dc/terms/subject,http://dbpedia.org/resource/Category:Wide_area_networks,1
+http://www.w3.org/2002/07/owl#sameAs,http://www.wikidata.org/entity/Q163701,1
+https://w3id.org/i40/sto#hasOfficialResource,http://mqtt.org/,1
+http://www.w3.org/2002/07/owl#sameAs,http://www.wikidata.org/entity/Q1149607,1
+http://www.w3.org/2000/01/rdf-schema#label,OAGIS,1
+http://purl.org/dc/terms/subject,http://dbpedia.org/resource/Category:Medical_technology,1
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/WikicatSystemsModelingLanguage,1
+http://www.w3.org/2002/07/owl#sameAs,http://pt.dbpedia.org/resource/Modbus,1
+http://www.w3.org/2002/07/owl#sameAs,http://es.dbpedia.org/resource/ISO_14443,1
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/Description106724763,1
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/WikicatLinkProtocols,1
+http://www.w3.org/2002/07/owl#sameAs,http://de.dbpedia.org/resource/AutomationML,1
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/Specification106725067,1
+http://www.w3.org/2002/07/owl#sameAs,http://wikidata.dbpedia.org/resource/Q1224749,1
+http://www.w3.org/2002/07/owl#sameAs,http://fr.dbpedia.org/resource/B2MML,1
+http://www.w3.org/2002/07/owl#sameAs,http://wikidata.dbpedia.org/resource/Q5974096,1
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/Feat100036762,1
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/Identification106885083,1
+http://www.w3.org/2000/01/rdf-schema#label,IEC 62656,1
+http://www.w3.org/2000/01/rdf-schema#label,IEC 61987_X,1
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/Engine103287733,1
+http://www.w3.org/2002/07/owl#sameAs,http://wikidata.dbpedia.org/resource/Q6718422,1
+http://www.w3.org/2002/07/owl#sameAs,http://yago-knowledge.org/resource/Systems_Modeling_Language,1
+http://purl.org/dc/terms/subject,http://dbpedia.org/resource/Category:Broadband,1
+https://w3id.org/i40/sto#hasOfficialResource,http://www.etsi.org/technologies-clusters/technologies/dect,1
+http://www.w3.org/2002/07/owl#sameAs,http://yago-knowledge.org/resource/BS_5750,1
+https://w3id.org/i40/sto#hasTag,AutomationML,1
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/Turbine104498523,1
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/String107013549,1
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/Ordering108456993,1
+https://w3id.org/i40/sto#hasDBpediaResource,http://dbpedia.org/resource/ASME_Y14.41,1
+https://w3id.org/i40/sto#developer,https://w3id.org/i40/sto#ISO,1
+https://w3id.org/i40/sto#hasOfficialResource,https://www.asme.org/products/codes-standards/y1441-2012-digital-product-definition-data,1
+https://w3id.org/i40/sto#hasTag,Automation systems and integration,1
+http://www.w3.org/2002/07/owl#sameAs,http://de.dbpedia.org/resource/Systems_Modeling_Language,1
+http://www.w3.org/2002/07/owl#sameAs,http://id.dbpedia.org/resource/Digital_Enhanced_Cordless_Telecommunications,1
+https://w3id.org/i40/sto#hasDBpediaResource,http://dbpedia.org/resource/Web_Ontology_Language,1
+http://www.w3.org/2002/07/owl#sameAs,http://fr.dbpedia.org/resource/TR-069,1
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/ConsumerCredit113374426,1
+https://w3id.org/i40/sto#hasTag,LOPs in PA,1
+https://w3id.org/i40/sto#hasTag,Information technology -- Data structure -- Unique identification for the Internet of Things,1
+http://www.w3.org/2002/07/owl#sameAs,http://pt.dbpedia.org/resource/OWL,1
+http://www.w3.org/2002/07/owl#sameAs,http://es.dbpedia.org/resource/SPARQL,1
+http://www.w3.org/2002/07/owl#sameAs,http://wikidata.dbpedia.org/resource/Q826165,1
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/WikicatBritishStandards,1
+http://www.w3.org/2002/07/owl#sameAs,http://pl.dbpedia.org/resource/Web_Ontology_Language,1
+https://w3id.org/i40/sto#hasOfficialResource,http://www.iso.org/iso/catalogue_detail.htm?csnumber=54809,1
+http://www.w3.org/2002/07/owl#sameAs,http://www.wikidata.org/entity/Q10322548,1
+http://www.w3.org/2002/07/owl#sameAs,http://it.dbpedia.org/resource/Web_Ontology_Language,1
+https://w3id.org/i40/sto#hasDBpediaResource,http://de.dbpedia.org/page/ECl@ss,1
+https://w3id.org/i40/sto#hasClassification,https://w3id.org/i40/sto#Product,1
+http://www.w3.org/2002/07/owl#sameAs,http://de.dbpedia.org/resource/TR-069,1
+https://w3id.org/i40/sto#hasWikipediaArticle,https://en.wikipedia.org/wiki/Device_Description_Language,1
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/WikicatBusinessModels,1
+http://purl.org/dc/terms/subject,http://dbpedia.org/resource/Category:IBM_WebSphere,1
+http://www.w3.org/2000/01/rdf-schema#isDefinedBy,https://www.researchgate.net/publication/220171079_ISO_15531_MANDATE_a_standardised_data_model_for_manufacturing_management,1
+https://w3id.org/i40/sto#hasOfficialResource,https://webstore.iec.ch/publication/30082?lipi=urn%3Ali%3Apage%3Ad_flagship3_pulse_read%3B2vZf0%2FOGS2CeRjny8ARziQ%3D%3D,1
+https://w3id.org/i40/sto#hasOfficialResource,https://www.eclass.eu/eclasscontent/standard/overview.html.en,1
+http://www.w3.org/2002/07/owl#sameAs,http://fr.dbpedia.org/resource/Digital_Enhanced_Cordless_Telecommunications,1
+http://purl.org/dc/terms/subject,http://dbpedia.org/resource/Category:Industrial_Ethernet,1
+https://w3id.org/i40/sto#hasPublicationDate,2004-11-01,1
+https://w3id.org/i40/sto#hasTag,PLC Open,1
+http://www.w3.org/2002/07/owl#sameAs,http://www.wikidata.org/entity/Q1512301,1
+http://www.w3.org/2002/07/owl#sameAs,http://fr.dbpedia.org/resource/Web_Ontology_Language,1
+https://w3id.org/i40/sto#hasOfficialResource,https://www.iso.org/standard/29557.html,1
+https://w3id.org/i40/sto#hasClassification,https://w3id.org/i40/sto#SCADALevel,1
+https://w3id.org/i40/sto#publisher,https://w3id.org/i40/sto#DIN,1
+https://w3id.org/i40/sto#hasDBpediaResource,http://dbpedia.org/page/WirelessHART,1
+https://w3id.org/i40/sto#hasWikipediaArticle,https://en.wikipedia.org/wiki/AutomationML,1
+http://www.w3.org/2002/07/owl#sameAs,http://pl.dbpedia.org/resource/Profibus,1
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/WikicatComputerSecurityExploits,1
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/Arrangement107938773,1
+http://purl.org/dc/terms/subject,http://dbpedia.org/resource/Category:Software_architecture,1
+https://w3id.org/i40/sto#hasOfficialResource,https://www.automationml.org/,1
+http://www.w3.org/2000/01/rdf-schema#label,ISO 19440,1
+https://w3id.org/i40/sto#hasTag,SPARQL,1
+http://www.w3.org/2000/01/rdf-schema#label,ebXML,1
+http://purl.org/dc/terms/subject,http://dbpedia.org/resource/Category:American_Society_of_Mechanical_Engineers,1
+http://purl.org/dc/terms/subject,http://dbpedia.org/resource/Category:Knowledge_representation_languages,1
+https://w3id.org/i40/sto#hasOfficialResource,http://www.27000.org/,1
+http://www.w3.org/2000/01/rdf-schema#label,IEC 24760,1
+https://w3id.org/i40/sto#hasTag,B2MML,1
+http://www.w3.org/2002/07/owl#sameAs,http://fr.dbpedia.org/resource/Collaborative_Design_Activity,1
+https://w3id.org/i40/sto#motivation,"Functional description, informational representation and communication mapping of application functionality. This standard describes how a distributed control application is composed of functional units (FB), which are executed in different context. It may help to describe how functions are distributed between different I40-Components and how the execution of the functions between the different I40-Components is controled.",1
+http://www.w3.org/2002/07/owl#sameAs,http://cs.dbpedia.org/resource/Resource_Description_Framework,1
+https://w3id.org/i40/sto#hasOfficialResource,https://webstore.iec.ch/publication/6675,1
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/Person100007846,1
+https://w3id.org/i40/sto#motivation,Provides best practices for information security management. A critical issue for Industry 4.0 ,1
+https://w3id.org/i40/sto#relatedTo,https://w3id.org/i40/sto#ISO_10303,1
+http://purl.org/dc/terms/subject,http://dbpedia.org/resource/Category:Application_layer_protocols,1
+http://www.w3.org/2004/02/skos/core#note,The IIRA is based in this standards,1
+http://www.w3.org/2002/07/owl#sameAs,http://id.dbpedia.org/resource/ISO_50001,1
+http://www.w3.org/2002/07/owl#sameAs,http://yago-knowledge.org/resource/ISO_19439,1
+http://www.w3.org/2002/07/owl#sameAs,http://nl.dbpedia.org/resource/Veldbus,1
+http://www.w3.org/2002/07/owl#sameAs,http://wikidata.dbpedia.org/resource/Q1653426,1
+http://www.w3.org/2002/07/owl#sameAs,http://de.dbpedia.org/resource/EN_ISO_13849,1
+http://www.w3.org/2002/07/owl#sameAs,http://yago-knowledge.org/resource/Terminating_bias_circuit,1
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/WikicatKnowledgeRepresentationLanguages,1
+https://w3id.org/i40/sto#hasOfficialResource,https://www.iso.org/standard/35431.html,1
+https://w3id.org/i40/sto#hasOfficialResource,"http://www.iec.ch/dyn/www/f?p=103:38:16824039984463::::FSP_ORG_ID,FSP_APEX_PAGE,FSP_PROJECT_ID:1250,23,20929",1
+http://www.w3.org/2002/07/owl#sameAs,http://yago-knowledge.org/resource/EbXML,1
+https://w3id.org/i40/sto#hasDBpediaResource,http://dbpedia.org/page/IEC_61334,1
+https://w3id.org/i40/sto#hasWikipediaArticle,https://en.wikipedia.org/wiki/COLLADA,1
+https://w3id.org/i40/sto#hasOfficialResource,https://www.vdma.org/documents/105628/2244593/Inhalt+VDMA+24582_en.pdf/,1
+https://w3id.org/i40/sto#hasOfficialResource,https://opcfoundation.org/about/opc-technologies/opc-ua/,1
+http://www.w3.org/2002/07/owl#sameAs,http://es.dbpedia.org/resource/SysML,1
+http://www.w3.org/2002/07/owl#sameAs,http://es.dbpedia.org/resource/IEC_60870-5-101,1
+https://w3id.org/i40/sto#hasDBpediaResource,http://dbpedia.org/resource/AutomationML,1
+http://www.w3.org/2002/07/owl#sameAs,http://fr.dbpedia.org/resource/Controller_Area_Network,1
+http://www.w3.org/2002/07/owl#sameAs,http://fr.dbpedia.org/resource/Rule_Interchange_Format,1
+http://www.w3.org/2002/07/owl#sameAs,http://cs.dbpedia.org/resource/SPARQL,1
+http://www.w3.org/2002/07/owl#sameAs,http://it.dbpedia.org/resource/IEC_61850,1
+http://www.w3.org/2002/07/owl#sameAs,http://www.wikidata.org/entity/Q5970192,1
+http://www.w3.org/2002/07/owl#sameAs,http://wikidata.dbpedia.org/resource/Q1022724,1
+http://www.w3.org/2000/01/rdf-schema#label,ISO 13374,1
+http://www.w3.org/2000/01/rdf-schema#label,IEC 61511,1
+https://w3id.org/i40/sto#hasOfficialResource,http://www.etsi.org/technologies-clusters/technologies/dect/dect-ule,1
+https://w3id.org/i40/sto#hasPublicationDate,2010-02-01,1
+http://www.w3.org/2000/01/rdf-schema#label,ISO 18828-2,1
+http://www.w3.org/2002/07/owl#sameAs,http://es.dbpedia.org/resource/Bus_de_campo,1
+http://www.w3.org/2002/07/owl#sameAs,http://de.dbpedia.org/resource/Feldbus,1
+https://w3id.org/i40/sto#relatedTo,https://w3id.org/i40/sto#IEC_61804,1
+https://w3id.org/i40/sto#hasOfficialResource,http://www.fieldbus.org/,1
+http://www.w3.org/2002/07/owl#sameAs,http://pl.dbpedia.org/resource/SPARQL,1
+http://www.w3.org/2002/07/owl#sameAs,https://w3id.org/i40/sto#ISO_20140_5,1
+http://www.w3.org/2002/07/owl#sameAs,http://pt.dbpedia.org/resource/SysML,1
+http://www.w3.org/2002/07/owl#sameAs,http://www.wikidata.org/entity/Q126231,1
+http://www.w3.org/2002/07/owl#sameAs,http://ja.dbpedia.org/resource/DECT,1
+https://w3id.org/i40/sto#hasOfficialResource,http://www.bpmn.org/,1
+https://w3id.org/i40/sto#hasOfficialResource,https://webstore.iec.ch/publication/5953,1
+http://www.w3.org/2002/07/owl#sameAs,http://wikidata.dbpedia.org/resource/Q5970192,1
+http://www.w3.org/2002/07/owl#sameAs,http://de.dbpedia.org/resource/IEC_60870,1
+http://www.w3.org/2002/07/owl#sameAs,http://es.dbpedia.org/resource/ISO_13485,1
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/WrittenCommunication106349220,1
+http://www.w3.org/2002/07/owl#sameAs,http://ko.dbpedia.org/resource/IEC_61508,1
+http://www.w3.org/2002/07/owl#sameAs,http://cs.dbpedia.org/resource/ISO_9000,1
+https://w3id.org/i40/sto#hasWikipediaArticle,https://en.wikipedia.org/wiki/Cyber_security_standards#ISA.2FIEC-62443_.28formerly_ISA-99.29,1
+https://w3id.org/i40/sto#hasOfficialResource,http://www.modbus.org/,1
+http://www.w3.org/2002/07/owl#sameAs,http://de.dbpedia.org/resource/Business_To_Manufacturing_Markup_Language,1
+https://w3id.org/i40/sto#hasTag,Identification cards -- Contactless integrated circuit cards -- Proximity cards,1
+https://w3id.org/i40/sto#hasWikipediaArticle,https://en.wikipedia.org/wiki/IEC_61131,1
+http://www.w3.org/2002/07/owl#sameAs,http://es.dbpedia.org/resource/Business_Process_Model_and_Notation,1
+https://w3id.org/i40/sto#developer,https://w3id.org/i40/sto#MESA,1
+https://w3id.org/i40/sto#hasTag,Low Throughput Networks,1
+http://www.w3.org/2000/01/rdf-schema#label,OWL,1
+https://w3id.org/i40/sto#hasPublicationDate,2015-04-01,1
+http://www.w3.org/2002/07/owl#sameAs,http://linked-web-apis.fit.cvut.cz/resource/sparql_protocol,1
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/PositiveIdentification106885389,1
+http://www.w3.org/2002/07/owl#sameAs,http://cs.dbpedia.org/resource/Profibus,1
+http://www.w3.org/2002/07/owl#sameAs,http://eu.dbpedia.org/resource/OWL,1
+https://w3id.org/i40/sto#hasTag,ISA-88,1
+https://w3id.org/i40/sto#hasPublicationDate,2003-10-26,1
+http://www.w3.org/2002/07/owl#sameAs,http://it.dbpedia.org/resource/MQTT,1
+http://www.w3.org/2002/07/owl#sameAs,http://yago-knowledge.org/resource/Fieldbus,1
+http://www.w3.org/2002/07/owl#sameAs,http://wikidata.dbpedia.org/resource/Q1514790,1
+http://www.w3.org/2004/02/skos/core#altLabel,B2MML,1
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/WikicatDataInterchangeStandards,1
+http://purl.org/dc/terms/subject,http://dbpedia.org/resource/Category:Web_Ontology_Language,1
+http://purl.org/dc/terms/subject,http://dbpedia.org/resource/Category:3D_graphics_software,1
+http://www.w3.org/2002/07/owl#sameAs,http://pt.dbpedia.org/resource/DECT,1
+https://w3id.org/i40/sto#hasPublicationDate,2000-06-01,1
+http://purl.org/linguistics/gold/hypernym,http://dbpedia.org/resource/Middleware,1
+https://w3id.org/i40/sto#hasOfficialResource,https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=wsbpel,1
+http://purl.org/dc/terms/subject,"http://dbpedia.org/resource/Category:School_of_Computer_Science,_University_of_Manchester",1
+http://www.w3.org/2002/07/owl#sameAs,http://www.wikidata.org/entity/Q1224749,1
+https://w3id.org/i40/sto#hasOfficialResource,http://www.oagi.org/dnn2/DownloadsandResources/OAGIS100PublicDownload.aspx,1
+http://www.w3.org/2002/07/owl#sameAs,http://pl.dbpedia.org/resource/IEC_61850,1
+http://purl.org/linguistics/gold/hypernym,http://dbpedia.org/resource/ISO,1
+https://w3id.org/i40/sto#hasDBpediaResource,http://dbpedia.org/page/Fieldbus,1
+http://www.w3.org/2002/07/owl#sameAs,http://ja.dbpedia.org/resource/SPARQL,1
+http://www.w3.org/2000/01/rdf-schema#label,ISO 13485,1
+http://purl.org/dc/terms/subject,http://dbpedia.org/resource/Category:Knowledge_representation,1
+http://www.w3.org/2002/07/owl#sameAs,http://de.dbpedia.org/resource/IEC_62264,1
+http://www.w3.org/2000/01/rdf-schema#label,BPEL,1
+https://w3id.org/i40/sto#hasWikipediaArticle,https://en.wikipedia.org/wiki/ISA-88,1
+http://www.w3.org/2000/01/rdf-schema#label,VDMA 24582,1
+http://www.w3.org/2002/07/owl#sameAs,http://pt.dbpedia.org/resource/Business_Process_Execution_Language,1
+http://www.w3.org/2000/01/rdf-schema#label,ISO 29161,1
+http://www.w3.org/2002/07/owl#sameAs,http://fr.dbpedia.org/resource/CEI_61131,1
+http://www.w3.org/2002/07/owl#sameAs,http://wikidata.dbpedia.org/resource/Q787631,1
+https://w3id.org/i40/sto#hasOfficialResource,https://www.isa.org/isa95/,1
+http://www.w3.org/2000/01/rdf-schema#label,IEC 60131,1
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/WikicatProgrammingLanguages,1
+http://purl.org/dc/terms/subject,http://dbpedia.org/resource/Category:Ontology_languages,1
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/CausalAgent100007347,1
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://dbpedia.org/class/yago/WikicatWideAreaNetworks,1

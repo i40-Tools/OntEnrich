@@ -1,5 +1,5 @@
 {
-    "input_file": "sto.ttl",
+    "input_file": "ttl/sto.ttl",
     "whitelist": [
         "<http://www.w3.org/2002/07/owl#sameAs>",
         "<http://purl.org/dc/terms/subject>",

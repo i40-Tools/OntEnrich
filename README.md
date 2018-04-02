@@ -10,6 +10,8 @@ or
 python -m pip install requirements.txt
 ```
 
+If you fail to install all libraries at once, then execute `pip install` manually for every library in the `requirements.txt`.
+
 ## Usage
 For enriching the ontology, first specify all the properties in the `options.json` file:
 

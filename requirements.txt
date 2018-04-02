@@ -2,3 +2,4 @@ rdflib
 SPARQLWrapper
 json
 sys
+pandas
