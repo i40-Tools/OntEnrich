@@ -37,19 +37,10 @@ def main():
 
     for sub in related_tran:
         for obj in related_tran[sub]:
-            triple = {
-                'sub': {
-                    'value': sub,
-                },
-                'pred': {
-                    'value': 'https://w3id.org/i40/sto#relatedTo',
-                },
-                'obj': {
-                    'value': obj,
-                    'type': 'uri',
-                }
-            }
-            ont.enrich(None, [triple])
+            sub = { 'value': sub }
+            pred = { 'value': 'https://w3id.org/i40/sto#relatedTo' }
+            obj = { 'value': obj }
+            ont.enrich(sub, pred, obj)
     
     print('Property sto:relatedTo added to ' + str(len(related_tran) - len(related)) + ' standards')
     ont.export('ttl/sto(full).ttl')
