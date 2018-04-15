@@ -46,16 +46,6 @@ def main():
     # removing relations of standards to themselves
     np.fill_diagonal(mtx, False)
 
-<<<<<<< HEAD
-    for sub in related_tran:
-        for obj in related_tran[sub]:
-            sub = { 'value': sub }
-            pred = { 'value': 'https://w3id.org/i40/sto#relatedTo' }
-            obj = { 'value': obj }
-            ont.enrich(sub, pred, obj)
-    
-    print('Property sto:relatedTo added to ' + str(len(related_tran) - len(related)) + ' standards')
-=======
     # enriching ontology with new triples
     for i in range(std_num):
         for j in range(std_num):
@@ -73,7 +63,6 @@ def main():
                     }
                 }
                 ont.enrich(None, [triple])
->>>>>>> 7ad1060fd4154c03b223c19b4f245e666664c172
     ont.export('ttl/sto(full).ttl')
 
     # counting number of updated standards
