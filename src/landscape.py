@@ -64,25 +64,48 @@ class Ontology(object):
     def add(self, sub, pred, obj):
         """Adds triple to ontology.
         """
-        self.graph.add([sub, pred, obj])
+        self.graph.add((sub, pred, obj))
+
 
     def remove(self, sub=None, pred=None, obj=None):
         """Removes triple from ontology.
         """
-        self.graph.remove([sub, pred, obj])
+        self.graph.remove((URIRef(sub), URIRef(pred), URIRef(obj)))
+        
 
-    def check(self, sub, pred=None, obj=None):
+    def check_triple(self, triple):
         """Returns True if triple is in ontology and False o/w.
-        By default (with pred and obj not specified) checks if it is an sto:Standard.
         """
-        sub = URIRef('https://w3id.org/i40/sto#' + sub)
-        if not pred and not obj:
-            pred = RDF.type
-            obj = URIRef('https://w3id.org/i40/sto#Standard')
-        if (sub, pred, obj) in self.graph:
+        # If URI, check links both starting from http and https and remove http
+        if str(triple[2]).find('http') > -1:
+            obj = str(triple[2])
+            obj = obj.replace('https:', 'http:')
+            triple[2] = URIRef(obj)
+            if triple in self.graph:
+                self.graph.remove(triple)
+                return False
+            obj = obj.replace('http:', 'https:')
+            triple[2] = URIRef(obj)
+        if triple in self.graph:
             return True
-        else:
-            return False
+        return False
+
+    def check_standard(self, standard_name):
+        """Returns True if standard is in ontology and False o/w.
+        """
+        sub = URIRef('https://w3id.org/i40/sto#' + standard_name)
+        pred = RDF.type
+        obj = URIRef('https://w3id.org/i40/sto#Standard')
+        return self.check_triple((sub, pred, obj))
+
+    def check_types(self, obj, types):
+        """Checks type of the object.
+        """
+        for obj_type in types:
+            if obj_type == 'Literal' and type(obj) is Literal or \
+               obj_type == 'URIRef' and type(obj) is URIRef:
+                return True
+        return False
 
     def set_prefix(self, prefix, url):
         """Sets ontology prefixes.
@@ -94,53 +117,27 @@ class Ontology(object):
         """
         return self.graph.query(query)
 
-    def enrich(self, sub, source):
+    def enrich(self, sub, pred, obj):
         """Enriches the ontology based on existing subject and its triples from other source.
         Returns information regarding the number of enriched entities.
         """
-        logs = {
-            "subj": sub,
-            "trip": []
-        }
-        
-        for triple in source:
-            pred = triple['pred']['value']
-            logs["trip"].append(pred)
-            if pred not in self.blacklist:
-                if sub is None:
-                    sub = URIRef(triple['sub']['value'])
-                pred = URIRef(pred)
-                obj = triple['obj']
-                obj_val = obj['value']
-                obj_type = obj['type']
-                lang = 'xml:lang'
+        pred_val = URIRef(pred['value'])
+        sub_val = URIRef(sub['value'])
+        obj_val = obj['value']
+        obj_type = obj.get('type') or 'uri'
 
-                if obj_type == 'uri':
-                    if not self.is_excep(obj_val):
-                        self.graph.add([sub, pred, URIRef(obj_val)])
-                elif obj_type == 'literal':
-                    if lang in obj:
-                        obj_lang = obj['xml:lang']
-                        self.graph.add([sub, pred, Literal(obj_val, obj_lang)])
-                    else:
-                        self.graph.add([sub, pred, Literal(obj_val)])
-                elif obj_type == 'typed-literal':
-                    obj_datatype = obj['datatype']
-                    if lang in obj:
-                        obj_lang = obj['xml:lang']
-                        self.graph.add([sub, pred, \
-                            Literal(obj_val, obj_lang, datatype=obj_datatype)])
-                    else:
-                        self.graph.add([sub, pred, Literal(obj_val, datatype=obj_datatype)])
-                elif obj_type == 'bnode':
-                    self.graph.add([sub, pred, BNode(obj_val)])
-                else:
-                    print('---UNKNOWN OBJECT TYPE ' + obj_type + ' FOR ' + sub + '---')
-        return logs
-
-    def is_excep(self, obj_val):
-        obj_excep_list = ['http://rdf.freebase.com/ns/']
-        for obj_excep in obj_excep_list:
-            if obj_val.find(obj_excep) > -1:
-                return True
+        if obj_type == 'uri':
+            triple = [sub_val, pred_val, URIRef(obj_val)]
+        elif obj_type == 'literal' or obj_type == 'typed-literal':
+            obj_lang = obj.get('xml:lang')
+            obj_datatype = obj.get('datatype')
+            triple = [sub_val, pred_val, Literal(obj_val, obj_lang, datatype=obj_datatype)]
+        elif obj_type == 'bnode':
+            triple = [sub_val, pred_val, BNode(obj_val)]
+        else:
+            print('!! Error while enriching: wrong obj_type ' + obj_type + ' for ' + sub)
+            return False
+        if not self.check_triple(triple):
+            self.graph.add(triple)
+            return True
         return False
