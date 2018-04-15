@@ -19,8 +19,8 @@ def main(options_path):
         }
     """
     print('...starting enrichment process')
-    trip_num = 0
-    subj_num = 0
+    total_added_triples_num = 0
+    total_subj_num = 0
     for row in ont.query(ont_query):
         subject = row[0]
         resource = get_resource(row[1])
@@ -36,16 +36,39 @@ def main(options_path):
 
         print('/', sep=' ', end='', flush=True)
         ont = set_blacklist(ont, options["blacklist"])
-        logs = ont.enrich(subject, dbpedia_result)
-        trip_num += len(logs["trip"])
-        subj_num += 1
+        ont, added_triples_num = enrich(ont, subject, dbpedia_result)
+        total_added_triples_num += added_triples_num
+        total_subj_num += 1
     
     ont = set_prefixes(ont, options["prefixes"])
     filename = get_filename(options["input_file"])
-    ont.export(filename + '(enriched).ttl')
+    full_filename = 'ttl/' + filename + '(enriched).ttl'
+    ont.export(full_filename)
     print('') # for moving to the next line in the command line
-    print('...saving file as "' + filename + '(enriched).ttl"')
-    print('Enriched ' + str(subj_num) + ' subjects  with ' + str(trip_num) + ' triples.')
+    print('...saving file as "' + full_filename + '"')
+    print('Enriched ' + str(total_subj_num) + ' subjects with ' + \
+      str(total_added_triples_num) + ' triples.')
+
+
+def enrich(ont, subject, dbpedia_result):
+    """Enrichhment process wrapper.
+    """
+    
+    added_triples_num = 0
+    for triple in dbpedia_result:
+        sub = { 'value': subject }
+        pred = triple['pred']
+        obj = triple['obj']
+        # marking primary topic of dbpedia resource as wikipedia article in STO terms
+        if pred['value'] == 'http://xmlns.com/foaf/0.1/isPrimaryTopicOf' \
+           and pred['value'].find('wikipedia.com'):
+            pred['value'] = 'https://w3id.org/i40/sto#hasWikipediaArticle'
+            obj['type'] = 'literal'
+        # 'http://rdf.freebase.com/ns/' doesn't exist anymore
+        if pred['value'] not in ont.blacklist and \
+           obj['value'] != 'http://rdf.freebase.com/ns/':
+            added_triples_num += ont.enrich(sub, pred, obj)
+    return ont, added_triples_num
 
 
 def get_filename(path):
@@ -87,7 +110,7 @@ def set_prefixes(ont, prefixes):
 
 
 if __name__ == "__main__":
-    if len(sys.argv) == 2:
-        main(sys.argv[1])
+    if len(sys.argv) == 3:
+        main(sys.argv[2])
     else:
         print('ERROR: wrong number of arguments.')
