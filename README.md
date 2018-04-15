@@ -22,10 +22,21 @@ For enriching the ontology, first specify all the properties in the `options.jso
 | blacklist | List of predicates to exclude from enrichment process | `[ "http://purl.org/voc/vrank#hasRank" ]` |
 | prefixes | List of prefixes to assign to the resulting ontology | `[ { "prfx": "deo", "uri": "http://purl.org/spar/deo/" } ]` |
 
-Next, execute `enrich.py` with `options.json` as a parameter:
+Next, navigate to the `src` folder and execute `enrich.py` with `options.json` as a parameter:
 ```bash
 python enrich.py --options options.json
 ```
+
+You are able to execute class cleaning (useful for enriched ontology from the dbpedia):
+```bash
+python class_cleaning.py --ontology ttl/sto(enriched).ttl
+```
+
+In addition, it is possible to check the ontology against the template specified as `template.json` in the `src` folder:
+```bash
+python template.py --ontology ttl/sto.ttl
+```
+The logs can be found in the `template_logs.txt` file.
 
 ## Example
 Using a Turtle format of the [Standard Ontology (STO)](https://github.com/i40-Tools/StandardOntology) as an input for the app, without specifying `whitelist` and `blacklist` in the `options.json` (fetching everything), the following results can be achieved:

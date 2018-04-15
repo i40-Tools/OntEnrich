@@ -1,8 +1,9 @@
 from landscape import Ontology, DBpedia
+import sys
 
 
-def main():
-    ont = Ontology('ttl/sto(enriched).ttl')
+def main(sto_path):
+    ont = Ontology(sto_path)
     ont_query = """
         PREFIX sto: <https://w3id.org/i40/sto#>
         PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
@@ -66,4 +67,7 @@ def extract_class(c, subclasses, superclasses, superclassof):
     return subclasses, superclasses, superclassof
 
 if __name__ == '__main__':
-    main()
+    if len(sys.argv) == 3:
+        main(sys.argv[2])
+    else:
+        print('ERROR: wrong number of arguments.')
