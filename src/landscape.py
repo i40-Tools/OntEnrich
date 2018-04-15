@@ -77,16 +77,17 @@ class Ontology(object):
         """Returns True if triple is in ontology and False o/w.
         """
         # If URI, check links both starting from http and https and remove http
-        if str(triple[2]).find('http') > -1:
-            obj = str(triple[2])
+        tmp_triple = triple.copy()
+        if str(tmp_triple[2]).find('http') > -1:
+            obj = str(tmp_triple[2])
             obj = obj.replace('https:', 'http:')
-            triple[2] = URIRef(obj)
-            if triple in self.graph:
-                self.graph.remove(triple)
+            tmp_triple[2] = URIRef(obj)
+            if tmp_triple in self.graph:
+                self.graph.remove(tmp_triple)
                 return False
             obj = obj.replace('http:', 'https:')
-            triple[2] = URIRef(obj)
-        if triple in self.graph:
+            tmp_triple[2] = URIRef(obj)
+        if tmp_triple in self.graph:
             return True
         return False
 
