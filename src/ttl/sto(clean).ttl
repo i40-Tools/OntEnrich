@@ -119,7 +119,7 @@ sto:ASME_Y1441 a owl:NamedIndividual,
     sto:hasClassification sto:ModelingPractice ;
     sto:hasDBpediaResource "http://dbpedia.org/resource/ASME_Y14.41" ;
     sto:hasOfficialResource "https://www.asme.org/products/codes-standards/y1441-2012-digital-product-definition-data" ;
-    sto:hasWikipediaArticle <http://en.wikipedia.org/wiki/ASME_Y14.41>,
+    sto:hasWikipediaArticle "http://en.wikipedia.org/wiki/ASME_Y14.41",
         "https://en.wikipedia.org/wiki/ASME_Y14.41>" ;
     sto:publisher sto:ASME .
 
@@ -149,7 +149,7 @@ sto:B2MML a dbpcy:WikicatANSIStandards,
     sto:hasDBpediaResource "http://dbpedia.org/resource/B2MML" ;
     sto:hasOfficialResource "https://services.mesa.org/ResourceLibrary/ShowResource/0f47758b-60f0-40c6-a71b-fa7b2363fb3a" ;
     sto:hasTag "B2MML"@en ;
-    sto:hasWikipediaArticle <http://en.wikipedia.org/wiki/B2MML>,
+    sto:hasWikipediaArticle "http://en.wikipedia.org/wiki/B2MML",
         "https://en.wikipedia.org/wiki/B2MML" ;
     sto:isImplementationOf sto:ISA-95 ;
     sto:publisher sto:MESA .
@@ -170,7 +170,7 @@ sto:BBF_TR-069 a dbpcy:WikicatApplicationLayerProtocols,
     sto:hasDBpediaResource "http://dbpedia.org/resource/TR-069" ;
     sto:hasOfficialResource "https://www.broadband-forum.org/standards-and-software/technical-specifications/tr-069-files-tools" ;
     sto:hasTag "CPE WAN Management Protocol"@en ;
-    sto:hasWikipediaArticle <http://en.wikipedia.org/wiki/TR-069>,
+    sto:hasWikipediaArticle "http://en.wikipedia.org/wiki/TR-069",
         "https://en.wikipedia.org/wiki/TR-069" ;
     sto:publisher sto:BBF .
 
@@ -195,7 +195,7 @@ sto:BPEL a dbpcy:WikicatMarkupLanguages,
     sto:hasDBpediaResource "http://dbpedia.org/resource/Business_Process_Execution_Language" ;
     sto:hasOfficialResource "https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=wsbpel" ;
     sto:hasTag "BPEL"@en ;
-    sto:hasWikipediaArticle <http://en.wikipedia.org/wiki/Business_Process_Execution_Language>,
+    sto:hasWikipediaArticle "http://en.wikipedia.org/wiki/Business_Process_Execution_Language",
         "https://en.wikipedia.org/wiki/Business_Process_Execution_Language" ;
     sto:publisher sto:OASIS .
 
@@ -214,7 +214,7 @@ sto:BPMN a owl:NamedIndividual,
     sto:hasDBpediaResource "http://dbpedia.org/page/Business_Process_Model_and_Notation" ;
     sto:hasOfficialResource "http://www.bpmn.org/" ;
     sto:hasTag "BPMN"@en ;
-    sto:hasWikipediaArticle <http://en.wikipedia.org/wiki/Business_Process_Model_and_Notation> .
+    sto:hasWikipediaArticle "http://en.wikipedia.org/wiki/Business_Process_Model_and_Notation" .
 
 sto:ConditionMonitoring a owl:NamedIndividual,
         rami:AdminShellSubmodel ;
@@ -256,7 +256,7 @@ sto:ETSI_ULE a dbpcy:WikicatMobileTelecommunicationsStandards,
     sto:hasDBpediaResource "http://dbpedia.org/resource/ULE_-_Ultra_Low_Energy" ;
     sto:hasOfficialResource "http://www.etsi.org/technologies-clusters/technologies/dect/dect-ule" ;
     sto:hasTag "Ultra Low Energy"@en ;
-    sto:hasWikipediaArticle <http://en.wikipedia.org/wiki/ULE_-_Ultra_Low_Energy>,
+    sto:hasWikipediaArticle "http://en.wikipedia.org/wiki/ULE_-_Ultra_Low_Energy",
         "https://en.wikipedia.org/wiki/DECT_Ultra_Low_Energy" ;
     sto:publisher sto:ETSI ;
     sto:relatedTo sto:ETSI_DECT .
@@ -281,7 +281,7 @@ sto:IEC_14443 a dbpcy:PositiveIdentification106885389,
     sto:hasDBpediaResource "http://dbpedia.org/resource/ISO/IEC_14443" ;
     sto:hasOfficialResource "https://www.iso.org/standard/70170.html" ;
     sto:hasTag "Identification cards -- Contactless integrated circuit cards -- Proximity cards"@en ;
-    sto:hasWikipediaArticle <http://en.wikipedia.org/wiki/ISO/IEC_14443>,
+    sto:hasWikipediaArticle "http://en.wikipedia.org/wiki/ISO/IEC_14443",
         "https://en.wikipedia.org/wiki/ISO/IEC_14443" ;
     sto:publisher sto:IEC,
         sto:ISO .
@@ -361,7 +361,7 @@ sto:IEC_42010 a <http://dbpedia.org/class/yago/WikicatISO/IECStandards>,
     sto:hasDBpediaResource "http://dbpedia.org/page/ISO/IEC_42010" ;
     sto:hasOfficialResource "http://www.iso-architecture.org/ieee-1471/" ;
     sto:hasTag "ISO/IEC/IEEE 42010"@en ;
-    sto:hasWikipediaArticle <http://en.wikipedia.org/wiki/ISO/IEC_42010>,
+    sto:hasWikipediaArticle "http://en.wikipedia.org/wiki/ISO/IEC_42010",
         "https://en.wikipedia.org/wiki/ISO/IEC_42010" ;
     sto:publisher sto:IEC,
         sto:ISO .
@@ -376,7 +376,7 @@ sto:IEC_60364 a dbpcy:WikicatIECStandards,
     lingg:hypernym dbres:Commission ;
     rdfs:comment "Electrical Installations for Buildings is the International Electrotechnical Commission's international standard on electrical installations of buildings"@en ;
     sto:hasDBpediaResource "http://dbpedia.org/page/IEC_60364" ;
-    sto:hasWikipediaArticle <http://en.wikipedia.org/wiki/IEC_60364>,
+    sto:hasWikipediaArticle "http://en.wikipedia.org/wiki/IEC_60364",
         "https://en.wikipedia.org/wiki/IEC_60364" ;
     sto:publisher sto:IEC .
 
@@ -403,7 +403,7 @@ sto:IEC_60870 a dbpcy:WikicatIECStandards,
         dbrc:IEC_standards ;
     rdfs:comment "In electrical engineering and power system automation, the IEC 60870 series define systems used for telecontrol (supervisory control and data acquisition)"@en ;
     sto:hasDBpediaResource "http://dbpedia.org/page/IEC_60870" ;
-    sto:hasWikipediaArticle <http://en.wikipedia.org/wiki/IEC_60870>,
+    sto:hasWikipediaArticle "http://en.wikipedia.org/wiki/IEC_60870",
         "https://en.wikipedia.org/wiki/IEC_60870" ;
     sto:publisher sto:IEC .
 
@@ -424,7 +424,7 @@ sto:IEC_61334 a dbont:Work,
     lingg:hypernym dbres:Standard ;
     rdfs:comment "IEC 61334 , known as Distribution automation using distribution line carrier systems, is a standard for low-speed reliable power line communications by electricity meters, water meters and SCADA."@en ;
     sto:hasDBpediaResource "http://dbpedia.org/page/IEC_61334" ;
-    sto:hasWikipediaArticle <http://en.wikipedia.org/wiki/IEC_61334> ;
+    sto:hasWikipediaArticle "http://en.wikipedia.org/wiki/IEC_61334" ;
     sto:publisher sto:IEC .
 
 sto:IEC_61400 a dbont:Work,
@@ -438,7 +438,7 @@ sto:IEC_61400 a dbont:Work,
     lingg:hypernym dbres:Standard ;
     rdfs:comment "IEC 61334 , known as Distribution automation using distribution line carrier systems, is a standard for low-speed reliable power line communications by electricity meters, water meters and SCADA."@en ;
     sto:hasDBpediaResource "http://dbpedia.org/page/IEC_61400" ;
-    sto:hasWikipediaArticle <http://en.wikipedia.org/wiki/IEC_61400> ;
+    sto:hasWikipediaArticle "http://en.wikipedia.org/wiki/IEC_61400" ;
     sto:publisher sto:IEC .
 
 sto:IEC_61508 a dbpcy:WikicatElectricalStandards,
@@ -455,7 +455,7 @@ sto:IEC_61508 a dbpcy:WikicatElectricalStandards,
     sto:hasDBpediaResource "http://dbpedia.org/resource/IEC_61508" ;
     sto:hasOfficialResource "http://www.iec.ch/functionalsafety/" ;
     sto:hasTag "Functional Safety of Electrical/Electronic/Programmable Electronic Safety-related Systems"@en ;
-    sto:hasWikipediaArticle <http://en.wikipedia.org/wiki/IEC_61508>,
+    sto:hasWikipediaArticle "http://en.wikipedia.org/wiki/IEC_61508",
         "https://en.wikipedia.org/wiki/IEC_61508" ;
     sto:motivation "Defines the functional safety requirements established by IEC 61508 in process industry sector terminology"@en ;
     sto:publisher sto:IEC ;
@@ -484,7 +484,7 @@ sto:IEC_62264 a dbpcy:WikicatIECStandards,
         "https://www.iso.org/standard/57308.html" ;
     sto:hasTag "Enterprise control systems"@en,
         "Enterprise-control system integration"@en ;
-    sto:hasWikipediaArticle <http://en.wikipedia.org/wiki/IEC_62264>,
+    sto:hasWikipediaArticle "http://en.wikipedia.org/wiki/IEC_62264",
         "https://en.wikipedia.org/wiki/IEC_62264" ;
     sto:motivation "Informational representation of MES and ERP models."@en ;
     sto:publisher sto:IEC,
@@ -507,7 +507,7 @@ sto:IEC_62424 a dbpcy:WikicatAbbreviations,
     sto:hasDBpediaResource "http://dbpedia.org/resource/CAEX" ;
     sto:hasOfficialResource "https://webstore.iec.ch/publication/25442" ;
     sto:hasTag "CAEX"@en ;
-    sto:hasWikipediaArticle <http://en.wikipedia.org/wiki/CAEX>,
+    sto:hasWikipediaArticle "http://en.wikipedia.org/wiki/CAEX",
         "https://en.wikipedia.org/wiki/CAEX" ;
     sto:isPartOf sto:IEC_62714 ;
     sto:publisher sto:IEC .
@@ -522,7 +522,7 @@ sto:IEC_62591 a dbont:Company,
     rdfs:comment "Industrial networks - Wireless communication network and communication profiles."@en ;
     sto:hasDBpediaResource "http://dbpedia.org/page/WirelessHART" ;
     sto:hasOfficialResource "https://webstore.iec.ch/publication/24433" ;
-    sto:hasWikipediaArticle <http://en.wikipedia.org/wiki/WirelessHART>,
+    sto:hasWikipediaArticle "http://en.wikipedia.org/wiki/WirelessHART",
         "https://en.wikipedia.org/wiki/WirelessHART" ;
     sto:publisher sto:IEC .
 
@@ -634,7 +634,7 @@ sto:ISO_11898-1 a dbpcy:WikicatComputerBuses,
     sto:hasOfficialResource "https://www.iso.org/standard/63648.html" ;
     sto:hasPublicationDate "2015-12-01"^^xsd:date ;
     sto:hasTag "CAN Bus"@en ;
-    sto:hasWikipediaArticle <http://en.wikipedia.org/wiki/CAN_bus> ;
+    sto:hasWikipediaArticle "http://en.wikipedia.org/wiki/CAN_bus" ;
     sto:publisher sto:ISO ;
     sto:relatedTo sto:IEC_61512 .
 
@@ -661,7 +661,7 @@ sto:ISO_13485 a dbpcy:WikicatISOStandards,
     sto:hasClassification rami:Safety ;
     sto:hasDBpediaResource "http://dbpedia.org/page/ISO_13485" ;
     sto:hasOfficialResource "https://www.iso.org/iso-9001-quality-management.html" ;
-    sto:hasWikipediaArticle <http://en.wikipedia.org/wiki/ISO_13485> ;
+    sto:hasWikipediaArticle "http://en.wikipedia.org/wiki/ISO_13485" ;
     sto:publisher sto:ISO .
 
 sto:ISO_14739-1 a owl:NamedIndividual,
@@ -826,7 +826,7 @@ sto:ISO_20922 a dbpcy:WikicatApplicationLayerProtocols,
         "https://www.iso.org/standard/69466.html" ;
     sto:hasTag "MQTT"@en,
         "Message Queue Telemetry Transport"@en ;
-    sto:hasWikipediaArticle <http://en.wikipedia.org/wiki/MQTT>,
+    sto:hasWikipediaArticle "http://en.wikipedia.org/wiki/MQTT",
         "https://en.wikipedia.org/wiki/MQTT" ;
     sto:publisher sto:IEC,
         sto:ISO ;
@@ -897,7 +897,7 @@ sto:ISO_50001 a dbpcy:WikicatISOStandards,
     rdfs:comment "Energy management systems – Requirements with guidance for use is a specification created by the International Organization for Standardization (ISO) for an energy management system."@en ;
     sto:hasClassification sto:CrossLevel ;
     sto:hasDBpediaResource "http://dbpedia.org/page/ISO_50001" ;
-    sto:hasWikipediaArticle <http://en.wikipedia.org/wiki/ISO_50001> ;
+    sto:hasWikipediaArticle "http://en.wikipedia.org/wiki/ISO_50001" ;
     sto:publisher sto:ISO .
 
 sto:ISO_5459 a owl:NamedIndividual,
@@ -937,7 +937,7 @@ sto:ISO_9000 a dbpcy:WikicatBritishStandards,
     sto:hasClassification sto:CrossLevel ;
     sto:hasDBpediaResource "http://dbpedia.org/page/ISO_9000" ;
     sto:hasOfficialResource "https://www.iso.org/iso-9001-quality-management.html" ;
-    sto:hasWikipediaArticle <http://en.wikipedia.org/wiki/ISO_9000>,
+    sto:hasWikipediaArticle "http://en.wikipedia.org/wiki/ISO_9000",
         "https://en.wikipedia.org/wiki/ISO_9000" ;
     sto:publisher sto:ISO .
 
@@ -964,7 +964,7 @@ sto:ISO_PAS_17506 a dbpcy:Wikicat3DGraphicsFileFormats,
     sto:hasDBpediaResource "http://dbpedia.org/resource/COLLADA" ;
     sto:hasOfficialResource "https://www.iso.org/standard/59902.html" ;
     sto:hasTag "COLLADA"@en ;
-    sto:hasWikipediaArticle <http://en.wikipedia.org/wiki/COLLADA>,
+    sto:hasWikipediaArticle "http://en.wikipedia.org/wiki/COLLADA",
         "https://en.wikipedia.org/wiki/COLLADA" ;
     sto:isPartOf sto:IEC_62714 ;
     sto:publisher sto:ISO .
@@ -998,7 +998,7 @@ sto:KATS a dbont:Organisation,
     sto:belongsTo dbr:South_Korea ;
     sto:hasDBpediaResource "http://dbpedia.org/page/Korean_Agency_for_Technology_and_Standards" ;
     sto:hasHeadquaterIn dbr:South_Korea ;
-    sto:hasWikipediaArticle <http://en.wikipedia.org/wiki/Korean_Agency_for_Technology_and_Standards>,
+    sto:hasWikipediaArticle "http://en.wikipedia.org/wiki/Korean_Agency_for_Technology_and_Standards",
         "https://en.wikipedia.org/wiki/Korean_Agency_for_Technology_and_Standards" ;
     sto:orgName "Korean Agency for Technology and Standards"@en .
 
@@ -1035,7 +1035,7 @@ sto:MTConnect a dbpcy:WikicatIndustry-specificXML-basedStandards,
     sto:hasDBpediaResource "http://dbpedia.org/resource/MTConnect" ;
     sto:hasOfficialResource "http://www.mtconnect.org/standard-documents" ;
     sto:hasTag "MTConnect"@en ;
-    sto:hasWikipediaArticle <http://en.wikipedia.org/wiki/MTConnect>,
+    sto:hasWikipediaArticle "http://en.wikipedia.org/wiki/MTConnect",
         "https://en.wikipedia.org/wiki/MTConnect" ;
     sto:publisher sto:MTConnect_Institute .
 
@@ -1059,7 +1059,7 @@ sto:ModBus a dbpcy:WikicatComputerBuses,
     sto:hasDBpediaResource "http://dbpedia.org/page/Modbus" ;
     sto:hasOfficialResource "http://www.modbus.org/" ;
     sto:hasTag "Modbus"@en ;
-    sto:hasWikipediaArticle <http://en.wikipedia.org/wiki/Modbus>,
+    sto:hasWikipediaArticle "http://en.wikipedia.org/wiki/Modbus",
         "https://en.wikipedia.org/wiki/Modbus" ;
     sto:publisher sto:SE .
 
@@ -1090,7 +1090,7 @@ sto:NIST a dbont:Agent,
     sto:hasDBpediaResource "http://dbpedia.org/page/National_Institute_of_Standards_and_Technology" ;
     sto:hasHeadquaterIn dbr:United_States ;
     sto:hasOfficialResource "https://www.nist.gov/" ;
-    sto:hasWikipediaArticle <http://en.wikipedia.org/wiki/National_Institute_of_Standards_and_Technology>,
+    sto:hasWikipediaArticle "http://en.wikipedia.org/wiki/National_Institute_of_Standards_and_Technology",
         "https://en.wikipedia.org/wiki/National_Institute_of_Standards_and_Technology" ;
     sto:orgName "National Institute of Standards and Technology"@en .
 
@@ -1126,7 +1126,7 @@ sto:ODVA a dbpcy:Abstraction100002137,
     sto:formationDate "1995-01-01"^^xsd:date ;
     sto:hasDBpediaResource "http://dbpedia.org/resource/ODVA_(company)" ;
     sto:hasOfficialResource "https://www.odva.org" ;
-    sto:hasWikipediaArticle <http://en.wikipedia.org/wiki/ODVA_(company)>,
+    sto:hasWikipediaArticle "http://en.wikipedia.org/wiki/ODVA_(company)",
         "https://en.wikipedia.org/wiki/ODVA_(company)" ;
     sto:orgName "ODVA, Inc"@en .
 
@@ -1142,7 +1142,7 @@ sto:OMG_DDS a dbpcy:WikicatComputerStandards,
     sto:hasDBpediaResource "http://dbpedia.org/page/Data_Distribution_Service" ;
     sto:hasOfficialResource "http://portals.omg.org/dds/" ;
     sto:hasTag "Data Distribution Service for real-time systems"@en ;
-    sto:hasWikipediaArticle <http://en.wikipedia.org/wiki/Data_Distribution_Service>,
+    sto:hasWikipediaArticle "http://en.wikipedia.org/wiki/Data_Distribution_Service",
         "https://en.wikipedia.org/wiki/Data_Distribution_Service" ;
     sto:publisher sto:OMG ;
     sto:relatedTo sto:IEC_61158 .
@@ -1181,7 +1181,7 @@ sto:SCOR a dbont:Person,
     sto:hasDBpediaResource "http://dbpedia.org/page/Supply-chain_operations_reference" ;
     sto:hasOfficialResource "http://www.apics.org/apics-for-business/products-and-services/apics-scc-frameworks/scor" ;
     sto:hasTag "SCOR"@en ;
-    sto:hasWikipediaArticle <http://en.wikipedia.org/wiki/Supply-chain_operations_reference>,
+    sto:hasWikipediaArticle "http://en.wikipedia.org/wiki/Supply-chain_operations_reference",
         "https://en.wikipedia.org/wiki/Supply-chain_operations_reference" .
 
 sto:SysML a dbont:Language,
@@ -1199,7 +1199,7 @@ sto:SysML a dbont:Language,
     sto:hasOfficialResource "http://sysml.org/",
         "http://www.omgsysml.org/what-is-sysml.htm" ;
     sto:hasTag "Systems Modeling Language"@en ;
-    sto:hasWikipediaArticle <http://en.wikipedia.org/wiki/Systems_Modeling_Language>,
+    sto:hasWikipediaArticle "http://en.wikipedia.org/wiki/Systems_Modeling_Language",
         "https://en.wikipedia.org/wiki/Systems_Modeling_Language" ;
     sto:publisher sto:OMG .
 
@@ -1229,7 +1229,7 @@ sto:W3C_RIF a dbpcy:WikicatKnowledgeRepresentationLanguages,
     sto:hasDBpediaResource "http://dbpedia.org/resource/Rule_Interchange_Format" ;
     sto:hasOfficialResource "https://www.w3.org/TR/rif-overview/" ;
     sto:hasTag "RIF"@en ;
-    sto:hasWikipediaArticle <http://en.wikipedia.org/wiki/Rule_Interchange_Format>,
+    sto:hasWikipediaArticle "http://en.wikipedia.org/wiki/Rule_Interchange_Format",
         "https://en.wikipedia.org/wiki/Rule_Interchange_Format" ;
     sto:publisher sto:W3C ;
     sto:relatedTo sto:W3C_OWL .
@@ -1262,7 +1262,7 @@ sto:W3C_SPARQL a dbpcy:WikicatComputerLanguages,
     sto:hasDBpediaResource "http://dbpedia.org/resource/SPARQL" ;
     sto:hasOfficialResource "https://www.w3.org/SPARQL" ;
     sto:hasTag "SPARQL"@en ;
-    sto:hasWikipediaArticle <http://en.wikipedia.org/wiki/SPARQL>,
+    sto:hasWikipediaArticle "http://en.wikipedia.org/wiki/SPARQL",
         "https://en.wikipedia.org/wiki/SPARQL" ;
     sto:publisher sto:W3C ;
     sto:relatedTo sto:W3C_RDF .
@@ -1315,7 +1315,7 @@ sto:ebXML a dbpcy:WikicatAbbreviations,
     sto:hasDBpediaResource "http://dbpedia.org/resource/EbXML" ;
     sto:hasOfficialResource "https://webstore.iec.ch/publication/24433" ;
     sto:hasTag "ebXML"@en ;
-    sto:hasWikipediaArticle <http://en.wikipedia.org/wiki/EbXML>,
+    sto:hasWikipediaArticle "http://en.wikipedia.org/wiki/EbXML",
         "https://en.wikipedia.org/wiki/EbXML" ;
     sto:publisher sto:OASIS,
         sto:UN-CEFACT .
@@ -1526,8 +1526,7 @@ sto:APICS a dbpcy:Abstraction100002137,
     sto:formationDate "1957-01-01"^^xsd:date ;
     sto:hasDBpediaResource <http://dbpedia.org/page/APICS> ;
     sto:hasOfficialResource <http://www.apics.org/apics> ;
-    sto:hasWikipediaArticle <http://en.wikipedia.org/wiki/APICS>,
-        <https://en.wikipedia.org/wiki/APICS> ;
+    sto:hasWikipediaArticle <https://en.wikipedia.org/wiki/APICS> ;
     sto:orgName "American Production and Inventory Control Society"@en .
 
 sto:ASAM a dbont:Agent,
@@ -1552,8 +1551,7 @@ sto:ASAM a dbont:Agent,
         "http://dbpedia.org/page/Association_for_Standardisation_of_Automation_and_Measuring_Systems" ;
     sto:hasHeadquaterIn dbr:Germany ;
     sto:hasOfficialResource <https://www.asam.net/> ;
-    sto:hasWikipediaArticle <http://en.wikipedia.org/wiki/Association_for_Standardisation_of_Automation_and_Measuring_Systems>,
-        <https://en.wikipedia.org/wiki/Association_for_Standardisation_of_Automation_and_Measuring_Systems>,
+    sto:hasWikipediaArticle <https://en.wikipedia.org/wiki/Association_for_Standardisation_of_Automation_and_Measuring_Systems>,
         "https://en.wikipedia.org/wiki/Association_for_Standardisation_of_Automation_and_Measuring_Systems" ;
     sto:orgName "Association for Standardization of Automation and Measuring Systems"@en .
 
@@ -1599,8 +1597,7 @@ sto:ASME a dbpcy:Abstraction100002137,
     sto:formationDate "1880-01-01"^^xsd:date ;
     sto:hasDBpediaResource dbres:ASME ;
     sto:hasOfficialResource <https://www.asme.org/> ;
-    sto:hasWikipediaArticle <http://en.wikipedia.org/wiki/ASME>,
-        <https://en.wikipedia.org/wiki/ASME> ;
+    sto:hasWikipediaArticle <https://en.wikipedia.org/wiki/ASME> ;
     sto:orgName "American Society of Mechanical Engineers"@en .
 
 sto:Communication a owl:NamedIndividual,
@@ -1694,8 +1691,7 @@ sto:IBM a dbpcy:Abstraction100002137,
     sto:formationDate "1911-06-16"^^xsd:date ;
     sto:hasDBpediaResource dbres:IBM ;
     sto:hasOfficialResource <http://www.ibm.com> ;
-    sto:hasWikipediaArticle <http://en.wikipedia.org/wiki/IBM>,
-        <https://en.wikipedia.org/wiki/IBM> ;
+    sto:hasWikipediaArticle <https://en.wikipedia.org/wiki/IBM> ;
     sto:orgName "International Business Machines Corporation"@en .
 
 sto:IEC_61131 a dbpcy:WikicatENStandards,
@@ -1714,7 +1710,7 @@ sto:IEC_61131 a dbpcy:WikicatENStandards,
     sto:hasDBpediaResource "http://dbpedia.org/page/IEC_61131" ;
     sto:hasOfficialResource "https://webstore.iec.ch/publication/4550" ;
     sto:hasTag "PLC Open"@en ;
-    sto:hasWikipediaArticle <http://en.wikipedia.org/wiki/IEC_61131>,
+    sto:hasWikipediaArticle "http://en.wikipedia.org/wiki/IEC_61131",
         "https://en.wikipedia.org/wiki/IEC_61131" ;
     sto:isPartOf sto:IEC_62714 ;
     sto:publisher sto:IEC ;
@@ -1733,7 +1729,7 @@ sto:IEC_61511 a dbpcy:WikicatElectricalStandards,
     sto:hasDBpediaResource "http://dbpedia.org/resource/IEC_61511" ;
     sto:hasOfficialResource "https://webstore.iec.ch/publication/24241" ;
     sto:hasTag "Functional safety - Safety instrumented systems for the process industry sector"@en ;
-    sto:hasWikipediaArticle <http://en.wikipedia.org/wiki/IEC_61511>,
+    sto:hasWikipediaArticle "http://en.wikipedia.org/wiki/IEC_61511",
         "https://en.wikipedia.org/wiki/IEC_61511" ;
     sto:motivation "Defines the functional safety requirements established by IEC 61508 in process industry sector terminology"@en ;
     sto:publisher sto:IEC ;
@@ -1757,7 +1753,7 @@ sto:IEC_61512 a dbpcy:WikicatANSIStandards,
     sto:hasDBpediaResource "http://dbpedia.org/resource/ISA-88" ;
     sto:hasOfficialResource "https://webstore.iec.ch/publication/5528" ;
     sto:hasTag "ISA-88"@en ;
-    sto:hasWikipediaArticle <http://en.wikipedia.org/wiki/ISA-88>,
+    sto:hasWikipediaArticle "http://en.wikipedia.org/wiki/ISA-88",
         "https://en.wikipedia.org/wiki/ISA-88" ;
     sto:motivation "The standard sought to address the following problems: lack of a universal model for batch control, difficulty in communicating user requirement, integration among batch automation suppliers, difficulty in batch control configuration."@en ;
     sto:publisher sto:IEC .
@@ -1783,7 +1779,7 @@ sto:IEC_61784 a dbpcy:WikicatComputerBuses,
     sto:hasOfficialResource "https://webstore.iec.ch/publication/5878" ;
     sto:hasPublicationDate "2014-08-19"^^xsd:date ;
     sto:hasTag "IEC Fieldbus (Profibus)"@en ;
-    sto:hasWikipediaArticle <http://en.wikipedia.org/wiki/Profibus> ;
+    sto:hasWikipediaArticle "http://en.wikipedia.org/wiki/Profibus" ;
     sto:motivation "Information description and communication mapping for fieldbus profiles"@en ;
     sto:publisher sto:IEC ;
     sto:relatedTo sto:IEC_61158 .
@@ -1801,7 +1797,7 @@ sto:IEC_61804 a dbont:Language,
     sto:hasDBpediaResource "http://dbpedia.org/resource/Device_Description_Language" ;
     sto:hasOfficialResource "https://webstore.iec.ch/publication/5953" ;
     sto:hasTag "EDDL"@en ;
-    sto:hasWikipediaArticle <http://en.wikipedia.org/wiki/Device_Description_Language>,
+    sto:hasWikipediaArticle "http://en.wikipedia.org/wiki/Device_Description_Language",
         "https://en.wikipedia.org/wiki/Device_Description_Language" ;
     sto:publisher sto:IEC ;
     sto:relatedTo sto:IEC_62453 .
@@ -1819,7 +1815,7 @@ sto:IEC_61850 a dbpcy:WikicatIECStandards,
     rdfs:comment "IEC 61850 is a standard for vendor-agnostic engineering of the configuration of Intelligent Electronic Devices for electrical substation automation systems to be able to communicate with each other.."@en ;
     sto:hasDBpediaResource "http://dbpedia.org/page/IEC_61850" ;
     sto:hasOfficialResource "https://webstore.iec.ch/publication/4550" ;
-    sto:hasWikipediaArticle <http://en.wikipedia.org/wiki/IEC_61850>,
+    sto:hasWikipediaArticle "http://en.wikipedia.org/wiki/IEC_61850",
         "https://en.wikipedia.org/wiki/IEC_61850" ;
     sto:publisher sto:IEC .
 
@@ -1855,7 +1851,7 @@ sto:IEC_62061 a dbpcy:WikicatElectricalStandards,
     sto:hasDBpediaResource "http://dbpedia.org/resource/IEC_62061" ;
     sto:hasOfficialResource "https://webstore.iec.ch/publication/22797" ;
     sto:hasTag "Safety of machinery"@en ;
-    sto:hasWikipediaArticle <http://en.wikipedia.org/wiki/IEC_62061>,
+    sto:hasWikipediaArticle "http://en.wikipedia.org/wiki/IEC_62061",
         "https://en.wikipedia.org/wiki/IEC_62061" ;
     sto:publisher sto:IEC .
 
@@ -1932,7 +1928,7 @@ sto:ISO_10303 a dbpcy:WikicatCADFileFormats,
     sto:hasClassification sto:ProductLifeCycleManagement ;
     sto:hasDBpediaResource "http://dbpedia.org/page/ISO_10303" ;
     sto:hasTag "STEP"@en ;
-    sto:hasWikipediaArticle <http://en.wikipedia.org/wiki/ISO_10303>,
+    sto:hasWikipediaArticle "http://en.wikipedia.org/wiki/ISO_10303",
         "https://en.wikipedia.org/wiki/ISO_10303" ;
     sto:publisher sto:ISO .
 
@@ -1962,7 +1958,7 @@ sto:ISO_13849 a dbpcy:WikicatISOStandards,
     sto:hasDBpediaResource "http://dbpedia.org/resource/ISO_13849" ;
     sto:hasDomain "Safety of machinery"@en ;
     sto:hasOfficialResource "http://www.iso.org/iso/home/store/catalogue_tc/catalogue_detail.htm?csnumber=69883" ;
-    sto:hasWikipediaArticle <http://en.wikipedia.org/wiki/ISO_13849>,
+    sto:hasWikipediaArticle "http://en.wikipedia.org/wiki/ISO_13849",
         "https://en.wikipedia.org/wiki/ISO_13849" ;
     sto:publisher sto:ISO .
 
@@ -1999,7 +1995,7 @@ sto:ISO_19439 a dbpcy:WikicatISOStandards,
     sto:hasDBpediaResource "http://dbpedia.org/page/ISO_19439" ;
     sto:hasOfficialResource "https://www.iso.org/standard/33833.html" ;
     sto:hasTag "19439"@en ;
-    sto:hasWikipediaArticle <http://en.wikipedia.org/wiki/ISO_19439>,
+    sto:hasWikipediaArticle "http://en.wikipedia.org/wiki/ISO_19439",
         "https://en.wikipedia.org/wiki/ISO_19439" ;
     sto:publisher sto:ISO .
 
@@ -2052,7 +2048,7 @@ sto:OPC_Foundation a dbont:Agent,
     sto:formationDate "1994-01-01"^^xsd:date ;
     sto:hasDBpediaResource "http://dbpedia.org/resource/Association_for_Standardisation_of_Automation_and_Measuring_Systems" ;
     sto:hasOfficialResource "https://opcfoundation.org/" ;
-    sto:hasWikipediaArticle <http://en.wikipedia.org/wiki/Association_for_Standardisation_of_Automation_and_Measuring_Systems>,
+    sto:hasWikipediaArticle "http://en.wikipedia.org/wiki/Association_for_Standardisation_of_Automation_and_Measuring_Systems",
         "https://en.wikipedia.org/wiki/OPC_Foundation" ;
     sto:orgName "OPC Foundation"@en .
 
@@ -2134,7 +2130,7 @@ sto:SE a dbpcy:Abstraction100002137,
     sto:formationDate "1936-01-01"^^xsd:date ;
     sto:hasDBpediaResource "http://dbpedia.org/page/Schneider_Electric" ;
     sto:hasOfficialResource "http://www.schneider-electric.com/ww/en/" ;
-    sto:hasWikipediaArticle <http://en.wikipedia.org/wiki/Schneider_Electric>,
+    sto:hasWikipediaArticle "http://en.wikipedia.org/wiki/Schneider_Electric",
         "https://en.wikipedia.org/wiki/Schneider_Electric" ;
     sto:orgName "Schneider Electric"@en .
 
@@ -2161,7 +2157,7 @@ sto:UN-CEFACT a dbpcy:Abstraction100002137,
     sto:abbreviation "UN/CEFACT" ;
     sto:hasDBpediaResource "http://dbpedia.org/page/UN/CEFACT" ;
     sto:hasOfficialResource "https://www.unece.org/cefact/" ;
-    sto:hasWikipediaArticle <http://en.wikipedia.org/wiki/UN/CEFACT>,
+    sto:hasWikipediaArticle "http://en.wikipedia.org/wiki/UN/CEFACT",
         "https://en.wikipedia.org/wiki/UN/CEFACT" ;
     sto:orgName "United Nations Centre for Trade Facilitation and Electronic Business"@en .
 
@@ -2185,7 +2181,7 @@ sto:VDMA a dbpcy:Abstraction100002137,
     sto:formationDate "1892-11-15"^^xsd:date ;
     sto:hasDBpediaResource "http://dbpedia.org/resource/VDMA" ;
     sto:hasOfficialResource "http://www.vdma.org" ;
-    sto:hasWikipediaArticle <http://en.wikipedia.org/wiki/VDMA>,
+    sto:hasWikipediaArticle "http://en.wikipedia.org/wiki/VDMA",
         "https://en.wikipedia.org/wiki/Mechanical_Engineering_Industry_Association" ;
     sto:orgName "Verband Deutscher Maschinen- und Anlagenbau"@de,
         "Mechanical Engineering Industry Association"@en .
@@ -2213,7 +2209,7 @@ sto:W3C_OWL a dbpcy:WikicatOntologyLanguages,
     sto:hasDBpediaResource "http://dbpedia.org/resource/Web_Ontology_Language" ;
     sto:hasOfficialResource "https://www.w3.org/OWL/" ;
     sto:hasTag "OWL"@en ;
-    sto:hasWikipediaArticle <http://en.wikipedia.org/wiki/Web_Ontology_Language>,
+    sto:hasWikipediaArticle "http://en.wikipedia.org/wiki/Web_Ontology_Language",
         "https://en.wikipedia.org/wiki/Web_Ontology_Language?oldformat=true" ;
     sto:publisher sto:W3C ;
     sto:relatedTo sto:W3C_RDF .
@@ -2273,7 +2269,7 @@ sto:BBF a dbpcy:Abstraction100002137,
     sto:formationDate "2008-01-01"^^xsd:date ;
     sto:hasDBpediaResource "http://dbpedia.org/resource/Broadband_Forum" ;
     sto:hasOfficialResource "https://www.broadband-forum.org/" ;
-    sto:hasWikipediaArticle <http://en.wikipedia.org/wiki/Broadband_Forum>,
+    sto:hasWikipediaArticle "http://en.wikipedia.org/wiki/Broadband_Forum",
         "https://en.wikipedia.org/wiki/Broadband_Forum" ;
     sto:orgName "Broadband Forum"@en .
 
@@ -2314,7 +2310,7 @@ sto:ETSI_DECT a dbpcy:WikicatMobileTelecommunicationsStandards,
     sto:hasDBpediaResource "http://dbpedia.org/resource/Digital_Enhanced_Cordless_Telecommunications" ;
     sto:hasOfficialResource "http://www.etsi.org/technologies-clusters/technologies/dect" ;
     sto:hasTag "Digital Enhanced Cordless Telecommunications"@en ;
-    sto:hasWikipediaArticle <http://en.wikipedia.org/wiki/Digital_Enhanced_Cordless_Telecommunications>,
+    sto:hasWikipediaArticle "http://en.wikipedia.org/wiki/Digital_Enhanced_Cordless_Telecommunications",
         "https://en.wikipedia.org/wiki/Digital_Enhanced_Cordless_Telecommunications" ;
     sto:publisher sto:ETSI .
 
@@ -2335,7 +2331,7 @@ sto:IEC_61499 a dbpcy:WikicatENStandards,
     sto:hasDBpediaResource "http://dbpedia.org/resource/IEC_61499" ;
     sto:hasOfficialResource "https://webstore.iec.ch/publication/5506" ;
     sto:hasTag "FBs distributed systems"@en ;
-    sto:hasWikipediaArticle <http://en.wikipedia.org/wiki/IEC_61499>,
+    sto:hasWikipediaArticle "http://en.wikipedia.org/wiki/IEC_61499",
         "https://en.wikipedia.org/wiki/IEC_61499" ;
     sto:motivation "Functional description, informational representation and communication mapping of application functionality. This standard describes how a distributed control application is composed of functional units (FB), which are executed in different context. It may help to describe how functions are distributed between different I40-Components and how the execution of the functions between the different I40-Components is controled."@en ;
     sto:publisher sto:IEC ;
@@ -2380,7 +2376,7 @@ sto:ISA-95 a dbpcy:WikicatANSIStandards,
     sto:hasDBpediaResource "http://dbpedia.org/resource/ANSI/ISA-95" ;
     sto:hasOfficialResource "https://www.isa.org/isa95/" ;
     sto:hasTag "Enterprise-Control System Integration"@en ;
-    sto:hasWikipediaArticle <http://en.wikipedia.org/wiki/ANSI/ISA-95>,
+    sto:hasWikipediaArticle "http://en.wikipedia.org/wiki/ANSI/ISA-95",
         "https://en.wikipedia.org/wiki/ANSI/ISA-95" ;
     sto:publisher sto:ANSI,
         sto:ISA .
@@ -2403,7 +2399,7 @@ sto:ISO_13584 a dbpcy:WikicatISOStandards,
     sto:hasDBpediaResource "http://dbpedia.org/resource/ISO_13584" ;
     sto:hasOfficialResource "https://webstore.iec.ch/publication/5380%0Ahttp://www.iso.org/iso/catalogue_detail.htm?csnumber=43423" ;
     sto:hasTag "Industrial automation systems and integration"@en ;
-    sto:hasWikipediaArticle <http://en.wikipedia.org/wiki/ISO_13584>,
+    sto:hasWikipediaArticle "http://en.wikipedia.org/wiki/ISO_13584",
         "https://en.wikipedia.org/wiki/ISO_13584" ;
     sto:motivation "Standard data elements (properties) are used as elements in administration shell"@en ;
     sto:publisher sto:ISO ;
@@ -2487,7 +2483,7 @@ sto:W3C_RDF a dbpcy:WikicatBibliographyFileFormats,
     sto:hasDBpediaResource "http://dbpedia.org/resource/Resource_Description_Framework" ;
     sto:hasOfficialResource "https://www.w3.org/RDF/" ;
     sto:hasTag "RDF"@en ;
-    sto:hasWikipediaArticle <http://en.wikipedia.org/wiki/Resource_Description_Framework>,
+    sto:hasWikipediaArticle "http://en.wikipedia.org/wiki/Resource_Description_Framework",
         "https://en.wikipedia.org/wiki/Resource_Description_Framework" ;
     sto:publisher sto:W3C .
 
@@ -2531,7 +2527,7 @@ sto:IEC_61158 a dbpcy:WikicatIECStandards,
     sto:hasDBpediaResource "http://dbpedia.org/page/Fieldbus" ;
     sto:hasOfficialResource "http://www.fieldbus.org/" ;
     sto:hasTag "Fieldbus"@en ;
-    sto:hasWikipediaArticle <http://en.wikipedia.org/wiki/Fieldbus>,
+    sto:hasWikipediaArticle "http://en.wikipedia.org/wiki/Fieldbus",
         "https://en.wikipedia.org/wiki/Fieldbus" ;
     sto:publisher sto:IEC ;
     sto:relatedTo sto:IEC_61784 .
@@ -2572,7 +2568,7 @@ sto:MESA a dbont:Settlement,
     sto:formationDate "1992-01-01"^^xsd:date ;
     sto:hasDBpediaResource "http://dbpedia.org/page/Manufacturing_Enterprise_Solutions_Association" ;
     sto:hasOfficialResource "http://www.mesa.org/en/index.asp" ;
-    sto:hasWikipediaArticle <http://en.wikipedia.org/wiki/Manufacturing_Enterprise_Solutions_Association>,
+    sto:hasWikipediaArticle "http://en.wikipedia.org/wiki/Manufacturing_Enterprise_Solutions_Association",
         "https://en.wikipedia.org/wiki/Manufacturing_Enterprise_Solutions_Association" ;
     sto:orgName "Manufacturing Enterprise Solutions Association"@en .
 
@@ -2610,7 +2606,7 @@ sto:OASIS a dbpcy:Abstraction100002137,
     sto:formationDate "1993-01-01"^^xsd:date ;
     sto:hasDBpediaResource "http://dbpedia.org/page/OASIS_(organization)" ;
     sto:hasOfficialResource "https://www.oasis-open.org/" ;
-    sto:hasWikipediaArticle <http://en.wikipedia.org/wiki/OASIS_(organization)>,
+    sto:hasWikipediaArticle "http://en.wikipedia.org/wiki/OASIS_(organization)",
         "https://en.wikipedia.org/wiki/OASIS_(organization)" ;
     sto:orgName "Organization for the Advancement of Structured Information Standards"@en .
 
@@ -2695,8 +2691,8 @@ sto:ANSI a dbpcy:Abstraction100002137,
     sto:hasDBpediaResource dbres:American_National_Standards_Institute ;
     sto:hasHeadquaterIn dbr:United_States ;
     sto:hasOfficialResource <https://www.ansi.org/> ;
-    sto:hasWikipediaArticle <http://en.wikipedia.org/wiki/American_National_Standards_Institute>,
-        <https://en.wikipedia.org/wiki/American_National_Standards_Institute?oldformat=true> ;
+    sto:hasWikipediaArticle <https://en.wikipedia.org/wiki/American_National_Standards_Institute?oldformat=true>,
+        "http://en.wikipedia.org/wiki/American_National_Standards_Institute" ;
     sto:orgName "American National Standards Institute"@en .
 
 sto:BusinessProcessExecution a owl:NamedIndividual,
@@ -2717,7 +2713,7 @@ sto:CAD a owl:NamedIndividual,
     rdfs:isDefinedBy <https://en.wikipedia.org/wiki/Computer-aided_design> ;
     sto:domainName "Computer-Aided Design"@en ;
     sto:hasDBpediaResource dbres:Computer-aided_design ;
-    sto:hasWikipediaArticle <http://en.wikipedia.org/wiki/Computer-aided_design> .
+    sto:hasWikipediaArticle "http://en.wikipedia.org/wiki/Computer-aided_design" .
 
 sto:ISA a dbpcy:Abstraction100002137,
         dbpcy:Association108049401,
@@ -2746,8 +2742,7 @@ sto:ISA a dbpcy:Abstraction100002137,
     sto:formationDate "1945-04-28"^^xsd:date ;
     sto:hasDBpediaResource dbres:International_Society_of_Automation ;
     sto:hasOfficialResource <https://www.isa.org/> ;
-    sto:hasWikipediaArticle <http://en.wikipedia.org/wiki/International_Society_of_Automation>,
-        <https://en.wikipedia.org/wiki/International_Society_of_Automation> ;
+    sto:hasWikipediaArticle <https://en.wikipedia.org/wiki/International_Society_of_Automation> ;
     sto:orgName "International Society of Automation"@en .
 
 sto:OMG a dbpcy:Abstraction100002137,
@@ -2781,7 +2776,7 @@ sto:OMG a dbpcy:Abstraction100002137,
     sto:formationDate "1989-01-01"^^xsd:date ;
     sto:hasDBpediaResource "http://dbpedia.org/resource/Object_Management_Group" ;
     sto:hasOfficialResource "http://www.omg.org/" ;
-    sto:hasWikipediaArticle <http://en.wikipedia.org/wiki/Object_Management_Group>,
+    sto:hasWikipediaArticle "http://en.wikipedia.org/wiki/Object_Management_Group",
         "https://en.wikipedia.org/wiki/Object_Management_Group" ;
     sto:orgName "Object Management Group"@en .
 
@@ -2841,7 +2836,7 @@ sto:W3C a dbpcy:Abstraction100002137,
     sto:formationDate "1994-10-01"^^xsd:date ;
     sto:hasDBpediaResource "http://dbpedia.org/resource/World_Wide_Web_Consortium" ;
     sto:hasOfficialResource "https://www.w3.org/" ;
-    sto:hasWikipediaArticle <http://en.wikipedia.org/wiki/World_Wide_Web_Consortium>,
+    sto:hasWikipediaArticle "http://en.wikipedia.org/wiki/World_Wide_Web_Consortium",
         "https://en.wikipedia.org/wiki/World_Wide_Web_Consortium" ;
     sto:orgName "World Wide Web Consortium"@en .
 
@@ -2904,7 +2899,7 @@ sto:IEC_62714 a dbpcy:WikicatComputerFileFormats,
     sto:hasOfficialResource "https://www.automationml.org/" ;
     sto:hasTag "AML"@en,
         "AutomationML"@en ;
-    sto:hasWikipediaArticle <http://en.wikipedia.org/wiki/AutomationML>,
+    sto:hasWikipediaArticle "http://en.wikipedia.org/wiki/AutomationML",
         "https://en.wikipedia.org/wiki/AutomationML" ;
     sto:publisher sto:IEC ;
     sto:relatedTo sto:IEC_61360,
@@ -2930,7 +2925,7 @@ sto:M2M a dbpcy:Abstraction100002137,
     rdfs:comment "Machine to machine refers to direct communication between devices using any communications channel, including wired and wireless"@en ;
     sto:domainName "Machine to machine Communication"@en ;
     sto:hasDBpediaResource "http://dbpedia.org/resource/Machine_to_machine" ;
-    sto:hasWikipediaArticle <http://en.wikipedia.org/wiki/Machine_to_machine>,
+    sto:hasWikipediaArticle "http://en.wikipedia.org/wiki/Machine_to_machine",
         "https://en.wikipedia.org/wiki/Machine_to_machine" .
 
 sto:ProductDevelopmentLifeCycle a owl:Class ;
@@ -2973,7 +2968,7 @@ sto:ETSI a dbpcy:Abstraction100002137,
     sto:formationDate "1988-01-01"^^xsd:date ;
     sto:hasDBpediaResource "http://dbpedia.org/resource/ETSI" ;
     sto:hasOfficialResource "http://www.etsi.org/" ;
-    sto:hasWikipediaArticle <http://en.wikipedia.org/wiki/ETSI>,
+    sto:hasWikipediaArticle "http://en.wikipedia.org/wiki/ETSI",
         "https://en.wikipedia.org/wiki/ETSI" ;
     sto:orgName "European Telecommunications Standards Institute"@en .
 
@@ -3039,7 +3034,7 @@ sto:IEC_62541 a dbpcy:WikicatComputerStandards,
     sto:hasDomain sto:IndustrialAutomation ;
     sto:hasOfficialResource "https://opcfoundation.org/about/opc-technologies/opc-ua/" ;
     sto:hasTag "OPC UA"@en ;
-    sto:hasWikipediaArticle <http://en.wikipedia.org/wiki/OPC_Unified_Architecture>,
+    sto:hasWikipediaArticle "http://en.wikipedia.org/wiki/OPC_Unified_Architecture",
         "https://en.wikipedia.org/wiki/OPC_Unified_Architecture" ;
     sto:publisher sto:IEC ;
     sto:relatedTo sto:IEC_61499,
@@ -3171,8 +3166,7 @@ sto:ISO a dbpcy:Abstraction100002137,
     sto:hasHeadquaterIn dbr:Switzerland ;
     sto:hasOfficialResource <https://www.iso.org>,
         <https://www.iso.org/about-us.html> ;
-    sto:hasWikipediaArticle <http://en.wikipedia.org/wiki/International_Organization_for_Standardization>,
-        <https://en.wikipedia.org/wiki/International_Organization_for_Standardization> ;
+    sto:hasWikipediaArticle <https://en.wikipedia.org/wiki/International_Organization_for_Standardization> ;
     sto:orgName "Internationale Organisation für Normung"@de,
         "International Organization for Standardization"@en,
         "The International Organization for Standardization"@en,
@@ -3217,8 +3211,7 @@ sto:IEC a dbpcy:Abstraction100002137,
     sto:formationDate "1906-06-26"^^xsd:date ;
     sto:hasDBpediaResource dbres:International_Electrotechnical_Commission ;
     sto:hasOfficialResource <http://www.iec.ch/> ;
-    sto:hasWikipediaArticle <http://en.wikipedia.org/wiki/International_Electrotechnical_Commission>,
-        <https://en.wikipedia.org/wiki/International_Electrotechnical_Commission> ;
+    sto:hasWikipediaArticle <https://en.wikipedia.org/wiki/International_Electrotechnical_Commission> ;
     sto:orgName "International Electrotechnical Commission"@en,
         "Commission électrotechnique internationale"@fr .
 
