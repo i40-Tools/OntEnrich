@@ -24,7 +24,7 @@ For enriching the ontology, first specify all the properties in the `options.jso
 
 Next, execute `enrich.py` with `options.json` as a parameter:
 ```bash
-python enrich.py options.json
+python enrich.py --options options.json
 ```
 
 ## Example
