@@ -1,0 +1,33 @@
+{
+    "necessary": {
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "literal, uri",
+        "http://www.w3.org/2000/01/rdf-schema#label": "literal",
+        "http://www.w3.org/2000/01/rdf-schema#comment": "literal",
+        "https://w3id.org/i40/sto#publisher": "sto-entity",
+        "https://w3id.org/i40/sto#hasDomain": "literal, sto-entity",
+        "http://purl.org/dc/terms/license": "literal",
+        "https://w3id.org/i40/sto#developer": "sto-entity"
+    },
+    "useful": {
+        "https://w3id.org/i40/sto#hasOfficialResource": "uri",
+        "https://w3id.org/i40/sto#hasClassification": "rami-entity, sto-entity",
+        "https://w3id.org/i40/sto#hasDBpediaResource": "uri",
+        "http://www.w3.org/2002/07/owl#sameAs": "sto-entity",
+        "http://purl.org/dc/terms/subject": "dbrc-entity",
+        "https://w3id.org/i40/sto#hasWikipediaArticle": "uri",
+        "http://purl.org/linguistics/gold/hypernym": "dbres-entity",
+        "https://w3id.org/i40/sto#relatedTo": "sto-entity",
+        "https://w3id.org/i40/sto#hasPublicationDate": "literal",
+        "https://w3id.org/i40/sto#isPartOf": "sto-entity",
+        "http://www.w3.org/ns/prov#wasDerivedFrom": "sto-entity",
+        "https://w3id.org/i40/sto#isImplementationOf": "sto-entity"
+    },
+    "additional": {
+        "https://w3id.org/i40/sto#hasTag": "literal",
+        "https://w3id.org/i40/sto#motivation": "literal",
+        "http://www.w3.org/2004/02/skos/core#altLabel": "literal",
+        "http://www.w3.org/2004/02/skos/core#note": "literal",
+        "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": "uri",
+        "http://www.w3.org/2000/01/rdf-schema#seeAlso": "literal"
+    }
+}
