@@ -5,6 +5,7 @@
 @prefix deo: <http://purl.org/spar/deo/> .
 @prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix geo: <http://www.geonames.org/ontology#> .
+@prefix om2: <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix sto: <https://w3id.org/i40/sto#> .
@@ -25,6 +26,7 @@
 @base <https://w3id.org/i40/sto#> .
 
 <https://w3id.org/i40/sto#> rdf:type owl:Ontology ;
+                             owl:imports <https://w3id.org/i40/sto#> ;
                              dcterms:modified "2017-09-08"^^xsd:date ;
                              dc11:title "Standards Ontology"@en ;
                              dcterms:creator <http://data.semanticweb.org/person/steffen-lohmann> ;
@@ -103,19 +105,24 @@ sto:edition rdf:type owl:AnnotationProperty .
 xsd:date rdf:type rdfs:Datatype .
 
 
+###  http://www.w3.org/2001/XMLSchema#gYear
+xsd:gYear rdf:type rdfs:Datatype .
+
+
 #################################################################
 #    Object Properties
 #################################################################
 
-###  http://purl.org/dc/terms/license
-dcterms:license rdf:type owl:ObjectProperty ;
-                rdfs:domain sto:Standard ;
-                rdfs:range dcterms:LicenseDocument .
+###  http://purl.org/dc/terms/hasLicense
+dcterms:hasLicense rdf:type owl:ObjectProperty ;
+                   rdfs:domain sto:Standard ;
+                   rdfs:range dcterms:LicenseDocument .
 
 
-###  http://www.w3.org/ns/prov#wasDerivedFrom
-prov:wasDerivedFrom rdf:type owl:ObjectProperty ;
-                    rdfs:subPropertyOf sto:relatedTo .
+###  http://www.w3.org/ns/prov#wasGeneratedBy
+prov:wasGeneratedBy rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf sto:relatedTo ;
+                    rdfs:comment "Standard A has influences in Standard B. For example, IEC_61499 hasInfluenceIn IEC_61804-2(EDDL)"@en .
 
 
 ###  http://xmlns.com/foaf/0.1/maker
@@ -130,15 +137,6 @@ sto:belongsTo rdf:type owl:ObjectProperty ;
               rdfs:label "belongs To"@en .
 
 
-###  https://w3id.org/i40/sto#developer
-sto:developer rdf:type owl:ObjectProperty ;
-              rdfs:subPropertyOf foaf:maker ;
-              rdfs:domain sto:Standard ;
-              rdfs:range sto:StandardOrganization ;
-              rdfs:comment "The organization that developed this Standard"@en ;
-              rdfs:label "developer"@en .
-
-
 ###  https://w3id.org/i40/sto#hasClassification
 sto:hasClassification rdf:type owl:ObjectProperty ;
                       rdfs:domain sto:Standard ;
@@ -147,18 +145,57 @@ sto:hasClassification rdf:type owl:ObjectProperty ;
                       rdfs:label "has Classification"@en .
 
 
+###  https://w3id.org/i40/sto#hasDeveloper
+sto:hasDeveloper rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf foaf:maker ;
+                 rdfs:domain sto:Standard ;
+                 rdfs:range sto:StandardOrganization ;
+                 rdfs:comment "The organization that developed this Standard"@en ;
+                 rdfs:label "has Developer"@en .
+
+
 ###  https://w3id.org/i40/sto#hasDomain
 sto:hasDomain rdf:type owl:ObjectProperty ;
               rdfs:domain sto:Standard ;
               rdfs:range sto:Domain .
 
 
+###  https://w3id.org/i40/sto#hasFileSize
+sto:hasFileSize rdf:type owl:ObjectProperty ;
+                rdfs:domain foaf:Document ;
+                rdfs:range om2:Measure ;
+                rdfs:comment "The size of document file in some unit e.g. 104 Kilobyte."@en ;
+                rdfs:label "has File Size"@en ;
+                rdfs:seeAlso <https://webstore.iec.ch/webstore/webstore.nsf/xpFAQ.xsp?Open&id=ADMN-7NALM5> ;
+                skos:note """1. Reference for om2:Measure <http://www.ontology-of-units-of-measure.org/page/om-2/Measure>
+                         2. om2:Measure om2:hasNumericalValue xsd:float;
+                         3. om2:Measure om2:hasUnit om2:Unit;
+                         4. om2:hasUnit om2:InformationCapacityUnit; is another possibility for range that could not be verified.
+                         5. rdfs:seeAlso <http://www.ontology-of-units-of-measure.org/page/om-2/kilobyte> 
+                         6. Documentation on Measure <https://github.com/HajoRijgersberg/OM>""" .
+
+
 ###  https://w3id.org/i40/sto#hasHeadquaterIn
 sto:hasHeadquaterIn rdf:type owl:ObjectProperty ;
                     rdfs:domain sto:StandardOrganization ;
-                    rdfs:range dbo:Country ;
+                    rdfs:range dbo:Place ;
                     rdfs:comment "Denotes the countries in which the Headquarter of the organization who publishes the Standart"@en ;
                     rdfs:label "has Headquater In"@en .
+
+
+###  https://w3id.org/i40/sto#hasMotivation
+sto:hasMotivation rdf:type owl:ObjectProperty ;
+                  rdfs:domain sto:Standard ;
+                  rdfs:range deo:Motivation .
+
+
+###  https://w3id.org/i40/sto#hasPublisher
+sto:hasPublisher rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf foaf:maker ;
+                 rdfs:domain sto:Standard ;
+                 rdfs:range sto:StandardOrganization ;
+                 rdfs:comment "The organization that published this Standard"@en ;
+                 rdfs:label "has Publisher"@en .
 
 
 ###  https://w3id.org/i40/sto#hasTag
@@ -167,11 +204,19 @@ sto:hasTag rdf:type owl:ObjectProperty ;
            rdfs:range muto:Tag .
 
 
+###  https://w3id.org/i40/sto#hasTechnicalCommittee
+sto:hasTechnicalCommittee rdf:type owl:ObjectProperty ;
+                          rdfs:domain sto:Standard ;
+                          rdfs:range sto:TechnicalCommittee ;
+                          rdfs:comment "Specifies the Technical Committe or a Sub-Committee that is responsible for creation and maintenance of a standard"@en ;
+                          rdfs:label "has Technical Committee"@en .
+
+
 ###  https://w3id.org/i40/sto#isDescribedin
 sto:isDescribedin rdf:type owl:ObjectProperty ;
                   rdfs:domain sto:StandardClassification ;
-                  rdfs:range sto:StandarizationInitiative ;
-                  rdfs:comment "Links the Standarization Initiatives with the Classification of Standards"@en ;
+                  rdfs:range sto:StandardizationFramework ;
+                  rdfs:comment "Links the Standarization Frameworks with the Classification of Standards"@en ;
                   rdfs:label "is Described in"@en .
 
 
@@ -191,21 +236,6 @@ sto:isPartOf rdf:type owl:ObjectProperty ;
              rdfs:label "is Part Of"@en .
 
 
-###  https://w3id.org/i40/sto#motivation
-sto:motivation rdf:type owl:ObjectProperty ;
-               rdfs:domain sto:Standard ;
-               rdfs:range deo:Motivation .
-
-
-###  https://w3id.org/i40/sto#publisher
-sto:publisher rdf:type owl:ObjectProperty ;
-              rdfs:subPropertyOf foaf:maker ;
-              rdfs:domain sto:Standard ;
-              rdfs:range sto:StandardOrganization ;
-              rdfs:comment "The organization that published this Standard"@en ;
-              rdfs:label "publisher"@en .
-
-
 ###  https://w3id.org/i40/sto#relatedTo
 sto:relatedTo rdf:type owl:ObjectProperty ,
                        owl:SymmetricProperty ,
@@ -217,13 +247,31 @@ sto:relatedTo rdf:type owl:ObjectProperty ,
               skos:altLabel "has Associated Standard"@en .
 
 
+###  https://w3id.org/i40/sto#useStructureOf
+sto:useStructureOf rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf sto:relatedTo ;
+                   rdfs:comment "Standard A uses the structure of Standard B. For example, OPC UA uses Structure Of IEC_61804 (EDDL)"@en ;
+                   rdfs:label "useStructureOf"@en .
+
+
+###  https://w3id.org/i40/sto#uses
+sto:uses rdf:type owl:ObjectProperty ;
+         rdfs:subPropertyOf sto:relatedTo ;
+         rdfs:comment "Defines that Standard A uses Standard B. For example, IEC_62714(AML) uses MathML."@en ;
+         rdfs:label "uses"@en .
+
+
 #################################################################
 #    Data properties
 #################################################################
 
+###  http://purl.org/dc/terms/language
+dcterms:language rdf:type owl:DatatypeProperty .
+
+
 ###  https://w3id.org/i40/sto#abbreviation
 sto:abbreviation rdf:type owl:DatatypeProperty ;
-                 rdfs:domain sto:StandardOrganization ;
+                 rdfs:domain owl:thing ;
                  rdfs:range rdf:PlainLiteral ;
                  rdfs:comment "Abbreviated  name of the organization"@en ;
                  rdfs:label "has Abbreviated Name"@en .
@@ -243,6 +291,13 @@ sto:formationDate rdf:type owl:DatatypeProperty ;
                   rdfs:range xsd:date ;
                   rdfs:comment "Formation date of the Organization"@en ;
                   rdfs:label "has Formation Date"@en .
+
+
+###  https://w3id.org/i40/sto#hasAvailableLanguage
+sto:hasAvailableLanguage rdf:type owl:DatatypeProperty ;
+                         rdfs:subPropertyOf dcterms:language ;
+                         rdfs:comment "Languages in which the document of the Standard is available, e.g., English, French, Spanish"@en ;
+                         rdfs:label "has Available Language"@en .
 
 
 ###  https://w3id.org/i40/sto#hasDBpediaResource
@@ -287,12 +342,27 @@ sto:hasPublicationDate rdf:type owl:DatatypeProperty ;
                        rdfs:label "has Publication Date"@en .
 
 
+###  https://w3id.org/i40/sto#hasStabilityDate
+sto:hasStabilityDate rdf:type owl:DatatypeProperty ;
+                     rdfs:domain sto:Standard ;
+                     rdfs:range xsd:gYear ;
+                     rdfs:comment "The contents of the publications will remain unchanged up to the Stability date. At this date, the publication will be either reconfirmed, withdrawn, replaced by a revised edition or amended. If there is a revision or amendment on-going then this is mentioned under the publication in the \"Work in progress\" tab, if you don't see this tab it means that there is no project under development."@en ;
+                     rdfs:label "has Stability Date"@en ;
+                     rdfs:seeAlso <https://webstore.iec.ch/webstore/webstore.nsf/xpFAQ.xsp?Open&id=ADMN-7NALM5> ;
+                     skos:note "The data specified is not actually a Date but an Year " .
+
+
 ###  https://w3id.org/i40/sto#hasStatus
 sto:hasStatus rdf:type owl:DatatypeProperty ;
               rdfs:domain sto:Standard ;
               rdfs:range xsd:string ;
               rdfs:comment "Publication status of the Standard, e.g., Published, under preparation, Released"@en ;
               rdfs:label "has Status"@en .
+
+
+###  https://w3id.org/i40/sto#hasTag
+sto:hasTag rdf:type owl:DatatypeProperty ;
+           rdfs:range rdfs:Literal .
 
 
 ###  https://w3id.org/i40/sto#hasTask
@@ -305,7 +375,7 @@ sto:hasTask rdf:type owl:DatatypeProperty ;
 
 ###  https://w3id.org/i40/sto#hasWikipediaArticle
 sto:hasWikipediaArticle rdf:type owl:DatatypeProperty ;
-                        rdfs:range xsd:string .
+                        rdfs:range rdfs:Literal .
 
 
 ###  https://w3id.org/i40/sto#orgName
@@ -332,6 +402,10 @@ sto:stoPartName rdf:type owl:DatatypeProperty ;
 dbo:Country rdf:type owl:Class .
 
 
+###  http://dbpedia.org/ontology#Place
+dbo:Place rdf:type owl:Class .
+
+
 ###  http://purl.org/dc/terms/LicenseDocument
 dcterms:LicenseDocument rdf:type owl:Class ;
                         rdfs:comment "A legal document giving official permission to do something with a Resource."@en ;
@@ -345,6 +419,14 @@ muto:Tag rdf:type owl:Class .
 
 ###  http://purl.org/spar/deo/Motivation
 deo:Motivation rdf:type owl:Class .
+
+
+###  http://www.ontology-of-units-of-measure.org/resource/om-2/Measure
+om2:Measure rdf:type owl:Class .
+
+
+###  http://www.w3.org/2002/07/owl#thing
+owl:thing rdf:type owl:Class .
 
 
 ###  http://xmlns.com/foaf/0.1/Document
@@ -474,22 +556,71 @@ sto:StandardPart rdf:type owl:Class ;
                  rdfs:label "StandardPart" .
 
 
-###  https://w3id.org/i40/sto#StandarizationInitiative
-sto:StandarizationInitiative rdf:type owl:Class ;
+###  https://w3id.org/i40/sto#StandardizationFramework
+sto:StandardizationFramework rdf:type owl:Class ;
                              rdfs:comment "Describes existings Standardizations Initiatives, e.g, RAMI, NIST."@en ;
-                             rdfs:label "Standarization Initiative"@en .
+                             rdfs:label "Standarization Framework"@en ;
+                             skos:altLabel "Reference Architecture"@en .
+
+
+###  https://w3id.org/i40/sto#TechnicalCommittee
+sto:TechnicalCommittee rdf:type owl:Class .
 
 
 #################################################################
 #    Individuals
 #################################################################
 
+###  http://dbpedia.org/resource#Beijing
+dbr:Beijing rdf:type owl:NamedIndividual .
+
+
+###  http://dbpedia.org/resource#Berlin
+dbr:Berlin rdf:type owl:NamedIndividual .
+
+
+###  http://dbpedia.org/resource#Boston
+dbr:Boston rdf:type owl:NamedIndividual .
+
+
+###  http://dbpedia.org/resource#Chicago
+dbr:Chicago rdf:type owl:NamedIndividual .
+
+
 ###  http://dbpedia.org/resource#China
 dbr:China rdf:type owl:NamedIndividual .
 
 
+###  http://dbpedia.org/resource#Cologne
+dbr:Cologne rdf:type owl:NamedIndividual .
+
+
+###  http://dbpedia.org/resource#Eumseong
+dbr:Eumseong rdf:type owl:NamedIndividual .
+
+
+###  http://dbpedia.org/resource#Frankfurt
+dbr:Frankfurt rdf:type owl:NamedIndividual .
+
+
+###  http://dbpedia.org/resource#Geneva
+dbr:Geneva rdf:type owl:NamedIndividual .
+
+
 ###  http://dbpedia.org/resource#Germany
 dbr:Germany rdf:type owl:NamedIndividual .
+
+
+###  http://dbpedia.org/resource#Höhenkirchen-Siegertsbrunn
+dbr:Höhenkirchen-Siegertsbrunn rdf:type owl:NamedIndividual .
+
+
+###  http://dbpedia.org/resource#New_York_City
+dbr:New_York_City rdf:type owl:NamedIndividual .
+
+
+###  http://dbpedia.org/resource#Paris
+dbr:Paris rdf:type owl:NamedIndividual .
 
 
 ###  http://dbpedia.org/resource#South_Korea
@@ -502,6 +633,50 @@ dbr:Switzerland rdf:type owl:NamedIndividual .
 
 ###  http://dbpedia.org/resource#United_States
 dbr:United_States rdf:type owl:NamedIndividual .
+
+
+###  http://dbpedia.org/resource#Valbonne
+dbr:Valbonne rdf:type owl:NamedIndividual .
+
+
+###  http://dbpedia.org/resource#_Arizona
+dbr:_Arizona rdf:type owl:NamedIndividual .
+
+
+###  http://dbpedia.org/resource#_California
+dbr:_California rdf:type owl:NamedIndividual .
+
+
+###  http://dbpedia.org/resource#_Georgia
+dbr:_Georgia rdf:type owl:NamedIndividual .
+
+
+###  http://dbpedia.org/resource#_Maryland
+dbr:_Maryland rdf:type owl:NamedIndividual .
+
+
+###  http://dbpedia.org/resource#_Massachusetts
+dbr:_Massachusetts rdf:type owl:NamedIndividual .
+
+
+###  http://dbpedia.org/resource#_Michigan
+dbr:_Michigan rdf:type owl:NamedIndividual .
+
+
+###  http://dbpedia.org/resource#_New_York
+dbr:_New_York rdf:type owl:NamedIndividual .
+
+
+###  http://dbpedia.org/resource#_North_Carolina
+dbr:_North_Carolina rdf:type owl:NamedIndividual .
+
+
+###  http://dbpedia.org/resource#_Texas
+dbr:_Texas rdf:type owl:NamedIndividual .
+
+
+###  http://dbpedia.org/resource#Washington,_D.C.
+<http://dbpedia.org/resource#Washington,_D.C.> rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/i40/rami#AdminShellGeneral
@@ -608,10 +783,6 @@ rami:Identification rdf:type owl:NamedIndividual ,
                     sto:isDescribedin sto:AdministrationShell .
 
 
-###  https://w3id.org/i40/rami#Identifikation
-rami:Identifikation rdf:type owl:NamedIndividual .
-
-
 ###  https://w3id.org/i40/rami#Information
 rami:Information rdf:type owl:NamedIndividual ,
                           rami:RAMIITLayer ;
@@ -714,7 +885,7 @@ rami:safety rdf:type owl:NamedIndividual .
 ###  https://w3id.org/i40/sto#ANSI
 sto:ANSI rdf:type owl:NamedIndividual ,
                   sto:StandardOrganization ;
-         sto:hasHeadquaterIn dbr:United_States ;
+         sto:hasHeadquaterIn <http://dbpedia.org/resource#Washington,_D.C.> ;
          sto:abbreviation "ANSI" ;
          sto:formationDate "1918-05-14"^^xsd:date ;
          sto:orgName "American National Standards Institute"@en ;
@@ -728,6 +899,7 @@ sto:ANSI rdf:type owl:NamedIndividual ,
 ###  https://w3id.org/i40/sto#APICS
 sto:APICS rdf:type owl:NamedIndividual ,
                    sto:StandardOrganization ;
+          sto:hasHeadquaterIn dbr:Chicago ;
           sto:formationDate "1957-01-01"^^xsd:date ;
           sto:orgName "American Production and Inventory Control Society"@en ;
           rdfs:comment "American Production and Inventory Control Society."@en ;
@@ -741,7 +913,7 @@ sto:APICS rdf:type owl:NamedIndividual ,
 sto:ASAM rdf:type owl:NamedIndividual ,
                   sto:StandardOrganization ;
          sto:belongsTo dbr:Germany ;
-         sto:hasHeadquaterIn dbr:Germany ;
+         sto:hasHeadquaterIn dbr:Höhenkirchen-Siegertsbrunn ;
          sto:abbreviation "ASAM" ;
          sto:formationDate "1998-12-01"^^xsd:date ;
          sto:hasDBpediaResource "http://dbpedia.org/page/Association_for_Standardisation_of_Automation_and_Measuring_Systems" ;
@@ -757,7 +929,7 @@ sto:ASAM rdf:type owl:NamedIndividual ,
 ###  https://w3id.org/i40/sto#ASAM_ODS
 sto:ASAM_ODS rdf:type owl:NamedIndividual ,
                       sto:Standard ;
-             sto:publisher sto:ASAM ;
+             sto:hasPublisher sto:ASAM ;
              sto:hasOfficialResource "https://wiki.asam.net/display/STANDARDS/ASAM+ODS" ;
              rdfs:comment "Set up a test data management system on top of test systems that produce measured or calculated data from testing activities"@en ;
              rdfs:label "ASAM ODS"@en .
@@ -766,6 +938,7 @@ sto:ASAM_ODS rdf:type owl:NamedIndividual ,
 ###  https://w3id.org/i40/sto#ASME
 sto:ASME rdf:type owl:NamedIndividual ,
                   sto:StandardOrganization ;
+         sto:hasHeadquaterIn dbr:New_York_City ;
          sto:abbreviation "ASME" ;
          sto:formationDate "1880-01-01"^^xsd:date ;
          sto:orgName "American Society of Mechanical Engineers"@en ;
@@ -779,17 +952,17 @@ sto:ASME rdf:type owl:NamedIndividual ,
 sto:ASME_Y1441 rdf:type owl:NamedIndividual ,
                         sto:Standard ;
                sto:hasClassification sto:ModelingPractice ;
-               sto:publisher sto:ASME ;
+               sto:hasPublisher sto:ASME ;
                sto:hasDBpediaResource "http://dbpedia.org/resource/ASME_Y14.41" ;
                sto:hasOfficialResource "https://www.asme.org/products/codes-standards/y1441-2012-digital-product-definition-data" ;
-               sto:hasWikipediaArticle "https://en.wikipedia.org/wiki/ASME_Y14.41>" ;
+               sto:hasWikipediaArticle "https://en.wikipedia.org/wiki/ASME_Y14.41" ;
                rdfs:comment "ASME Y14.41 establishs requirements for model-based definition upon CAD software and those who use CAD software to create product definition within the 3D model."@en ;
                rdfs:label "ASME Y14.41"@en .
 
 
 ###  https://w3id.org/i40/sto#AdministrationShell
 sto:AdministrationShell rdf:type owl:NamedIndividual ,
-                                 sto:StandarizationInitiative ;
+                                 sto:StandardizationFramework ;
                         rdfs:comment "Represents the classifications of the standards according to the submodels of the administration shell."@en ;
                         rdfs:label "Administration Shell"@en .
 
@@ -797,23 +970,24 @@ sto:AdministrationShell rdf:type owl:NamedIndividual ,
 ###  https://w3id.org/i40/sto#B2MML
 sto:B2MML rdf:type owl:NamedIndividual ,
                    sto:Standard ;
-          sto:developer sto:MESA ;
           sto:hasClassification sto:BusinessProcessExecution ,
                                 sto:EnterpriseLevel ;
+          sto:hasDeveloper sto:MESA ;
+          sto:hasPublisher sto:MESA ;
           sto:isImplementationOf sto:ISA-95 ;
-          sto:publisher sto:MESA ;
           sto:hasDBpediaResource "http://dbpedia.org/resource/B2MML" ;
           sto:hasOfficialResource "https://services.mesa.org/ResourceLibrary/ShowResource/0f47758b-60f0-40c6-a71b-fa7b2363fb3a" ;
+          sto:hasTag "B2MML"@en ;
           sto:hasWikipediaArticle "https://en.wikipedia.org/wiki/B2MML" ;
           rdfs:comment "B2MML or Business To Manufacturing Markup Language is an XML implementation of the ANSI/ISA-95 family of standards (ISA-95)"@en ;
-          rdfs:label "B2MML" ;
-          skos:altLabel "IEC 62264"@en ;
-          sto:hasTag "B2MML"@en .
+          rdfs:label "Business To Manufacturing Markup Language" ;
+          skos:altLabel "IEC 62264"@en .
 
 
 ###  https://w3id.org/i40/sto#BBF
 sto:BBF rdf:type owl:NamedIndividual ,
                  sto:StandardOrganization ;
+        sto:hasHeadquaterIn dbr:_California ;
         sto:abbreviation "BBF" ;
         sto:formationDate "2008-01-01"^^xsd:date ;
         sto:hasDBpediaResource "http://dbpedia.org/resource/Broadband_Forum" ;
@@ -827,39 +1001,40 @@ sto:BBF rdf:type owl:NamedIndividual ,
 ###  https://w3id.org/i40/sto#BBF_TR-069
 sto:BBF_TR-069 rdf:type owl:NamedIndividual ,
                         sto:Standard ;
-               sto:developer sto:BBF ;
-               sto:publisher sto:BBF ;
+               sto:hasDeveloper sto:BBF ;
+               sto:hasPublisher sto:BBF ;
                sto:hasDBpediaResource "http://dbpedia.org/resource/TR-069" ;
                sto:hasOfficialResource "https://www.broadband-forum.org/standards-and-software/technical-specifications/tr-069-files-tools" ;
+               sto:hasTag "CPE WAN Management Protocol"@en ;
                sto:hasWikipediaArticle "https://en.wikipedia.org/wiki/TR-069" ;
                rdfs:comment "Digital Enhanced Cordless Telecommunications (DECT™) is the ETSI standard for short-range cordless communications, which can be adapted for many applications and can be used over unlicensed frequency allocations world-wide."@en ;
-               rdfs:label "BBF TR-069"@en ;
-               sto:hasTag "CPE WAN Management Protocol"@en .
+               rdfs:label "BBF TR-069"@en .
 
 
 ###  https://w3id.org/i40/sto#BPEL
 sto:BPEL rdf:type owl:NamedIndividual ,
                   sto:Standard ;
          sto:hasClassification sto:BusinessProcessExecution ;
-         sto:publisher sto:OASIS ;
+         sto:hasPublisher sto:OASIS ;
          sto:hasDBpediaResource "http://dbpedia.org/resource/Business_Process_Execution_Language" ;
          sto:hasOfficialResource "https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=wsbpel" ;
+         sto:hasTag "BPEL"@en ;
          sto:hasWikipediaArticle "https://en.wikipedia.org/wiki/Business_Process_Execution_Language" ;
          rdfs:comment "The Web Services Business Process Execution Language (WS-BPEL), commonly known as BPEL Business Process Execution Language, is a standard executable language for specifying actions within business processes with web services."@en ;
-         rdfs:label "BPEL"@en ;
-         sto:hasTag "BPEL"@en .
+         rdfs:label "Business Process Execution Language"@en .
 
 
 ###  https://w3id.org/i40/sto#BPMN
 sto:BPMN rdf:type owl:NamedIndividual ,
                   sto:Standard ;
-         sto:developer sto:OMG ;
          sto:hasClassification sto:SCM ;
+         sto:hasDeveloper sto:OMG ;
          sto:hasDBpediaResource "http://dbpedia.org/page/Business_Process_Model_and_Notation" ;
          sto:hasOfficialResource "http://www.bpmn.org/" ;
-         rdfs:comment "Business Process Model and Notation  is a graphical representation for specifying business processes in a business process model."@en ;
-         rdfs:label "BPMN"@en ;
-         sto:hasTag "BPMN"@en .
+         sto:hasTag "BPMN"@en ;
+         sto:hasWikipediaArticle "https://en.wikipedia.org/wiki/Business_Process_Model_and_Notation" ;
+         rdfs:comment "Business Process Model and Notation is a graphical representation for specifying business processes in a business process model."@en ;
+         rdfs:label "Business Process Model Notation"@en .
 
 
 ###  https://w3id.org/i40/sto#BusinessProcessExecution
@@ -910,7 +1085,7 @@ sto:CrossLevel rdf:type owl:NamedIndividual ,
 sto:DIN rdf:type owl:NamedIndividual ,
                  sto:StandardOrganization ;
         sto:belongsTo dbr:Germany ;
-        sto:hasHeadquaterIn dbr:Germany ;
+        sto:hasHeadquaterIn dbr:Berlin ;
         sto:abbreviation "DIN"@de ;
         sto:formationDate "1918-01-01"^^xsd:date ;
         sto:orgName "Deutsches Institut für Normung"@en ;
@@ -925,17 +1100,19 @@ sto:DIN rdf:type owl:NamedIndividual ,
 ###  https://w3id.org/i40/sto#DIN_SPEC_16592
 sto:DIN_SPEC_16592 rdf:type owl:NamedIndividual ,
                             sto:Standard ;
-                   prov:wasDerivedFrom sto:IEC_62541 ,
+                   prov:wasGeneratedBy sto:IEC_62541 ,
                                        sto:IEC_62714 ;
-                   sto:developer sto:DIN ;
-                   sto:publisher sto:DIN ;
+                   sto:hasDeveloper sto:DIN ;
+                   sto:hasPublisher sto:DIN ;
                    rdfs:comment "Combining OPC Unified Architecture and Automation Markup Language."@en ;
-                   rdfs:label "DIN SPEC 16592"@en .
+                   rdfs:label "DIN SPEC 16592"@en ;
+                   sto:hasOfficialResource <https://www.beuth.de/de/technische-regel/din-spec-16592/265597431> .
 
 
 ###  https://w3id.org/i40/sto#DMSC
 sto:DMSC rdf:type owl:NamedIndividual ,
                   sto:StandardOrganization ;
+         sto:hasHeadquaterIn dbr:_Texas ;
          rdfs:comment "Dimensional Metrology Standards Consortium (DMSC) is to identify urgently needed standards in the field of dimensional metrology, and to promote, foster, and encourage the development and interoperability of these standards, along with related and supporting standards that will benefit the industry as a whole."@en ;
          rdfs:label "Dimensional Metrology Standards Consortium"@en ;
          sto:hasOfficialResource <http://www.dmis.org/> .
@@ -951,6 +1128,7 @@ sto:DeviceLevel rdf:type owl:NamedIndividual ,
 ###  https://w3id.org/i40/sto#ETSI
 sto:ETSI rdf:type owl:NamedIndividual ,
                   sto:StandardOrganization ;
+         sto:hasHeadquaterIn dbr:Valbonne ;
          sto:abbreviation "ETSI"@en ;
          sto:formationDate "1988-01-01"^^xsd:date ;
          sto:hasDBpediaResource "http://dbpedia.org/resource/ETSI" ;
@@ -964,41 +1142,41 @@ sto:ETSI rdf:type owl:NamedIndividual ,
 ###  https://w3id.org/i40/sto#ETSI_DECT
 sto:ETSI_DECT rdf:type owl:NamedIndividual ,
                        sto:Standard ;
-              sto:developer sto:ETSI ;
-              sto:publisher sto:ETSI ;
+              sto:hasDeveloper sto:ETSI ;
+              sto:hasPublisher sto:ETSI ;
               sto:hasDBpediaResource "http://dbpedia.org/resource/Digital_Enhanced_Cordless_Telecommunications" ;
               sto:hasOfficialResource "http://www.etsi.org/technologies-clusters/technologies/dect" ;
+              sto:hasTag "Digital Enhanced Cordless Telecommunications"@en ;
               sto:hasWikipediaArticle "https://en.wikipedia.org/wiki/Digital_Enhanced_Cordless_Telecommunications" ;
               rdfs:comment "Digital Enhanced Cordless Telecommunications (DECT) is the ETSI standard for short-range cordless communications, which can be adapted for many applications and can be used over unlicensed frequency allocations world-wide."@en ;
-              rdfs:label "ETSI DECT" ;
-              sto:hasTag "Digital Enhanced Cordless Telecommunications"@en .
+              rdfs:label "ETSI DECT" .
 
 
 ###  https://w3id.org/i40/sto#ETSI_LTN
 sto:ETSI_LTN rdf:type owl:NamedIndividual ,
                       sto:Standard ;
-             sto:developer sto:ETSI ;
+             sto:hasDeveloper sto:ETSI ;
              sto:hasDomain sto:M2M ;
-             sto:publisher sto:ETSI ;
+             sto:hasPublisher sto:ETSI ;
              sto:relatedTo sto:ETSI_DECT ;
              sto:hasOfficialResource "http://www.etsi.org/technologies-clusters/technologies/low-throughput-networks" ;
+             sto:hasTag "Low Throughput Networks"@en ;
              rdfs:comment "Machine-to-Machine communications and the Internet of Things (IoT) involve the connection of potentially billions of connected objects which need only low throughput connectivity. The anticipated benefits of creating new dedicated IoT Low Throughput Networks (LTN) include lower costs, the creation of new applications, a reduction in electromagnetic radiation by improving data transmission efficiency LTN are expected to be crucial to the success of IoT standardization and implementation, and to provide the basis for many new and innovative applications. "@en ;
-             rdfs:label "ETSI LTN"@en ;
-             sto:hasTag "Low Throughput Networks"@en .
+             rdfs:label "ETSI LTN"@en .
 
 
 ###  https://w3id.org/i40/sto#ETSI_ULE
 sto:ETSI_ULE rdf:type owl:NamedIndividual ,
                       sto:Standard ;
-             sto:developer sto:ETSI ;
-             sto:publisher sto:ETSI ;
+             sto:hasDeveloper sto:ETSI ;
+             sto:hasPublisher sto:ETSI ;
              sto:relatedTo sto:ETSI_DECT ;
              sto:hasDBpediaResource "http://dbpedia.org/resource/ULE_-_Ultra_Low_Energy" ;
              sto:hasOfficialResource "http://www.etsi.org/technologies-clusters/technologies/dect/dect-ule" ;
+             sto:hasTag "ETSI ULE"@en ;
              sto:hasWikipediaArticle "https://en.wikipedia.org/wiki/DECT_Ultra_Low_Energy" ;
              rdfs:comment "DECT Ultra Low Energy (DECT ULE) is a technology based on DECT, and intended for Machine-to-Machine communications such as Home and Industrial automation. The main characteristics of the technology are ultra-low power consumption (much lower than IEEE 802.11) and wider coverage (much wider than IEEE 802.15 and Bluetooth Low Energy)."@en ;
-             rdfs:label "ETSI ULE"@en ;
-             sto:hasTag "Ultra Low Energy"@en .
+             rdfs:label "Ultra Low Energy"@en .
 
 
 ###  https://w3id.org/i40/sto#EndOfLifeReclying
@@ -1016,9 +1194,26 @@ sto:EnterpriseLevel rdf:type owl:NamedIndividual ,
                     rdfs:label "Enterprise Level"@en .
 
 
+###  https://w3id.org/i40/sto#FunctionalSafety
+sto:FunctionalSafety rdf:type owl:NamedIndividual ,
+                              sto:Domain ;
+                     rdfs:comment "Functional Safety"@en ;
+                     rdfs:label "Functional Safety"@en .
+
+
+###  https://w3id.org/i40/sto#GPLv2
+sto:GPLv2 rdf:type owl:NamedIndividual ,
+                   dcterms:LicenseDocument ;
+          rdfs:comment "Published under Open Content License."@en ;
+          rdfs:label "GNU General Public License"@en ;
+          rdfs:seeAlso "<https://opcfoundation.org/license/gpl.htm>" ;
+          skos:prefLabel "OCL 1.0" .
+
+
 ###  https://w3id.org/i40/sto#IBM
 sto:IBM rdf:type owl:NamedIndividual ,
                  sto:StandardOrganization ;
+        sto:hasHeadquaterIn dbr:_New_York ;
         sto:abbreviation "IBM" ;
         sto:formationDate "1911-06-16"^^xsd:date ;
         sto:orgName "International Business Machines Corporation"@en ;
@@ -1031,6 +1226,7 @@ sto:IBM rdf:type owl:NamedIndividual ,
 ###  https://w3id.org/i40/sto#IEC
 sto:IEC rdf:type owl:NamedIndividual ,
                  sto:StandardOrganization ;
+        sto:hasHeadquaterIn dbr:Geneva ;
         sto:abbreviation "IEC" ;
         sto:formationDate "1906-06-26"^^xsd:date ;
         sto:orgName "Commission électrotechnique internationale"@fr ,
@@ -1045,34 +1241,26 @@ sto:IEC rdf:type owl:NamedIndividual ,
 sto:IEC_14443 rdf:type owl:NamedIndividual ,
                        sto:Standard ;
               owl:sameAs sto:ISO_14443 ;
-              sto:publisher sto:IEC ,
-                            sto:ISO ;
+              sto:hasPublisher sto:IEC ,
+                               sto:ISO ;
               sto:hasDBpediaResource "http://dbpedia.org/resource/ISO/IEC_14443" ;
               sto:hasOfficialResource "https://www.iso.org/standard/70170.html" ;
+              sto:hasTag "IEC 14443"@en ;
               sto:hasWikipediaArticle "https://en.wikipedia.org/wiki/ISO/IEC_14443" ;
               rdfs:comment "The ISO/IEC 14443 standard is a four-part international standard for contact-less smart cards operating at 13.56 MHz in close proximity (~10cm) with a reader antenna. This ISO standard describes the modulation and transmission protocols between card and reader to create interoperability for contact-less smart card products. There are two main communication protocols supported by the ISO/IEC 14443 standard, they are addressed as Type A and Type B. Most High Frequency (13.56 MHz) proximity tags are using these guidelines for their communication."@en ;
-              rdfs:label "IEC 14443"@en ;
-              sto:hasTag "Identification cards -- Contactless integrated circuit cards -- Proximity cards"@en .
+              rdfs:label "ISO/IEC 14443"@en .
 
 
 ###  https://w3id.org/i40/sto#IEC_15459
 sto:IEC_15459 rdf:type owl:NamedIndividual ,
                        sto:Standard ;
               owl:sameAs sto:ISO_15459 ;
-              sto:publisher sto:IEC ,
-                            sto:ISO ;
+              sto:hasPublisher sto:IEC ,
+                               sto:ISO ;
               sto:hasOfficialResource "https://www.iso.org/standard/54779.html" ;
+              sto:hasTag "Information technology -- Automatic identification and data capture techniques -- Unique identification"@en ;
               rdfs:comment "ISO/IEC 15459-1:2014 specifies a unique string of characters for the identification of individual transport units. The character string is intended to be represented in a bar code label or other AIDC media attached to the entity to meet management needs. To address management needs, different types of entities are recognized in the various parts of ISO/IEC 15459, which allows different requirements to be met by the identities associated with each type. The rules for the unique identification for individual transport units, to identify physical logistical transfers, with the identity relevant for the duration of one or more items in the load being held or transported as part of that load, are defined and supported by example."@en ;
-              rdfs:label "IEC 15459"@en ;
-              sto:hasTag "Information technology -- Automatic identification and data capture techniques -- Unique identification"@en .
-
-
-###  https://w3id.org/i40/sto#IEC_20140_5
-sto:IEC_20140_5 rdf:type owl:NamedIndividual ,
-                         sto:Standard ;
-                owl:sameAs sto:ISO_20140_5 ;
-                sto:publisher sto:IEC ;
-                rdfs:label "IEC 20140"@en .
+              rdfs:label "IEC 15459"@en .
 
 
 ###  https://w3id.org/i40/sto#IEC_24760
@@ -1086,8 +1274,8 @@ sto:IEC_24760 rdf:type owl:NamedIndividual ,
                                     rami:Security ,
                                     rami:Station ,
                                     sto:ProductModelDataExchange ;
-              sto:hasDomain sto:M2M ;
-              sto:publisher sto:IEC ;
+              sto:hasDomain sto:ITSecurity ;
+              sto:hasPublisher sto:IEC ;
               sto:relatedTo sto:IEC_62443 ;
               sto:hasOfficialResource "https://www.iso.org/standard/57914.html" ;
               sto:hasPublicationDate "2011-01-12"^^xsd:date ;
@@ -1099,14 +1287,14 @@ sto:IEC_24760 rdf:type owl:NamedIndividual ,
 sto:IEC_29161 rdf:type owl:NamedIndividual ,
                        sto:Standard ;
               owl:sameAs sto:ISO_29161 ;
-              sto:publisher sto:IEC ,
-                            sto:ISO ;
+              sto:hasPublisher sto:IEC ,
+                               sto:ISO ;
               sto:hasOfficialResource "https://www.iso.org/standard/45240.html" ;
               sto:hasPublicationDate "2016-08-01"^^xsd:date ;
+              sto:hasTag "Information technology -- Data structure -- Unique identification for the Internet of Things"@en ;
               rdfs:comment "ISO/IEC 29161:2016 establishes a unique identification scheme for the Internet of Things (IoT), based on existing and evolving data structures. This International Standard specifies the common rules applicable for unique identification that are required to ensure full compatibility across different identities. The unique identification is a universal construct for any physical object, virtual object, or person. It is used in IoT information systems that need to track or otherwise refer to entities. It is intended for use with any IoT media."@en ;
               rdfs:label "IEC 29161"@en ;
-              sto:hasDomain "Automatic identification and data capture techniques"@en ;
-              sto:hasTag "Information technology -- Data structure -- Unique identification for the Internet of Things"@en .
+              sto:hasDomain "Automatic identification and data capture techniques"@en .
 
 
 ###  https://w3id.org/i40/sto#IEC_29182-1
@@ -1117,8 +1305,8 @@ sto:IEC_29182-1 rdf:type owl:NamedIndividual ,
                                       rami:FieldDevice ,
                                       sto:ProductionSystemModelData ;
                 sto:hasDomain sto:M2M ;
-                sto:publisher sto:IEC ,
-                              sto:ISO ;
+                sto:hasPublisher sto:IEC ,
+                                 sto:ISO ;
                 sto:relatedTo sto:IEC_61158 ;
                 sto:hasOfficialResource "https://www.iso.org/standard/45261.html" ;
                 sto:hasPublicationDate "2013-06-01"^^xsd:date ;
@@ -1129,21 +1317,32 @@ sto:IEC_29182-1 rdf:type owl:NamedIndividual ,
 ###  https://w3id.org/i40/sto#IEC_42010
 sto:IEC_42010 rdf:type owl:NamedIndividual ,
                        sto:Standard ;
-              sto:publisher sto:IEC ,
-                            sto:ISO ;
+              sto:hasPublisher sto:IEC ,
+                               sto:ISO ;
               sto:hasDBpediaResource "http://dbpedia.org/page/ISO/IEC_42010" ;
               sto:hasOfficialResource "http://www.iso-architecture.org/ieee-1471/" ;
+              sto:hasTag "ISO/IEC/IEEE 42010"@en ;
               sto:hasWikipediaArticle "https://en.wikipedia.org/wiki/ISO/IEC_42010" ;
               rdfs:comment "ISO/IEC/IEEE 42010:2011 defines requirements on the description of system, software and enterprise architectures. It aims to standardise the practice of architecture description by defining standard terms, presenting a conceptual foundation for expressing, communicating and reviewing architectures and specifying requirements that apply to architecture descriptions, architecture frameworks and architecture description languages."@en ;
               rdfs:label "IEC 42010"@en ;
-              skos:note "The IIRA is based in this standards" ;
-              sto:hasTag "ISO/IEC/IEEE 42010"@en .
+              skos:note "The IIRA is based in this standards" .
+
+
+###  https://w3id.org/i40/sto#IEC_60086
+sto:IEC_60086 rdf:type owl:NamedIndividual ,
+                       sto:Standard ;
+              sto:hasPublisher sto:IEC ;
+              sto:hasDBpediaResource "http://dbpedia.org/page/Battery_nomenclature#IEC_60086" ;
+              sto:hasOfficialResource "https://webstore.iec.ch/publication/22991" ;
+              sto:hasWikipediaArticle "https://en.wikipedia.org/wiki/Battery_nomenclature#IEC_60086" ;
+              rdfs:comment "Standard battery nomenclature describes portable dry cell batteries that have physical dimensions and electrical characteristics interchangeable between manufacturers."@en ;
+              rdfs:label "IEC 60086"@en .
 
 
 ###  https://w3id.org/i40/sto#IEC_60364
 sto:IEC_60364 rdf:type owl:NamedIndividual ,
                        sto:Standard ;
-              sto:publisher sto:IEC ;
+              sto:hasPublisher sto:IEC ;
               sto:hasDBpediaResource "http://dbpedia.org/page/IEC_60364" ;
               sto:hasWikipediaArticle "https://en.wikipedia.org/wiki/IEC_60364" ;
               rdfs:comment "Electrical Installations for Buildings is the International Electrotechnical Commission's international standard on electrical installations of buildings"@en ;
@@ -1157,9 +1356,7 @@ sto:IEC_60839-5-2 rdf:type owl:NamedIndividual ,
                                         rami:ControlDevice ,
                                         rami:FieldDevice ,
                                         rami:Security ;
-                  sto:hasDomain sto:M2M ;
-                  sto:publisher sto:IEC ;
-                  sto:relatedTo sto:IEC_62443 ;
+                  sto:hasPublisher sto:IEC ;
                   sto:hasOfficialResource "https://webstore.iec.ch/publication/24120" ;
                   sto:hasPublicationDate "2016-02-03"^^xsd:date ;
                   rdfs:comment "IEC 60839-5-2:2016 specifies the general equipment requirements for the performance, reliability, resilience, security and safety characteristics of supervised premises transceiver (SPT) installed in supervised premises and used in alarm transmission systems (ATS). A supervised premises transceiver can be a stand-alone device or an integrated part of an alarm system. These requirements also apply to the SPT sharing means of interconnection, control, communication and power supplies with other applications. The alarm transmission system requirements and classifications are defined within IEC 60839-5-1. This new edition includes the following significant technical changes with respect to the previous edition: reflects the current technological state of art (IP networks) ,harmonizes with the ATS categories introduced in IEC 60839-5-1:2014; introduces test requirements."@en ;
@@ -1169,7 +1366,7 @@ sto:IEC_60839-5-2 rdf:type owl:NamedIndividual ,
 ###  https://w3id.org/i40/sto#IEC_60870
 sto:IEC_60870 rdf:type owl:NamedIndividual ,
                        sto:Standard ;
-              sto:publisher sto:IEC ;
+              sto:hasPublisher sto:IEC ;
               sto:hasDBpediaResource "http://dbpedia.org/page/IEC_60870" ;
               sto:hasWikipediaArticle "https://en.wikipedia.org/wiki/IEC_60870" ;
               rdfs:comment "In electrical engineering and power system automation, the IEC 60870 series define systems used for telecontrol (supervisory control and data acquisition)"@en ;
@@ -1179,7 +1376,7 @@ sto:IEC_60870 rdf:type owl:NamedIndividual ,
 ###  https://w3id.org/i40/sto#IEC_60904
 sto:IEC_60904 rdf:type owl:NamedIndividual ,
                        sto:Standard ;
-              sto:publisher sto:IEC ;
+              sto:hasPublisher sto:IEC ;
               sto:hasOfficialResource "https://webstore.iec.ch/publication/3881" ;
               sto:hasPublicationDate "2017-05-18"^^xsd:date ;
               rdfs:comment "Photovoltaic devices"@en ;
@@ -1192,35 +1389,36 @@ sto:IEC_61131 rdf:type owl:NamedIndividual ,
               sto:hasClassification rami:ControlDevice ,
                                     rami:Station ,
                                     rami:WorkCenter ;
+              sto:hasPublisher sto:IEC ;
               sto:isPartOf sto:IEC_62714 ;
-              sto:publisher sto:IEC ;
               sto:relatedTo sto:IEC_61499 ;
               sto:hasDBpediaResource "http://dbpedia.org/page/IEC_61131" ;
               sto:hasOfficialResource "https://webstore.iec.ch/publication/4550" ;
+              sto:hasTag "PLC Open"@en ;
               sto:hasWikipediaArticle "https://en.wikipedia.org/wiki/IEC_61131" ;
               rdfs:comment "IEC 61131 is an IEC standard for programmable controllers. It was known as IEC 1131 before the change in numbering system by IEC. The parts of the IEC 61131 standard are prepared and maintained working group 7, programmable control systems, of subcommittee SC 65B of Technical Committee TC65 of the IEC."@en ;
-              rdfs:label "IEC 60131"@en ;
-              sto:hasTag "PLC Open"@en .
+              rdfs:label "IEC 61131"@en .
 
 
 ###  https://w3id.org/i40/sto#IEC_61158
 sto:IEC_61158 rdf:type owl:NamedIndividual ,
                        sto:Standard ;
-              sto:publisher sto:IEC ;
+              sto:hasPublisher sto:IEC ;
               sto:relatedTo sto:IEC_61784 ;
               sto:hasDBpediaResource "http://dbpedia.org/page/Fieldbus" ;
               sto:hasOfficialResource "http://www.fieldbus.org/" ;
+              sto:hasTag "Fieldbus"@en ;
               sto:hasWikipediaArticle "https://en.wikipedia.org/wiki/Fieldbus" ;
               rdfs:comment "Fieldbus is the name of a family of industrial computer network protocols used for real-time distributed control, standardized as IEC 61158. A complex automated industrial system such as manufacturing assembly line usually needs a distributed control system an organized hierarchy of controller systems to function. In this hierarchy, there is usually a Human Machine Interface (HMI) at the top, where an operator can monitor or operate the system. This is typically linked to a middle layer of programmable logic controllers (PLC) via a non-time-critical communications system (e.g. Ethernet). At the bottom of the control chain is the fieldbus that links the PLCs to the components that actually do the work, such as sensors, actuators, electric motors, console lights, switches, valves and contactors"@en ;
-              rdfs:label "IEC 61158"@en ;
-              sto:hasTag "Fieldbus"@en .
+              rdfs:label "IEC 61158"@en .
 
 
 ###  https://w3id.org/i40/sto#IEC_61334
 sto:IEC_61334 rdf:type owl:NamedIndividual ,
                        sto:Standard ;
-              sto:publisher sto:IEC ;
+              sto:hasPublisher sto:IEC ;
               sto:hasDBpediaResource "http://dbpedia.org/page/IEC_61334" ;
+              sto:hasOfficialResource "https://webstore.iec.ch/publication/5308" ;
               rdfs:comment "IEC 61334 , known as Distribution automation using distribution line carrier systems, is a standard for low-speed reliable power line communications by electricity meters, water meters and SCADA."@en ;
               rdfs:label "IEC 61334"@en .
 
@@ -1231,23 +1429,25 @@ sto:IEC_61360 rdf:type owl:NamedIndividual ,
               sto:hasClassification rami:Asset ,
                                     rami:Engineering ,
                                     sto:ManufacturingModelData ;
-              sto:publisher sto:IEC ;
+              sto:hasPublisher sto:IEC ;
               sto:relatedTo sto:ISO_13584 ,
                             sto:eClass ;
               sto:hasOfficialResource "http://cdd.iec.ch/cdd/iec61360/iec61360.nsf" ,
                                       "https://webstore.iec.ch/publication/5380" ;
+              sto:hasTag "IEC Common Data Dictionary"@en ;
               rdfs:comment "IEC Common Data Dictionary (IEC CDD) is a common repository of concepts for all electrotechnical domains based on the methodology and the information model of IEC 61360 series. Standard data elements types with associated classification scheme for electric items."@en ;
               rdfs:label "IEC 61360"@en ;
               sto:hasDomain "Electrotechnical"@en ;
-              sto:hasTag "IEC Common Data Dictionary"@en ;
-              sto:motivation "Standard data elements (properties) are used as elements in administration shell"@en .
+              sto:hasMotivation "Standard data elements (properties) are used as elements in administration shell"@en .
 
 
 ###  https://w3id.org/i40/sto#IEC_61400
 sto:IEC_61400 rdf:type owl:NamedIndividual ,
                        sto:Standard ;
-              sto:publisher sto:IEC ;
+              sto:hasPublisher sto:IEC ;
               sto:hasDBpediaResource "http://dbpedia.org/page/IEC_61400" ;
+              sto:hasOfficialResource "https://webstore.iec.ch/publication/26603" ;
+              sto:hasPublicationDate "2017-03-03"^^xsd:date ;
               rdfs:comment "IEC 61334 , known as Distribution automation using distribution line carrier systems, is a standard for low-speed reliable power line communications by electricity meters, water meters and SCADA."@en ;
               rdfs:label "IEC 61400"@en .
 
@@ -1257,48 +1457,49 @@ sto:IEC_61499 rdf:type owl:NamedIndividual ,
                        sto:Standard ;
               sto:hasClassification rami:ControlDevice ,
                                     rami:FieldDevice ;
-              sto:publisher sto:IEC ;
+              sto:hasPublisher sto:IEC ;
               sto:relatedTo sto:IEC_61131 ,
                             sto:IEC_62541 ;
               sto:hasDBpediaResource "http://dbpedia.org/resource/IEC_61499" ;
               sto:hasOfficialResource "https://webstore.iec.ch/publication/5506" ;
+              sto:hasTag "FBs distributed systems"@en ;
               sto:hasWikipediaArticle "https://en.wikipedia.org/wiki/IEC_61499" ;
               rdfs:comment "Function Blocks - Architecture Related Applications http://www.eclipse.org/4diac/ (sourceforge.net/projects/oooneida-fbench/) http://timeme.io/  not accepted by the Industry yet. http://www.holobloc.com/Proposed for IEC to overcome the restricctions of IEC 61131"@en ;
               rdfs:label "IEC 61499"@en ;
-              sto:hasTag "FBs distributed systems"@en ;
-              sto:motivation "Functional description, informational representation and communication mapping of application functionality. This standard describes how a distributed control application is composed of functional units (FB), which are executed in different context. It may help to describe how functions are distributed between different I40-Components and how the execution of the functions between the different I40-Components is controled."@en .
+              sto:hasMotivation "Functional description, informational representation and communication mapping of application functionality. This standard describes how a distributed control application is composed of functional units (FB), which are executed in different context. It may help to describe how functions are distributed between different I40-Components and how the execution of the functions between the different I40-Components is controled."@en .
 
 
 ###  https://w3id.org/i40/sto#IEC_61508
 sto:IEC_61508 rdf:type owl:NamedIndividual ,
                        sto:Standard ;
               sto:hasClassification rami:Safety ;
-              sto:publisher sto:IEC ;
+              sto:hasPublisher sto:IEC ;
               sto:relatedTo sto:IEC_61511 ;
               sto:hasDBpediaResource "http://dbpedia.org/resource/IEC_61508" ;
               sto:hasOfficialResource "http://www.iec.ch/functionalsafety/" ;
+              sto:hasTag "Functional Safety of Electrical/Electronic/Programmable Electronic Safety-related Systems"@en ;
               sto:hasWikipediaArticle "https://en.wikipedia.org/wiki/IEC_61508" ;
-              dcterms:license "Private"@en ;
+              dcterms:hasLicense "Private"@en ;
               rdfs:comment "Functional safety is a concept applicable across all industry sectors. It is fundamental to the enabling of complex technology used for safety-related systems. It provides the assurance that the safety-related systems will offer the necessary risk reduction required to achieve safety for the equipment. The oil and gas industry, nuclear plants and the machinery sector, to name but a few, all rely heavily on functional safety to achieve safety for the equipment giving rise to the hazards."@en ;
               rdfs:label "IEC 60508"@en ;
-              sto:hasTag "Functional Safety of Electrical/Electronic/Programmable Electronic Safety-related Systems"@en ;
-              sto:motivation "Defines the functional safety requirements established by IEC 61508 in process industry sector terminology"@en .
+              sto:hasMotivation "Defines the functional safety requirements established by IEC 61508 in process industry sector terminology"@en .
 
 
 ###  https://w3id.org/i40/sto#IEC_61511
 sto:IEC_61511 rdf:type owl:NamedIndividual ,
                        sto:Standard ;
-              sto:publisher sto:IEC ;
+              sto:hasDomain sto:FunctionalSafety ;
+              sto:hasPublisher sto:IEC ;
               sto:relatedTo sto:IEC_62061 ,
                             sto:ISO_13849 ;
               sto:hasDBpediaResource "http://dbpedia.org/resource/IEC_61511" ;
               sto:hasOfficialResource "https://webstore.iec.ch/publication/24241" ;
+              sto:hasTag "Functional safety - Safety instrumented systems for the process industry sector"@en ;
               sto:hasWikipediaArticle "https://en.wikipedia.org/wiki/IEC_61511" ;
-              dcterms:license "Private"@en ;
+              dcterms:hasLicense "Private"@en ;
               rdfs:comment "IEC 61511 is a technical standard which sets out practices in the engineering of systems that ensure the safety of an industrial process through the use of instrumentation."@en ;
               rdfs:label "IEC 61511" ;
-              sto:hasTag "Functional safety - Safety instrumented systems for the process industry sector"@en ;
-              sto:motivation "Defines the functional safety requirements established by IEC 61508 in process industry sector terminology"@en .
+              sto:hasMotivation "Defines the functional safety requirements established by IEC 61508 in process industry sector terminology"@en .
 
 
 ###  https://w3id.org/i40/sto#IEC_61512
@@ -1308,14 +1509,14 @@ sto:IEC_61512 rdf:type owl:NamedIndividual ,
                                     rami:Product ,
                                     rami:Station ,
                                     rami:WorkCenter ;
-              sto:publisher sto:IEC ;
+              sto:hasPublisher sto:IEC ;
               sto:hasDBpediaResource "http://dbpedia.org/resource/ISA-88" ;
               sto:hasOfficialResource "https://webstore.iec.ch/publication/5528" ;
+              sto:hasTag "ISA-88"@en ;
               sto:hasWikipediaArticle "https://en.wikipedia.org/wiki/ISA-88" ;
               rdfs:comment "Batch control - Models and terminology"@en ;
               rdfs:label "IEC 61512"@en ;
-              sto:hasTag "ISA-88"@en ;
-              sto:motivation "The standard sought to address the following problems: lack of a universal model for batch control, difficulty in communicating user requirement, integration among batch automation suppliers, difficulty in batch control configuration."@en .
+              sto:hasMotivation "The standard sought to address the following problems: lack of a universal model for batch control, difficulty in communicating user requirement, integration among batch automation suppliers, difficulty in batch control configuration."@en .
 
 
 ###  https://w3id.org/i40/sto#IEC_61784
@@ -1325,16 +1526,16 @@ sto:IEC_61784 rdf:type owl:NamedIndividual ,
                                     rami:CommunicationSubModel ,
                                     rami:ControlDevice ,
                                     rami:FieldDevice ;
-              sto:publisher sto:IEC ;
+              sto:hasPublisher sto:IEC ;
               sto:relatedTo sto:IEC_61158 ;
               sto:hasDBpediaResource "http://dbpedia.org/page/Profibus" ;
               sto:hasOfficialResource "https://webstore.iec.ch/publication/5878" ;
               sto:hasPublicationDate "2014-08-19"^^xsd:date ;
-              dcterms:license "Private"@en ;
+              sto:hasTag "IEC Fieldbus (Profibus)"@en ;
+              dcterms:hasLicense "Private"@en ;
               rdfs:comment "Industrial communication networks - Profiles - Ethernet-real-time-enabled"@en ;
               rdfs:label "IEC 61784"@en ;
-              sto:hasTag "IEC Fieldbus (Profibus)"@en ;
-              sto:motivation "Information description and communication mapping for fieldbus profiles"@en .
+              sto:hasMotivation "Information description and communication mapping for fieldbus profiles"@en .
 
 
 ###  https://w3id.org/i40/sto#IEC_61804
@@ -1343,20 +1544,20 @@ sto:IEC_61804 rdf:type owl:NamedIndividual ,
               sto:hasClassification rami:Configuration ,
                                     rami:ControlDevice ,
                                     rami:FieldDevice ;
-              sto:publisher sto:IEC ;
+              sto:hasPublisher sto:IEC ;
               sto:relatedTo sto:IEC_62453 ;
               sto:hasDBpediaResource "http://dbpedia.org/resource/Device_Description_Language" ;
               sto:hasOfficialResource "https://webstore.iec.ch/publication/5953" ;
+              sto:hasTag "EDDL"@en ;
               sto:hasWikipediaArticle "https://en.wikipedia.org/wiki/Device_Description_Language" ;
               rdfs:comment "Function blocks (FB) for process control - Overview of system aspects "@en ;
-              rdfs:label "IEC 61804"@en ;
-              sto:hasTag "EDDL"@en .
+              rdfs:label "IEC 61804"@en .
 
 
 ###  https://w3id.org/i40/sto#IEC_61850
 sto:IEC_61850 rdf:type owl:NamedIndividual ,
                        sto:Standard ;
-              sto:publisher sto:IEC ;
+              sto:hasPublisher sto:IEC ;
               sto:hasDBpediaResource "http://dbpedia.org/page/IEC_61850" ;
               sto:hasOfficialResource "https://webstore.iec.ch/publication/4550" ;
               sto:hasWikipediaArticle "https://en.wikipedia.org/wiki/IEC_61850" ;
@@ -1374,51 +1575,51 @@ sto:IEC_61987_X rdf:type owl:NamedIndividual ,
                                       rami:Product ,
                                       rami:Station ,
                                       rami:WorkCenter ;
-                sto:publisher sto:IEC ;
+                sto:hasPublisher sto:IEC ;
                 sto:hasOfficialResource "https://webstore.iec.ch/publication/6225" ;
-                dcterms:license "Private"@en ;
+                sto:hasTag "LOPs in PA"@en ;
+                dcterms:hasLicense "Private"@en ;
                 rdfs:comment "Industrial-process measurement and control - Data structures and elements in process equipment catalogs - Measuring equipment with analogue and digital output"@en ;
                 rdfs:label "IEC 61987_X"@en ;
-                sto:hasTag "LOPs in PA"@en ;
-                sto:motivation "Properties and LOPs as an informational representation of the features of measuring equipment. The referenced standards define general principles (e.g. part 11) as well as specific LOPs for specific device types. These international standards also may serve as examples for description of products."@en .
+                sto:hasMotivation "Properties and LOPs as an informational representation of the features of measuring equipment. The referenced standards define general principles (e.g. part 11) as well as specific LOPs for specific device types. These international standards also may serve as examples for description of products."@en .
 
 
 ###  https://w3id.org/i40/sto#IEC_62061
 sto:IEC_62061 rdf:type owl:NamedIndividual ,
                        sto:Standard ;
               sto:hasClassification rami:Safety ;
-              sto:publisher sto:IEC ;
+              sto:hasPublisher sto:IEC ;
               sto:hasDBpediaResource "http://dbpedia.org/resource/IEC_62061" ;
               sto:hasOfficialResource "https://webstore.iec.ch/publication/22797" ;
+              sto:hasTag "Safety of machinery"@en ;
               sto:hasWikipediaArticle "https://en.wikipedia.org/wiki/IEC_62061" ;
               rdfs:comment "provides requirements that are applicable to the system level design of all types of machinery safety-related electrical control systems and also for the design of non-complex subsystems or devices."@en ;
-              rdfs:label "IEC 60061"@en ;
-              sto:hasTag "Safety of machinery"@en .
+              rdfs:label "IEC 60061"@en .
 
 
 ###  https://w3id.org/i40/sto#IEC_62264
 sto:IEC_62264 rdf:type owl:NamedIndividual ,
                        sto:Standard ;
-              sto:developer sto:IEC ;
               sto:hasClassification rami:Functional ;
-              sto:publisher sto:IEC ,
-                            sto:MESA ;
+              sto:hasDeveloper sto:IEC ;
+              sto:hasPublisher sto:IEC ,
+                               sto:MESA ;
               sto:relatedTo sto:ISA-95 ;
               sto:hasDBpediaResource "http://dbpedia.org/resource/IEC_62264" ;
               sto:hasOfficialResource "http://www.iso.org/iso/catalogue_detail.htm?csnumber=63740" ,
                                       "https://webstore.iec.ch/publication/6675" ,
                                       "https://www.iso.org/standard/57308.html" ;
+              sto:hasTag "Enterprise control systems"@en ,
+                         "Enterprise-control system integration"@en ;
               sto:hasWikipediaArticle "https://en.wikipedia.org/wiki/IEC_62264" ;
-              dcterms:license "Private"@en ;
+              dcterms:hasLicense "Private"@en ;
               rdfs:comment "Enterprise-control system integration - Models and terminology"@en ,
                            "IEC 62264 is an international standard for enterprise-control system integration. This standard is based upon ANSI/ISA-95."@en ;
               rdfs:label "IEC 62264"@en ;
               rdfs:seeAlso "https://en.wikipedia.org/wiki/B2MML" ;
               skos:altLabel "B2MML" ;
               sto:hasDomain "Enterprise Control"@en ;
-              sto:hasTag "Enterprise control systems"@en ,
-                         "Enterprise-control system integration"@en ;
-              sto:motivation "Informational representation of MES and ERP models."@en .
+              sto:hasMotivation "Informational representation of MES and ERP models."@en .
 
 
 ###  https://w3id.org/i40/sto#IEC_62337
@@ -1431,7 +1632,7 @@ sto:IEC_62337 rdf:type owl:NamedIndividual ,
                                     rami:Work_Centers ,
                                     sto:ProductionSystemModelData ;
               sto:hasDomain sto:IndustrialAutomation ;
-              sto:publisher sto:IEC ;
+              sto:hasPublisher sto:IEC ;
               sto:hasOfficialResource "https://webstore.iec.ch/publication/6871" ;
               sto:hasPublicationDate "2012-02-22"^^xsd:date ;
               rdfs:comment "Commissioning of electrical, instrumentation and control systems in the process industry - Specific phases and milestones."@en ;
@@ -1441,40 +1642,40 @@ sto:IEC_62337 rdf:type owl:NamedIndividual ,
 ###  https://w3id.org/i40/sto#IEC_62424
 sto:IEC_62424 rdf:type owl:NamedIndividual ,
                        sto:Standard ;
+              sto:hasPublisher sto:IEC ;
               sto:isPartOf sto:IEC_62714 ;
-              sto:publisher sto:IEC ;
               sto:hasDBpediaResource "http://dbpedia.org/resource/CAEX" ;
               sto:hasOfficialResource "https://webstore.iec.ch/publication/25442" ;
+              sto:hasTag "CAEX"@en ;
               sto:hasWikipediaArticle "https://en.wikipedia.org/wiki/CAEX" ;
-              dcterms:license "Private"@en ;
+              dcterms:hasLicense "Private"@en ;
               rdfs:comment "CAEX (Computer Aided Engineering Exchange) is a neutral data format that allows storage of hierarchical object information, e.g. the hierarchical architecture of a plant. On a certain abstraction level, a plant consists in modules or components that are interconnected. CAEX allows storage of those modules or components by means of objects. Object oriented concepts as encapsulation, classes, class libraries, instances, instance hierarchies, inheritance, relations, attributes and interfaces are explicitly supported. CAEX bases on XML and is defined as XML schema (xsd file). The original intention of developing CAEX was the industrial lack of a common and established data exchange between process engineering tools and process control engineering tools. However, CAEX can be applied to all types of static object information, e.g. plant topologies, document topologies, product topologies, petri nets, but also for non-technical applications like phylogenetic trees."@en ;
-              rdfs:label "IEC 62424"@en ;
-              sto:hasTag "CAEX"@en .
+              rdfs:label "IEC 62424"@en .
 
 
 ###  https://w3id.org/i40/sto#IEC_62443
 sto:IEC_62443 rdf:type owl:NamedIndividual ,
                        sto:Standard ;
-              sto:developer sto:ANSI ,
-                            sto:ISA ;
               sto:hasClassification rami:Security ,
                                     sto:CrossLevel ;
-              sto:publisher sto:ANSI ,
-                            sto:IEC ,
-                            sto:ISA ;
+              sto:hasDeveloper sto:ANSI ,
+                               sto:ISA ;
+              sto:hasPublisher sto:ANSI ,
+                               sto:IEC ,
+                               sto:ISA ;
               sto:hasDBpediaResource "http://dbpedia.org/page/Cyber_security_standards#ISA/IEC-62443_(formerly_ISA-99)" ;
               sto:hasOfficialResource "https://webstore.iec.ch/publication/7029" ,
                                       "https://webstore.iec.ch/publication/7033" ;
-              dcterms:license "Private"@en ;
+              sto:hasTag "Electronically secure Industrial Automation and Control Systems"@en ,
+                         "Network and system security for industrial-process measurement and control"@en ;
+              dcterms:hasLicense "Private"@en ;
               rdfs:comment "Defines procedures for implementing electronically secure Industrial Automation and Control Systems."@en ,
                            "ISA/IEC-62443 is a series of standards, technical reports, and related information that define procedures for implementing electronically secure Industrial Automation and Control Systems (IACS). This guidance applies to end-users (i.e. asset owner), system integrators, security practitioners, and control systems manufacturers responsible for manufacturing, designing, implementing, or managing industrial automation and control systems."@en ;
               rdfs:label "IEC 62443"@en ;
               skos:altLabel "ISA 99" ;
               skos:note "TODO" ;
-              sto:hasTag "Electronically secure Industrial Automation and Control Systems"@en ,
-                         "Network and system security for industrial-process measurement and control"@en ;
-              sto:hasWikipediaArticle <https://en.wikipedia.org/wiki/Cyber_security_standards#ISA.2FIEC-62443_.28formerly_ISA-99.29> ;
-              sto:motivation "Cyber attacks threat the industry and can cause damage to property and personal injury and affect the image of companies. The Standard allows to define procedures for implementing electronically secure Industrial Automation and Control Systems (IACS). This guidance applies to end-users, system integrators, security practitioners, and control systems manufacturers responsible for manufacturing, designing, implementing, or managing industrial automation and control systems"@en .
+              sto:hasMotivation "Cyber attacks threat the industry and can cause damage to property and personal injury and affect the image of companies. The Standard allows to define procedures for implementing electronically secure Industrial Automation and Control Systems (IACS). This guidance applies to end-users, system integrators, security practitioners, and control systems manufacturers responsible for manufacturing, designing, implementing, or managing industrial automation and control systems"@en ;
+              sto:hasWikipediaArticle <https://en.wikipedia.org/wiki/Cyber_security_standards#ISA.2FIEC-62443_.28formerly_ISA-99.29> .
 
 
 ###  https://w3id.org/i40/sto#IEC_62453
@@ -1484,18 +1685,18 @@ sto:IEC_62453 rdf:type owl:NamedIndividual ,
                                     rami:ControlDevice ,
                                     rami:FieldDevice ,
                                     rami:Station ;
-              sto:publisher sto:IEC ;
+              sto:hasPublisher sto:IEC ;
               sto:hasOfficialResource "https://webstore.iec.ch/publication/7040" ;
+              sto:hasTag "FDT"@en ;
               rdfs:comment "Field device tool (FDT) interface specification - Overview and guidance"@en ;
               rdfs:label "IEC 62453"@en ;
-              sto:hasTag "FDT"@en ;
-              sto:motivation "FDT is an interface for integration of devices into a system (e.g. control system or engineering system). The standard supports factory automation as well as process automation with a wide range of fieldbus protocols. The interface defines fieldbus-independent mechanisms for accessing data and functions of the devices."@en .
+              sto:hasMotivation "FDT is an interface for integration of devices into a system (e.g. control system or engineering system). The standard supports factory automation as well as process automation with a wide range of fieldbus protocols. The interface defines fieldbus-independent mechanisms for accessing data and functions of the devices."@en .
 
 
 ###  https://w3id.org/i40/sto#IEC_62541
 sto:IEC_62541 rdf:type owl:NamedIndividual ,
                        sto:Standard ;
-              sto:developer sto:OPC_Foundation ;
+              dcterms:hasLicense sto:GPLv2 ;
               sto:hasClassification rami:Communication ,
                                     rami:ConnectedWorld ,
                                     rami:ControlDevice ,
@@ -1505,24 +1706,26 @@ sto:IEC_62541 rdf:type owl:NamedIndividual ,
                                     rami:WorkCenter ,
                                     sto:Communication ,
                                     sto:SCADALevel ;
+              sto:hasDeveloper sto:OPC_Foundation ;
               sto:hasDomain sto:IndustrialAutomation ;
-              sto:publisher sto:IEC ;
+              sto:hasPublisher sto:IEC ;
               sto:relatedTo sto:IEC_61499 ,
                             sto:IEC_61850 ,
                             sto:IEC_62714 ;
+              sto:useStructureOf sto:IEC_61804 ;
               sto:hasDBpediaResource "http://dbpedia.org/resource/OPC_Unified_Architecture" ;
               sto:hasOfficialResource "https://opcfoundation.org/about/opc-technologies/opc-ua/" ;
+              sto:hasTag "OPC UA"@en ;
               sto:hasWikipediaArticle "https://en.wikipedia.org/wiki/OPC_Unified_Architecture" ;
-              dcterms:license "Open"@en ;
+              dcterms:hasLicense "Open"@en ;
               rdfs:comment "OPC Unified Architecture (OPC UA) is an industrial M2M communication protocol for interoperability developed by the OPC Foundation. It is the successor to Open Platform Communications (OPC). Although developed by the same organization, OPC UA differs significantly from its predecessor. The Foundation's goal for this project was to provide a path forward from the original OPC communications model (namely the Microsoft Windows only process exchange COM/DCOM) to a cross-platform service-oriented architecture (SOA) for process control, while enhancing security and providing an information model."@en ;
-              rdfs:label "IEC 62541"@en ;
-              sto:hasTag "OPC UA"@en .
+              rdfs:label "IEC 62541"@en .
 
 
 ###  https://w3id.org/i40/sto#IEC_62591
 sto:IEC_62591 rdf:type owl:NamedIndividual ,
                        sto:Standard ;
-              sto:publisher sto:IEC ;
+              sto:hasPublisher sto:IEC ;
               sto:hasDBpediaResource "http://dbpedia.org/page/WirelessHART" ;
               sto:hasOfficialResource "https://webstore.iec.ch/publication/24433" ;
               sto:hasWikipediaArticle "https://en.wikipedia.org/wiki/WirelessHART" ;
@@ -1533,7 +1736,7 @@ sto:IEC_62591 rdf:type owl:NamedIndividual ,
 ###  https://w3id.org/i40/sto#IEC_62656
 sto:IEC_62656 rdf:type owl:NamedIndividual ,
                        sto:Standard ;
-              sto:publisher sto:IEC ;
+              sto:hasPublisher sto:IEC ;
               sto:hasOfficialResource "https://webstore.iec.ch/publication/7326" ;
               rdfs:comment "Specifies the logical structure for a set of spreadsheets, used as data parcels, to define, transfer and register product ontologies"@en ;
               rdfs:label "IEC 62656"@en .
@@ -1548,29 +1751,30 @@ sto:IEC_62714 rdf:type owl:NamedIndividual ,
                                     rami:Information ,
                                     rami:Product ,
                                     sto:ProductionSystemEngineering ;
-              sto:publisher sto:IEC ;
+              sto:hasPublisher sto:IEC ;
               sto:relatedTo sto:IEC_61360 ,
                             sto:IEC_61987_X ,
                             sto:IEC_62541 ,
                             sto:eClass ;
+              sto:uses sto:MathML ;
               sto:hasDBpediaResource "http://dbpedia.org/resource/AutomationML" ;
               sto:hasOfficialResource "https://www.automationml.org/" ;
-              sto:hasWikipediaArticle "https://en.wikipedia.org/wiki/AutomationML" ;
-              dcterms:license "Open"@en ;
-              rdfs:comment "Engineering data exchange format for use in industrial automation systems engineering - Automation markup language - Architecture and general requirements"@en ;
-              rdfs:label "IEC 62714"@en ;
               sto:hasTag "AML"@en ,
-                         "AutomationML"@en .
+                         "AutomationML"@en ;
+              sto:hasWikipediaArticle "https://en.wikipedia.org/wiki/AutomationML" ;
+              dcterms:hasLicense "Open"@en ;
+              rdfs:comment "Engineering data exchange format for use in industrial automation systems engineering - Automation markup language - Architecture and general requirements"@en ;
+              rdfs:label "IEC 62714"@en .
 
 
 ###  https://w3id.org/i40/sto#IEC_62837
 sto:IEC_62837 rdf:type owl:NamedIndividual ,
                        sto:Standard ;
-              sto:publisher sto:IEC ;
+              sto:hasPublisher sto:IEC ;
               sto:hasOfficialResource "https://webstore.iec.ch/publication/7446" ;
+              sto:hasTag "62837"@en ;
               rdfs:comment "Provides to the technical committees a framework for the development and adaptation of documents in order to improve energy efficiency in manufacturing, process control and industrial facility management."@en ;
-              rdfs:label "IEC 62837"@en ;
-              sto:hasTag "62837"@en .
+              rdfs:label "IEC 62837"@en .
 
 
 ###  https://w3id.org/i40/sto#IEC_62890
@@ -1580,14 +1784,14 @@ sto:IEC_62890 rdf:type owl:NamedIndividual ,
                                     rami:Station ,
                                     rami:WorkCenter ,
                                     sto:ProductionLifeCycleDataManagement ;
-              sto:publisher sto:IEC ;
+              sto:hasPublisher sto:IEC ;
               sto:hasOfficialResource "http://www.iec.ch/dyn/www/f?p=103:38:16824039984463::::FSP_ORG_ID,FSP_APEX_PAGE,FSP_PROJECT_ID:1250,23,20929" ;
-              dcterms:license "Private"@en ;
+              sto:hasTag "IEC 62890"@en ;
+              dcterms:hasLicense "Private"@en ;
               rdfs:comment "Defines standards for lifecycle management for systems and products used in industrial process measurement, control and automation"@en ,
                            "MES KPIs"@en ;
               rdfs:label "IEC 62890"@en ;
-              sto:hasTag "IEC 62890"@en ;
-              sto:motivation "Stations need to describe their operational state and performance parameters towards superior I4.0-Components"@en .
+              sto:hasMotivation "Stations need to describe their operational state and performance parameters towards superior I4.0-Components"@en .
 
 
 ###  https://w3id.org/i40/sto#IEC_81714
@@ -1595,12 +1799,12 @@ sto:IEC_81714 rdf:type owl:NamedIndividual ,
                        sto:Standard ;
               sto:hasClassification rami:Asset ,
                                     rami:Engineering ,
-                                    rami:Identifikation ,
+                                    rami:Identification ,
                                     rami:Product ,
                                     sto:ModelingPractice ;
               sto:hasDomain sto:CAD ;
-              sto:publisher sto:IEC ,
-                            sto:ISO ;
+              sto:hasPublisher sto:IEC ,
+                               sto:ISO ;
               sto:hasOfficialResource "https://www.iso.org/standard/40134.html" ;
               sto:hasPublicationDate "2004-10-01"^^xsd:date ;
               rdfs:comment "ISO/IEC 81714 Design of graphical symbols for use in the technical documentation of products -- Part 3: Classification of connect nodes, networks and their encoding-- specifies requirements concerning the classification of connect nodes assigned to graphical symbols, being a representation of functional and product concepts."@en ;
@@ -1610,13 +1814,13 @@ sto:IEC_81714 rdf:type owl:NamedIndividual ,
 ###  https://w3id.org/i40/sto#IEC_PAS_63088
 sto:IEC_PAS_63088 rdf:type owl:NamedIndividual ,
                            sto:Standard ;
-                  sto:publisher sto:IEC ,
-                                sto:ISO ;
+                  sto:hasPublisher sto:IEC ,
+                                   sto:ISO ;
                   sto:hasOfficialResource "https://webstore.iec.ch/publication/30082?lipi=urn%3Ali%3Apage%3Ad_flagship3_pulse_read%3B2vZf0%2FOGS2CeRjny8ARziQ%3D%3D" ;
                   sto:hasPublicationDate "2017-03-07"^^xsd:date ;
+                  sto:hasTag "RAMI 4.0" ;
                   rdfs:comment "IEC PAS 63088:2017(E) describes a reference architecture model in the form of a cubic layer model, RAMI model"@en ;
-                  rdfs:label "IEC PAS 63088"@en ;
-                  skos:altLabel "RAMI 4.0" .
+                  rdfs:label "IEC PAS 63088"@en .
 
 
 ###  https://w3id.org/i40/sto#IEC_TR_62794
@@ -1628,14 +1832,14 @@ sto:IEC_TR_62794 rdf:type owl:NamedIndividual ,
                                        rami:GeneralAdminShell ,
                                        rami:Station ,
                                        rami:WorkCenter ;
-                 sto:publisher sto:IEC ;
+                 sto:hasPublisher sto:IEC ;
                  sto:relatedTo sto:IEC_TS_62832 ;
-                 dcterms:license "Private"@en ;
+                 sto:hasTag "DF/TR"@en ;
+                 dcterms:hasLicense "Private"@en ;
                  rdfs:comment "Industrial-process measurement, control and automation - Reference model for representation of production facilities (digital factory)"@en ;
                  rdfs:label "IEC TR 62794"@en ;
-                 sto:hasOfficialResource <https://webstore.iec.ch/publication/7433> ;
-                 sto:hasTag "DF/TR"@en ;
-                 sto:motivation "The standards for Digital Factory define methods and information models, which are required for self description of I40-components. "@en .
+                 sto:hasMotivation "The standards for Digital Factory define methods and information models, which are required for self description of I40-components. "@en ;
+                 sto:hasOfficialResource <https://webstore.iec.ch/publication/7433> .
 
 
 ###  https://w3id.org/i40/sto#IEC_TS_62237
@@ -1648,12 +1852,12 @@ sto:IEC_TS_62237 rdf:type owl:NamedIndividual ,
                                        rami:WorkCenter ,
                                        sto:ProductionSystemModelData ;
                  sto:hasDomain sto:IndustrialAutomation ;
-                 sto:publisher sto:IEC ;
+                 sto:hasPublisher sto:IEC ;
                  sto:relatedTo sto:IEC_62337 ;
                  sto:hasOfficialResource "https://webstore.iec.ch/publication/6626" ;
                  sto:hasPublicationDate "2003-10-26"^^xsd:date ;
                  rdfs:comment "Live working - Insulating hoses with fittings for use with hydraulic tools and equipment."@en ;
-                 rdfs:label "IEC TS 62237"@en .
+                 rdfs:label "IEC 62237"@en .
 
 
 ###  https://w3id.org/i40/sto#IEC_TS_62832
@@ -1665,17 +1869,27 @@ sto:IEC_TS_62832 rdf:type owl:NamedIndividual ,
                                        rami:GeneralAdminShell ,
                                        rami:Station ,
                                        rami:WorkCenter ;
-                 sto:publisher sto:IEC ;
-                 dcterms:license "Private"@en ;
+                 sto:hasPublisher sto:IEC ;
+                 sto:hasOfficialResource "https://webstore.iec.ch/publication/33023" ;
+                 sto:hasTag "DF/TS"@en ;
+                 dcterms:hasLicense "Private"@en ;
                  rdfs:comment "Digital Factory Reference model TS"@en ;
                  rdfs:label "IEC TS 62832"@en ;
-                 sto:hasTag "DF/TS"@en ;
-                 sto:motivation "The standards for Digital Factory define methods and information models, which are required for self description of I40-components. IEC TS 62832 defines methods, which allow to validate or plan connections between assets."@en .
+                 sto:hasMotivation "The standards for Digital Factory define methods and information models, which are required for self description of I40-components. IEC TS 62832 defines methods, which allow to validate or plan connections between assets."@en .
+
+
+###  https://w3id.org/i40/sto#IIRA
+sto:IIRA rdf:type owl:NamedIndividual ,
+                  sto:StandardizationFramework ;
+         sto:hasOfficialResource "http://www.iiconsortium.org/IIRA.htm" ;
+         rdfs:comment "Industrial Internet Reference Architecture"@en ;
+         rdfs:label "IIRA"@en .
 
 
 ###  https://w3id.org/i40/sto#ISA
 sto:ISA rdf:type owl:NamedIndividual ,
                  sto:StandardOrganization ;
+        sto:hasHeadquaterIn dbr:_North_Carolina ;
         sto:abbreviation "ISA" ;
         sto:formationDate "1945-04-28"^^xsd:date ;
         sto:orgName "International Society of Automation"@en ;
@@ -1688,21 +1902,21 @@ sto:ISA rdf:type owl:NamedIndividual ,
 ###  https://w3id.org/i40/sto#ISA-95
 sto:ISA-95 rdf:type owl:NamedIndividual ,
                     sto:Standard ;
-           sto:developer sto:ANSI ,
-                         sto:ISA ;
-           sto:publisher sto:ANSI ,
-                         sto:ISA ;
+           sto:hasDeveloper sto:ANSI ,
+                            sto:ISA ;
+           sto:hasPublisher sto:ANSI ,
+                            sto:ISA ;
            sto:hasDBpediaResource "http://dbpedia.org/resource/ANSI/ISA-95" ;
            sto:hasOfficialResource "https://www.isa.org/isa95/" ;
+           sto:hasTag "Enterprise-Control System Integration"@en ;
            sto:hasWikipediaArticle "https://en.wikipedia.org/wiki/ANSI/ISA-95" ;
            rdfs:comment "ANSI/ISA-95, or ISA-95 as it is more commonly referred, is an international standard from the International Society of Automation for developing an automated interface between enterprise and control systems. This standard has been developed for global manufacturers. It was developed to be applied in all industries, and in all sorts of processes, like batch processes, continuous and repetitive processes.There are 5 parts of the ISA-95 standard.ISA-95 Models"@en ;
-           rdfs:label "ISA 95"@en ;
-           sto:hasTag "Enterprise-Control System Integration"@en .
+           rdfs:label "ISA 95"@en .
 
 
 ###  https://w3id.org/i40/sto#ISA95
 sto:ISA95 rdf:type owl:NamedIndividual ,
-                   sto:StandarizationInitiative ;
+                   sto:StandardizationFramework ;
           rdfs:comment "Describes the ISA95 as a Standarization Initiative that classifies Standards"@en ;
           rdfs:label "ISA 95"@en .
 
@@ -1711,7 +1925,7 @@ sto:ISA95 rdf:type owl:NamedIndividual ,
 sto:ISO rdf:type owl:NamedIndividual ,
                  sto:StandardOrganization ;
         sto:belongsTo dbr:Switzerland ;
-        sto:hasHeadquaterIn dbr:Switzerland ;
+        sto:hasHeadquaterIn dbr:Geneva ;
         sto:abbreviation "ISO" ;
         sto:formationDate "1947-02-23"^^xsd:date ;
         sto:orgName "International Organization for Standardization"@en ,
@@ -1731,13 +1945,14 @@ sto:ISO rdf:type owl:NamedIndividual ,
 sto:ISO_10303 rdf:type owl:NamedIndividual ,
                        sto:Standard ;
               sto:hasClassification sto:ProductLifeCycleManagement ;
-              sto:publisher sto:ISO ;
+              sto:hasPublisher sto:ISO ;
               sto:hasDBpediaResource "http://dbpedia.org/page/ISO_10303" ;
+              sto:hasOfficialResource "https://www.steptools.com/stds/step/" ;
+              sto:hasTag "STEP"@en ;
               sto:hasWikipediaArticle "https://en.wikipedia.org/wiki/ISO_10303" ;
               rdfs:comment "Standard for the Exchange of Product model data. ISO 10303 can represent 3D objects in Computer-aided design (CAD) and related information."@en ;
               rdfs:label "ISO 10303"@en ;
-              skos:note "TODO - Split properly and classify it - check the NIST paper" ;
-              sto:hasTag "STEP"@en .
+              skos:note "TODO - Split properly and classify it - check the NIST paper" .
 
 
 ###  https://w3id.org/i40/sto#ISO_1101
@@ -1746,11 +1961,23 @@ sto:ISO_1101 rdf:type owl:NamedIndividual ,
              sto:hasClassification rami:Asset ,
                                    rami:Product ,
                                    sto:ModelingPractice ;
-             sto:publisher sto:ISO ;
+             sto:hasPublisher sto:ISO ;
              sto:hasOfficialResource "https://www.iso.org/standard/66777.html" ;
              sto:hasPublicationDate "2017-02-01"^^xsd:date ;
              rdfs:comment "Geometrical product specifications (GPS) -- Geometrical tolerancing -- Tolerances of form, orientation, location and run-out"@en ;
              rdfs:label "ISO 1101"@en .
+
+
+###  https://w3id.org/i40/sto#ISO_11783
+sto:ISO_11783 rdf:type owl:NamedIndividual ,
+                       sto:Standard ;
+              sto:hasPublisher sto:ISO ;
+              sto:hasDBpediaResource "http://dbpedia.org/resource/ISO_11783" ;
+              sto:hasOfficialResource "https://www.iso.org/standard/61646.html" ;
+              sto:hasTag "ISOBUS"@en ;
+              sto:hasWikipediaArticle "https://en.wikipedia.org/wiki/ISO_11783" ;
+              rdfs:comment "ISO 11783, known as Tractors and machinery for agriculture and forestry—Serial control and communications data network is a communication protocol for the agriculture industry based on the SAE J1939 protocol (which includes CANbus)."@en ;
+              rdfs:label "ISO 11783"@en .
 
 
 ###  https://w3id.org/i40/sto#ISO_11898-1
@@ -1760,21 +1987,20 @@ sto:ISO_11898-1 rdf:type owl:NamedIndividual ,
                                       rami:Engineering ,
                                       rami:Safety ;
                 sto:hasDomain sto:IndustrialAutomation ;
-                sto:publisher sto:ISO ;
-                sto:relatedTo sto:IEC_61512 ;
+                sto:hasPublisher sto:ISO ;
+                sto:relatedTo sto:ISO_11783 ;
                 sto:hasDBpediaResource "http://dbpedia.org/page/CAN_bus" ;
                 sto:hasOfficialResource "https://www.iso.org/standard/63648.html" ;
                 sto:hasPublicationDate "2015-12-01"^^xsd:date ;
+                sto:hasTag "CAN Bus"@en ;
                 rdfs:comment "Used mainly for Road vehicles Controller area network (CAN) Data link layer and physical signalling."@en ;
-                rdfs:label "ISO 11898-1"@en ;
-                sto:hasTag "CAN Bus"@en .
+                rdfs:label "ISO 11898-1"@en .
 
 
 ###  https://w3id.org/i40/sto#ISO_1302
 sto:ISO_1302 rdf:type owl:NamedIndividual ,
                       sto:Standard ;
-             sto:hasClassification rami:Asst ,
-                                   sto:ModelingPractice ;
+             sto:hasClassification sto:ModelingPractice ;
              sto:hasOfficialResource "https://www.iso.org/standard/28089.html" ;
              sto:hasPublicationDate "2002-02-01"^^xsd:date ;
              rdfs:comment "Geometrical product specifications Standards"@en ;
@@ -1789,7 +2015,7 @@ sto:ISO_13374 rdf:type owl:NamedIndividual ,
                                     rami:Enterprise ,
                                     sto:ProductionSystemEngineering ;
               sto:hasDomain sto:IndustrialAutomation ;
-              sto:publisher sto:ISO ;
+              sto:hasPublisher sto:ISO ;
               sto:hasOfficialResource "https://www.iso.org/standard/61131.html" ;
               sto:hasPublicationDate "2012-02-01"^^xsd:date ;
               rdfs:comment "Condition monitoring and diagnostics of machines -- Data processing, communication and presentation"@en ;
@@ -1800,7 +2026,7 @@ sto:ISO_13374 rdf:type owl:NamedIndividual ,
 sto:ISO_13485 rdf:type owl:NamedIndividual ,
                        sto:Standard ;
               sto:hasClassification rami:Safety ;
-              sto:publisher sto:ISO ;
+              sto:hasPublisher sto:ISO ;
               sto:hasDBpediaResource "http://dbpedia.org/page/ISO_13485" ;
               sto:hasOfficialResource "https://www.iso.org/iso-9001-quality-management.html" ;
               rdfs:comment "Medical devices -- Quality management systems -- Requirements for regulatory purposes."@en ;
@@ -1811,25 +2037,24 @@ sto:ISO_13485 rdf:type owl:NamedIndividual ,
 sto:ISO_13584 rdf:type owl:NamedIndividual ,
                        sto:Standard ;
               sto:hasClassification sto:ProductCatalogData ;
-              sto:publisher sto:ISO ;
+              sto:hasPublisher sto:ISO ;
               sto:relatedTo sto:IEC_61360 ,
                             sto:eClass ;
               sto:hasDBpediaResource "http://dbpedia.org/resource/ISO_13584" ;
               sto:hasOfficialResource "https://webstore.iec.ch/publication/5380%0Ahttp://www.iso.org/iso/catalogue_detail.htm?csnumber=43423" ;
+              sto:hasTag "Industrial automation systems and integration"@en ;
               sto:hasWikipediaArticle "https://en.wikipedia.org/wiki/ISO_13584" ;
-              dcterms:license "Private"@en ;
+              dcterms:hasLicense "Private"@en ;
               rdfs:comment "ISO 13584 is a series of International Standards for the computer-sensible representation and exchange of parts library data. The objective is to provide a mechanism capable of transferring parts library data, independent from any particular system. The nature of this description makes it suitable not only for the exchange of files containing parts libraries, but also as a basis for implementing and sharing databases of parts library data, and archiving"@en ;
               rdfs:label "ISO 13584"@en ;
-              sto:hasTag "Industrial automation systems and integration"@en ;
-              sto:motivation "Standard data elements (properties) are used as elements in administration shell"@en .
+              sto:hasMotivation "Standard data elements (properties) are used as elements in administration shell"@en .
 
 
 ###  https://w3id.org/i40/sto#ISO_13849
 sto:ISO_13849 rdf:type owl:NamedIndividual ,
                        sto:Standard ;
-              sto:hasClassification rami:Safety ,
-                                    rami:safety ;
-              sto:publisher sto:ISO ;
+              sto:hasClassification rami:Safety ;
+              sto:hasPublisher sto:ISO ;
               sto:hasDBpediaResource "http://dbpedia.org/resource/ISO_13849" ;
               sto:hasOfficialResource "http://www.iso.org/iso/home/store/catalogue_tc/catalogue_detail.htm?csnumber=69883" ;
               sto:hasWikipediaArticle "https://en.wikipedia.org/wiki/ISO_13849" ;
@@ -1843,12 +2068,12 @@ sto:ISO_14306 rdf:type owl:NamedIndividual ,
                        sto:Standard ;
               sto:hasClassification rami:Asset ,
                                     rami:Engineering ,
-                                    rami:Identifikation ,
+                                    rami:Identification ,
                                     rami:Product ,
                                     sto:ProcessPlanning ,
                                     sto:ProductionSystemModelData ;
               sto:hasDomain sto:CAD ;
-              sto:publisher sto:ISO ;
+              sto:hasPublisher sto:ISO ;
               sto:relatedTo sto:IEC_62541 ;
               sto:hasOfficialResource "https://www.iso.org/standard/60572.html" ;
               sto:hasPublicationDate "2017-07-01"^^xsd:date ;
@@ -1865,7 +2090,7 @@ sto:ISO_14739-1 rdf:type owl:NamedIndividual ,
                          sto:Standard ;
                 sto:hasClassification sto:ProductModelDataExchange ;
                 sto:hasDomain sto:CAD ;
-                sto:publisher sto:ISO ;
+                sto:hasPublisher sto:ISO ;
                 sto:hasOfficialResource "https://www.iso.org/standard/54948.html" ;
                 sto:hasPublicationDate "2014-12-01"^^xsd:date ;
                 rdfs:comment "Document management -- 3D use of Product Representation Compact (PRC) format-ISO 14739-1:2014 describes PRC 10001 of a product representation compact (PRC) file format for three dimensional (3D) content data. This format is designed to be included in PDF (ISO 32000) and other similar document formats for the purpose of 3D visualization and exchange. "@en ;
@@ -1881,12 +2106,12 @@ sto:ISO_15459 rdf:type owl:NamedIndividual .
 sto:ISO_15531 rdf:type owl:NamedIndividual ,
                        sto:Standard ;
               sto:hasDomain sto:IndustrialProcessMeasurementControl ;
-              sto:publisher sto:ISO ;
+              sto:hasPublisher sto:ISO ;
               sto:hasOfficialResource "https://www.iso.org/standard/28144.html" ;
+              sto:hasTag "MANDATE" ;
               rdfs:comment "This Standard models manufacturing management data such as, Resources management data (Resource model); Time related features (Time model); Flow management data in manufacturing (Flow management model)."@en ;
               rdfs:isDefinedBy "https://www.researchgate.net/publication/220171079_ISO_15531_MANDATE_a_standardised_data_model_for_manufacturing_management" ;
-              rdfs:label "ISO 15531"@en ;
-              sto:hasTag "MANDATE" .
+              rdfs:label "ISO 15531"@en .
 
 
 ###  https://w3id.org/i40/sto#ISO_15531-2x
@@ -1923,7 +2148,7 @@ sto:ISO_15704 rdf:type owl:NamedIndividual ,
                                     rami:Enterprise ,
                                     rami:Other ;
               sto:hasDomain sto:IndustrialAutomation ;
-              sto:publisher sto:ISO ;
+              sto:hasPublisher sto:ISO ;
               sto:relatedTo sto:ISO_13374 ,
                             sto:ISO_19439 ;
               sto:hasOfficialResource "https://www.iso.org/standard/28777.html" ;
@@ -1945,7 +2170,7 @@ sto:ISO_15746 rdf:type owl:NamedIndividual ,
                                     rami:Product ,
                                     sto:ProductLifeCycleManagement ;
               sto:hasDomain sto:IndustrialAutomation ;
-              sto:publisher sto:ISO ;
+              sto:hasPublisher sto:ISO ;
               sto:relatedTo sto:ISO_15926 ;
               sto:hasOfficialResource "https://www.iso.org/standard/61131.html" ;
               sto:hasPublicationDate "2015-04-01"^^xsd:date ;
@@ -1962,7 +2187,7 @@ sto:ISO_15926 rdf:type owl:NamedIndividual ,
                                     rami:Product ,
                                     sto:ProductLifeCycleManagement ;
               sto:hasDomain sto:IndustrialAutomation ;
-              sto:publisher sto:ISO ;
+              sto:hasPublisher sto:ISO ;
               sto:relatedTo sto:ISO_ASTM_52915 ;
               sto:hasOfficialResource "https://www.iso.org/standard/29557.html" ;
               sto:hasPublicationDate "2003-12-01"^^xsd:date ;
@@ -1978,7 +2203,7 @@ sto:ISO_16739 rdf:type owl:NamedIndividual ,
                                     rami:WorkCenter ,
                                     sto:ProductLifeCycleManagement ;
               sto:hasDomain sto:IndustrialAutomation ;
-              sto:publisher sto:ISO ;
+              sto:hasPublisher sto:ISO ;
               sto:relatedTo sto:IEC_62890 ;
               sto:hasOfficialResource "https://www.iso.org/standard/51622.html" ;
               sto:hasPublicationDate "2013-04-01"^^xsd:date ;
@@ -1993,7 +2218,7 @@ sto:ISO_16792 rdf:type owl:NamedIndividual ,
                                     rami:Product ,
                                     sto:ModelingPractice ;
               sto:hasDomain sto:CAD ;
-              sto:publisher sto:ISO ;
+              sto:hasPublisher sto:ISO ;
               sto:hasOfficialResource "https://www.iso.org/standard/56865.html" ;
               sto:hasPublicationDate "2015-12-01"^^xsd:date ;
               rdfs:comment "ISO 16792 Technical product documentation -- Digital product definition data practices-It supports two methods of application: model-only and model and drawing in digital format."@en ;
@@ -2014,11 +2239,13 @@ sto:ISO_18629 rdf:type owl:NamedIndividual ,
                                     rami:Product ,
                                     sto:ProductModelDataExchange ;
               sto:hasDomain sto:IndustrialAutomation ;
-              sto:publisher sto:ISO ;
+              sto:hasPublisher sto:ISO ;
               sto:relatedTo sto:ISO_15926 ,
                             sto:ISO_ASTM_52915 ;
               sto:hasOfficialResource "https://www.iso.org/standard/35431.html" ;
               sto:hasPublicationDate "2004-11-01"^^xsd:date ;
+              sto:hasTag "PSL"@en ;
+              sto:hasWikipediaArticle "https://en.wikipedia.org/wiki/Process_Specification_Language" ;
               rdfs:comment "ISO 18629-1:2004 provides a general overview of the different series of parts of ISO 18629, which defines a process specification language aimed at identifying, formally defining and structuring the semantic concepts intrinsic to the capture and exchange of process information related to discrete manufacturing."@en ;
               rdfs:label "ISO 19629"@en .
 
@@ -2034,7 +2261,7 @@ sto:ISO_18828-2 rdf:type owl:NamedIndividual ,
                                       rami:WorkCenter ,
                                       sto:Prodcut ;
                 sto:hasDomain sto:IndustrialAutomation ;
-                sto:publisher sto:ISO ;
+                sto:hasPublisher sto:ISO ;
                 sto:relatedTo sto:IEC_61804 ;
                 sto:hasOfficialResource "https://www.iso.org/standard/63505.html" ;
                 sto:hasPublicationDate "2016-10-01"^^xsd:date ;
@@ -2046,13 +2273,13 @@ sto:ISO_18828-2 rdf:type owl:NamedIndividual ,
 sto:ISO_19439 rdf:type owl:NamedIndividual ,
                        sto:Standard ;
               sto:hasClassification rami:Business ;
-              sto:publisher sto:ISO ;
+              sto:hasPublisher sto:ISO ;
               sto:hasDBpediaResource "http://dbpedia.org/page/ISO_19439" ;
               sto:hasOfficialResource "https://www.iso.org/standard/33833.html" ;
+              sto:hasTag "19439"@en ;
               sto:hasWikipediaArticle "https://en.wikipedia.org/wiki/ISO_19439" ;
               rdfs:comment "Provides a unified conceptual basis for model-based enterprise engineering that enables consistency, convergence and interoperability of the various modelling methodologies and supporting tools."@en ;
-              rdfs:label "ISO 19439"@en ;
-              sto:hasTag "19439"@en .
+              rdfs:label "ISO 19439"@en .
 
 
 ###  https://w3id.org/i40/sto#ISO_19440
@@ -2064,7 +2291,8 @@ sto:ISO_19440 rdf:type owl:NamedIndividual ,
                                     sto:EnterpriseLevel ,
                                     sto:Product ;
               sto:hasDomain sto:EnterpriseIntegration ;
-              sto:publisher sto:ISO ;
+              sto:hasPublisher sto:ISO ;
+              sto:relatedTo sto:BPMN ;
               sto:hasOfficialResource "https://www.iso.org/standard/33834.html" ;
               sto:hasPublicationDate "2007-12-01"^^xsd:date ;
               rdfs:comment "Enterprise integration -- Constructs for enterprise modelling-specifies the characteristics of the core constructs necessary for computer-supported modelling of enterprises conforming to ISO 19439.."@en ;
@@ -2075,29 +2303,30 @@ sto:ISO_19440 rdf:type owl:NamedIndividual ,
 sto:ISO_20140_5 rdf:type owl:NamedIndividual ,
                          sto:Standard ;
                 sto:hasClassification rami:EnergyEfficiency ;
-                sto:publisher sto:ISO ;
+                sto:hasPublisher sto:ISO ;
                 sto:hasOfficialResource "http://www.iso.org/iso/catalogue_detail.htm?csnumber=54809" ;
+                sto:hasTag "Energy Efficiency"@en ;
                 rdfs:comment "Automation systems and integration -- Evaluating energy efficiency and other factors of manufacturing systems that influence the environment"@en ;
-                rdfs:label "ISO 20140-5"@en ;
-                sto:hasTag "Energy Efficiency"@en .
+                rdfs:label "ISO 20140-5"@en .
 
 
 ###  https://w3id.org/i40/sto#ISO_20922
 sto:ISO_20922 rdf:type owl:NamedIndividual ,
                        sto:Standard ;
-              sto:developer sto:IBM ,
-                            sto:OASIS ;
-              sto:publisher sto:IEC ,
-                            sto:ISO ;
+              sto:hasDeveloper sto:IBM ,
+                               sto:OASIS ;
+              sto:hasDomain sto:M2M ;
+              sto:hasPublisher sto:IEC ,
+                               sto:ISO ;
               sto:relatedTo sto:IEC_62541 ;
               sto:hasDBpediaResource "http://dbpedia.org/resource/MQTT" ;
               sto:hasOfficialResource "http://mqtt.org/" ,
                                       "https://www.iso.org/standard/69466.html" ;
+              sto:hasTag "MQTT"@en ,
+                         "Message Queue Telemetry Transport"@en ;
               sto:hasWikipediaArticle "https://en.wikipedia.org/wiki/MQTT" ;
               rdfs:comment "ISO/IEC 20922:2016 is a Client Server publish/subscribe messaging transport protocol. It is light weight, open, simple, and designed so as to be easy to implement. These characteristics make it ideal for use in many situations, including constrained environments such as for communication in Machine to Machine (M2M) and Internet of Things (IoT) contexts where a small code footprint is required and/or network bandwidth is at a premium."@en ;
-              rdfs:label "ISO 20922"@en ;
-              sto:hasTag "MQTT"@en ,
-                         "Message Queue Telemetry Transport"@en .
+              rdfs:label "ISO 20922"@en .
 
 
 ###  https://w3id.org/i40/sto#ISO_22400
@@ -2113,7 +2342,7 @@ sto:ISO_22400 rdf:type owl:NamedIndividual ,
                                     rami:Station ,
                                     rami:WorkCenter ;
               sto:hasDomain sto:IndustrialAutomation ;
-              sto:publisher sto:ISO ;
+              sto:hasPublisher sto:ISO ;
               sto:relatedTo sto:IEC_62541 ;
               sto:hasOfficialResource "https://www.iso.org/standard/54497.html" ;
               sto:hasPublicationDate "2014-01-01"^^xsd:date ;
@@ -2128,7 +2357,7 @@ sto:ISO_22745-11 rdf:type owl:NamedIndividual ,
                                        rami:Product ,
                                        sto:ProductCatalogData ;
                  sto:hasDomain sto:IndustrialAutomation ;
-                 sto:publisher sto:ISO ;
+                 sto:hasPublisher sto:ISO ;
                  sto:hasOfficialResource "https://www.iso.org/standard/53999.html" ;
                  sto:hasPublicationDate "2010-02-01"^^xsd:date ;
                  rdfs:comment "ISO 22745-11:2010 provides guidelines that are recommended for the development of terminology for concepts in an open technical dictionary (OTD).Compliance with these guidelines is not required in order for a term or definition to be included in an OTD. These guidelines are provided as a framework for developers of industrial terminology to ensure that definitions are consistent and understandable. Terminology that complies with these guidelines will be marked as such in the OTD. This will allow a user to perform a search that filters terminology based on compliance with ISO 22745-11:2010."@en ;
@@ -2138,23 +2367,23 @@ sto:ISO_22745-11 rdf:type owl:NamedIndividual ,
 ###  https://w3id.org/i40/sto#ISO_27000
 sto:ISO_27000 rdf:type owl:NamedIndividual ,
                        sto:Standard ;
-              sto:publisher sto:ISO ;
+              sto:hasPublisher sto:ISO ;
               sto:hasDBpediaResource "http://dbpedia.org/resource/IEC_27000" ;
               sto:hasOfficialResource "http://www.27000.org/" ;
+              sto:hasTag "Information Security Management Systems"@en ;
               sto:hasWikipediaArticle "https://en.wikipedia.org/wiki/ISO/IEC_27000" ;
               rdfs:comment "The ISO/IEC 27000 family of standards helps organizations keep information assets secure. Using this family of standards will help your organization manage the security of assets such as financial information, intellectual property, employee details or information entrusted to you by third parties."@en ;
               rdfs:label "IEC 27000"@en ,
                          "ISO 27000"@en ,
                          "ISO/IEC 27000"@en ;
-              sto:hasTag "Information Security Management Systems"@en ;
-              sto:motivation "Provides best practices for information security management. A critical issue for Industry 4.0 "@en .
+              sto:hasMotivation "Provides best practices for information security management. A critical issue for Industry 4.0 "@en .
 
 
 ###  https://w3id.org/i40/sto#ISO_29002
 sto:ISO_29002 rdf:type owl:NamedIndividual ,
                        sto:Standard ;
               sto:hasDomain sto:IndustrialProcessMeasurementControl ;
-              sto:publisher sto:ISO ;
+              sto:hasPublisher sto:ISO ;
               sto:relatedTo sto:eClass ;
               sto:hasOfficialResource "https://www.iso.org/standard/53617.html" ;
               sto:hasPublicationDate "2010-04-01"^^xsd:date ;
@@ -2174,8 +2403,9 @@ sto:ISO_29161 rdf:type owl:NamedIndividual ,
 sto:ISO_50001 rdf:type owl:NamedIndividual ,
                        sto:Standard ;
               sto:hasClassification sto:CrossLevel ;
-              sto:publisher sto:ISO ;
+              sto:hasPublisher sto:ISO ;
               sto:hasDBpediaResource "http://dbpedia.org/page/ISO_50001" ;
+              sto:hasOfficialResource "https://www.iso.org/iso-50001-energy-management.html" ;
               rdfs:comment "Energy management systems – Requirements with guidance for use is a specification created by the International Organization for Standardization (ISO) for an energy management system."@en ;
               rdfs:label "ISO 50001"@en .
 
@@ -2187,7 +2417,7 @@ sto:ISO_5459 rdf:type owl:NamedIndividual ,
                                    rami:Product ,
                                    sto:ModelingPractice ;
              sto:hasDomain sto:M2M ;
-             sto:publisher sto:ISO ;
+             sto:hasPublisher sto:ISO ;
              sto:hasOfficialResource "https://www.iso.org/standard/40358.html" ;
              sto:hasPublicationDate "2011-08-01"^^xsd:date ;
              rdfs:comment "Geometrical product specifications (GPS) -- Geometrical tolerancing -- Datums and datum systems--ISO 5459:2011 specifies terminology, rules and methodology for the indication and understanding of datums and datum systems in technical product documentation"@en ;
@@ -2200,20 +2430,20 @@ sto:ISO_8062-4 rdf:type owl:NamedIndividual ,
                sto:hasClassification rami:Asset ,
                                      rami:Product ,
                                      sto:ProductionSystemModelData ;
-               sto:publisher sto:ISO ;
+               sto:hasPublisher sto:ISO ;
                sto:relatedTo sto:ISO_10303 ;
                sto:hasOfficialResource "https://www.iso.org/standard/60774.html" ;
                sto:hasPublicationDate "2017-07-01"^^xsd:date ;
+               sto:hasTag "Automation systems and integration"@en ;
                rdfs:comment "Geometrical product specifications (GPS) -- Dimensional and geometrical tolerances for moulded parts -- General tolerances for castings using profile tolerancing in a general datum system"@en ;
-               rdfs:label "ISO 8062-4"@en ;
-               sto:hasTag "Automation systems and integration"@en .
+               rdfs:label "ISO 8062-4"@en .
 
 
 ###  https://w3id.org/i40/sto#ISO_9000
 sto:ISO_9000 rdf:type owl:NamedIndividual ,
                       sto:Standard ;
              sto:hasClassification sto:CrossLevel ;
-             sto:publisher sto:ISO ;
+             sto:hasPublisher sto:ISO ;
              sto:hasDBpediaResource "http://dbpedia.org/page/ISO_9000" ;
              sto:hasOfficialResource "https://www.iso.org/iso-9001-quality-management.html" ;
              sto:hasWikipediaArticle "https://en.wikipedia.org/wiki/ISO_9000" ;
@@ -2226,11 +2456,11 @@ sto:ISO_ASTM_52915 rdf:type owl:NamedIndividual ,
                             sto:Standard ;
                    sto:hasClassification rami:Asset ,
                                          rami:Engineering ,
-                                         rami:Identifikation ,
+                                         rami:Identification ,
                                          rami:Product ,
                                          sto:ProductionSystemEngineering ;
                    sto:hasDomain sto:IndustrialAutomation ;
-                   sto:publisher sto:ISO ;
+                   sto:hasPublisher sto:ISO ;
                    sto:relatedTo sto:IEC_62541 ,
                                  sto:ISO_14306 ;
                    sto:hasOfficialResource "https://www.iso.org/standard/60572.html" ;
@@ -2242,16 +2472,16 @@ sto:ISO_ASTM_52915 rdf:type owl:NamedIndividual ,
 ###  https://w3id.org/i40/sto#ISO_PAS_17506
 sto:ISO_PAS_17506 rdf:type owl:NamedIndividual ,
                            sto:Standard ;
-                  sto:developer sto:ISO ;
+                  sto:hasDeveloper sto:ISO ;
+                  sto:hasPublisher sto:ISO ;
                   sto:isPartOf sto:IEC_62714 ;
-                  sto:publisher sto:ISO ;
                   sto:hasDBpediaResource "http://dbpedia.org/resource/COLLADA" ;
                   sto:hasOfficialResource "https://www.iso.org/standard/59902.html" ;
+                  sto:hasTag "COLLADA"@en ;
                   sto:hasWikipediaArticle "https://en.wikipedia.org/wiki/COLLADA" ;
                   rdfs:comment "ISO-PAS 17506-2012 describes the COLLADA schema. COLLADA is a COLLAborative Design Activity that defines an XML-based schema to enable 3D authoring applications to freely exchange digital assets without loss of information, enabling multiple software packages to be combined into extremely powerful tool chains."@en ,
                                "SO/PAS 17506:2012 describes the COLLADA schema. COLLADA is a COLLAborative Design Activity that defines an XML-based schema to enable 3D authoring applications to freely exchange digital assets without loss of information, enabling multiple software packages to be combined into extremely powerful tool chains. The purpose of ISO/PAS 17506:2012 is to provide a specification for the COLLADA schema in sufficient detail to enable software developers to create tools to process COLLADA resources. In particular, it is relevant to those who import to or export from digital content creation (DCC) applications, 3D interactive applications and tool chains, prototyping tools, real-time visualization applications such as those used in the video game and movie industries, and CAD tools. ISO/PAS 17506:2012 covers the initial design and specifications of the COLLADA schema, as well as a minimal set of requirements for COLLADA exporters. "@en ;
-                  rdfs:label "ISO PAS 17506"@en ;
-                  sto:hasTag "COLLADA"@en .
+                  rdfs:label "ISO PAS 17506"@en .
 
 
 ###  https://w3id.org/i40/sto#ISO_TS_14649-201
@@ -2265,11 +2495,17 @@ sto:ISO_TS_14649-201 rdf:type owl:NamedIndividual ,
                                            rami:Safety ,
                                            sto:ProductionSystemModelData ;
                      sto:hasDomain sto:IndustrialAutomation ;
-                     sto:publisher sto:ISO ;
+                     sto:hasPublisher sto:ISO ;
                      sto:hasOfficialResource "https://www.iso.org/standard/60042.html" ;
                      sto:hasPublicationDate "2011-12-01"^^xsd:date ;
                      rdfs:comment "SO/TS 14649-201:2011 specifies the technology-specific machine tool description data elements needed as process data for manufacturing and machine characteristics. The machine tool descriptions covered in this schema are, initially, milling machines, machining centres, turning machines and multi-tasking machines.ISO/TS 14649-201:2011 is not intended to replace existing machine tool description standards, but to cover the specific needs of manufacturing resource description for manufacturing needs in the technologies described in ISO 14649."@en ;
                      rdfs:label "ISO TS 14649-201"@en .
+
+
+###  https://w3id.org/i40/sto#ITSecurity
+sto:ITSecurity rdf:type owl:NamedIndividual ,
+                        sto:Domain ;
+               rdfs:label "IT Security"@en .
 
 
 ###  https://w3id.org/i40/sto#IndustrialAutomation
@@ -2292,7 +2528,7 @@ sto:IndustrialProcessMeasurementControl rdf:type owl:NamedIndividual ,
 sto:KATS rdf:type owl:NamedIndividual ,
                   sto:StandardOrganization ;
          sto:belongsTo dbr:South_Korea ;
-         sto:hasHeadquaterIn dbr:South_Korea ;
+         sto:hasHeadquaterIn dbr:Eumseong ;
          sto:abbreviation "KATS"@de ;
          sto:hasDBpediaResource "http://dbpedia.org/page/Korean_Agency_for_Technology_and_Standards" ;
          sto:hasWikipediaArticle "https://en.wikipedia.org/wiki/Korean_Agency_for_Technology_and_Standards" ;
@@ -2315,6 +2551,7 @@ sto:M2M rdf:type owl:NamedIndividual ,
 ###  https://w3id.org/i40/sto#MESA
 sto:MESA rdf:type owl:NamedIndividual ,
                   sto:StandardOrganization ;
+         sto:hasHeadquaterIn dbr:_Arizona ;
          sto:abbreviation "MESA" ;
          sto:formationDate "1992-01-01"^^xsd:date ;
          sto:hasDBpediaResource "http://dbpedia.org/page/Manufacturing_Enterprise_Solutions_Association" ;
@@ -2328,11 +2565,12 @@ sto:MESA rdf:type owl:NamedIndividual ,
 sto:MIIT rdf:type owl:NamedIndividual ,
                   sto:StandardOrganization ;
          sto:belongsTo dbr:China ;
-         sto:hasHeadquaterIn dbr:China ;
+         sto:hasHeadquaterIn dbr:Beijing ;
          sto:abbreviation "MIIT" ;
          sto:formationDate "2008-03-01"^^xsd:date ;
+         sto:hasDBpediaResource "http://dbpedia.org/page/Ministry_of_Industry_and_Information_Technology" ;
          sto:hasOfficialResource "http://www.miit.gov.cn/" ;
-         sto:hasWikipediaArticle "https://en.wikipedia.org/wiki/OASIS_(organization)" ;
+         sto:hasWikipediaArticle "https://en.wikipedia.org/wiki/Ministry_of_Industry_and_Information_Technology" ;
          sto:orgName "Ministry of Industry and Information Technology"@en ;
          rdfs:comment "Ministry of Industry and Information Technology (MIIT) of the Chinese government, established in March 2008, is the state agency of the People's Republic of China responsible for regulation and development of the postal service, Internet, wireless, broadcasting, communications, production of electronic and information goods, software industry and the promotion of the national knowledge economy."@en .
 
@@ -2348,15 +2586,15 @@ sto:MOMLevel rdf:type owl:NamedIndividual ,
 ###  https://w3id.org/i40/sto#MTConnect
 sto:MTConnect rdf:type owl:NamedIndividual ,
                        sto:Standard ;
-              sto:developer sto:MTConnect_Institute ;
               sto:hasClassification sto:DeviceLevel ;
-              sto:publisher sto:MTConnect_Institute ;
+              sto:hasDeveloper sto:MTConnect_Institute ;
+              sto:hasPublisher sto:MTConnect_Institute ;
               sto:hasDBpediaResource "http://dbpedia.org/resource/MTConnect" ;
               sto:hasOfficialResource "http://www.mtconnect.org/standard-documents" ;
+              sto:hasTag "MTConnect"@en ;
               sto:hasWikipediaArticle "https://en.wikipedia.org/wiki/MTConnect" ;
               rdfs:comment "MTConnect is a protocol designed for the exchange of data between shop floor equipment and software applications used for monitoring and data analysis. MTConnect is referred to as a read-only standard, meaning that it only defines the extraction (reading) of data from control devices, not the writing of data to a control device. Freely available, open standards are used for all aspects of MTConnect. Data from shop floor devices is presented in XML format, and is retrieved from information providers, called Agents, using Hypertext Transfer Protocol (HTTP) as the underlying transport protocol. MTConnect provides a RESTful interface, which means the interface is stateless. No session must be established to retrieve data from an MTConnect Agent, and no logon or logoff sequence is required (unless overlying security protocols are added which do). Lightweight Directory Access Protocol (LDAP) is recommended for discovery services."@en ;
-              rdfs:label "MTConnect"@en ;
-              sto:hasTag "MTConnect"@en .
+              rdfs:label "MTConnect"@en .
 
 
 ###  https://w3id.org/i40/sto#MTConnect_Institute
@@ -2381,17 +2619,28 @@ sto:ManufacturingModelData rdf:type owl:NamedIndividual ,
                            rdfs:label "Manufacturing Model Data"@en .
 
 
+###  https://w3id.org/i40/sto#MathML
+sto:MathML rdf:type owl:NamedIndividual ,
+                    sto:Standard ;
+           sto:hasPublisher sto:W3C ;
+           sto:hasDBpediaResource "http://dbpedia.org/page/MathML" ;
+           sto:hasOfficialResource "https://www.w3.org/Math/" ;
+           sto:hasWikipediaArticle "https://en.wikipedia.org/wiki/MathML" ;
+           rdfs:comment "MathML is a low-level specification for mathematical and scientific content on the Web and beyond"@en ;
+           rdfs:label "MathML"@en .
+
+
 ###  https://w3id.org/i40/sto#ModBus
 sto:ModBus rdf:type owl:NamedIndividual ,
                     sto:Standard ;
            sto:hasClassification rami:Integration ;
-           sto:publisher sto:SE ;
+           sto:hasPublisher sto:SE ;
            sto:hasDBpediaResource "http://dbpedia.org/page/Modbus" ;
            sto:hasOfficialResource "http://www.modbus.org/" ;
+           sto:hasTag "Modbus"@en ;
            sto:hasWikipediaArticle "https://en.wikipedia.org/wiki/Modbus" ;
            rdfs:comment "Modbus is a serial communications protocol to be used in Programmable logic controllers (PLCs)."@en ;
-           rdfs:label "ModBus"@en ;
-           sto:hasTag "Modbus"@en .
+           rdfs:label "ModBus"@en .
 
 
 ###  https://w3id.org/i40/sto#ModelingPractice
@@ -2406,7 +2655,7 @@ sto:ModelingPractice rdf:type owl:NamedIndividual ,
 sto:NIST rdf:type owl:NamedIndividual ,
                   sto:StandardOrganization ;
          sto:belongsTo dbr:United_States ;
-         sto:hasHeadquaterIn dbr:United_States ;
+         sto:hasHeadquaterIn dbr:_Maryland ;
          sto:abbreviation "NIST" ;
          sto:formationDate "1901-01-01"^^xsd:date ;
          sto:hasDBpediaResource "http://dbpedia.org/page/National_Institute_of_Standards_and_Technology" ;
@@ -2428,7 +2677,7 @@ sto:NISTIR_8107 rdf:type owl:NamedIndividual ;
 
 ###  https://w3id.org/i40/sto#NISTInitiative
 sto:NISTInitiative rdf:type owl:NamedIndividual ,
-                            sto:StandarizationInitiative ;
+                            sto:StandardizationFramework ;
                    rdfs:comment "Describes the National Institute of Standards and Technology Initiative, i.e., NIST which provides a standard landascape"@en ;
                    rdfs:isDefinedBy "http://nvlpubs.nist.gov/nistpubs/ir/2016/NIST.IR.8107.pdf" ;
                    rdfs:label "NIST Initiative"@en .
@@ -2437,16 +2686,18 @@ sto:NISTInitiative rdf:type owl:NamedIndividual ,
 ###  https://w3id.org/i40/sto#OAGIS
 sto:OAGIS rdf:type owl:NamedIndividual ,
                    sto:Standard ;
-          sto:publisher sto:OAGi ;
+          sto:hasPublisher sto:OAGi ;
           sto:hasOfficialResource "http://www.oagi.org/dnn2/DownloadsandResources/OAGIS100PublicDownload.aspx" ;
+          sto:hasTag "Open Applications Group Integration Specification"@en ;
+          sto:hasWikipediaArticle "https://de.wikipedia.org/wiki/Open_Application_Group_Integration_Specification" ;
           rdfs:comment "The Open Applications Group Integration Specification (OAGIS) is an effort to provide a canonical business language for information integration. It uses XML as the common alphabet for defining business messages, and for identifying business processes (scenarios) that allow businesses and business applications to communicate."@en ;
-          rdfs:label "OAGIS"@en ;
-          sto:hasTag "Open Applications Group Integration Specification"@en .
+          rdfs:label "OAGIS"@en .
 
 
 ###  https://w3id.org/i40/sto#OAGi
 sto:OAGi rdf:type owl:NamedIndividual ,
                   sto:StandardOrganization ;
+         sto:hasHeadquaterIn dbr:_Georgia ;
          sto:abbreviation "OAGi" ;
          sto:formationDate "1994-01-01"^^xsd:date ;
          sto:hasOfficialResource "http://www.oagi.org/dnn2/Home.aspx" ;
@@ -2458,6 +2709,7 @@ sto:OAGi rdf:type owl:NamedIndividual ,
 ###  https://w3id.org/i40/sto#OASIS
 sto:OASIS rdf:type owl:NamedIndividual ,
                    sto:StandardOrganization ;
+          sto:hasHeadquaterIn dbr:Boston ;
           sto:abbreviation "OASIS" ;
           sto:formationDate "1993-01-01"^^xsd:date ;
           sto:hasDBpediaResource "http://dbpedia.org/page/OASIS_(organization)" ;
@@ -2470,6 +2722,7 @@ sto:OASIS rdf:type owl:NamedIndividual ,
 ###  https://w3id.org/i40/sto#ODVA
 sto:ODVA rdf:type owl:NamedIndividual ,
                   sto:StandardOrganization ;
+         sto:hasHeadquaterIn dbr:_Michigan ;
          sto:abbreviation "ODVA" ;
          sto:formationDate "1995-01-01"^^xsd:date ;
          sto:hasDBpediaResource "http://dbpedia.org/resource/ODVA_(company)" ;
@@ -2482,6 +2735,7 @@ sto:ODVA rdf:type owl:NamedIndividual ,
 ###  https://w3id.org/i40/sto#OMG
 sto:OMG rdf:type owl:NamedIndividual ,
                  sto:StandardOrganization ;
+        sto:hasHeadquaterIn dbr:_Massachusetts ;
         sto:abbreviation "OMG" ;
         sto:formationDate "1989-01-01"^^xsd:date ;
         sto:hasDBpediaResource "http://dbpedia.org/resource/Object_Management_Group" ;
@@ -2494,22 +2748,23 @@ sto:OMG rdf:type owl:NamedIndividual ,
 ###  https://w3id.org/i40/sto#OMG_DDS
 sto:OMG_DDS rdf:type owl:NamedIndividual ,
                      sto:Standard ;
-            sto:publisher sto:OMG ;
+            sto:hasPublisher sto:OMG ;
             sto:relatedTo sto:IEC_61158 ;
             sto:hasDBpediaResource "http://dbpedia.org/page/Data_Distribution_Service" ;
             sto:hasOfficialResource "http://portals.omg.org/dds/" ;
+            sto:hasTag "Data Distribution Service for real-time systems"@en ;
             sto:hasWikipediaArticle "https://en.wikipedia.org/wiki/Data_Distribution_Service" ;
             rdfs:comment "The Data Distribution Service for real-time systems (DDS) is an Object Management Group (OMG) machine-to-machine (sometimes called middleware) standard that aims to enable scalable, real-time, dependable, high-performance and interoperable data exchanges using a publish–subscribe pattern. DDS addresses the needs of applications like financial trading, air-traffic control, smart grid management, and other big data applications. The standard is used in applications such as smartphone operating systems, transportation systems and vehicles, software-defined radio, and by healthcare providers. DDS was promoted for use in the Internet of things."@en ;
-            rdfs:label "OMG DDS"@en ;
-            sto:hasTag "Data Distribution Service for real-time systems"@en .
+            rdfs:label "OMG DDS"@en .
 
 
 ###  https://w3id.org/i40/sto#OPC_Foundation
 sto:OPC_Foundation rdf:type owl:NamedIndividual ,
                             sto:StandardOrganization ;
+                   sto:hasHeadquaterIn dbr:_Arizona ;
                    sto:abbreviation "OPC" ;
                    sto:formationDate "1994-01-01"^^xsd:date ;
-                   sto:hasDBpediaResource "http://dbpedia.org/resource/Association_for_Standardisation_of_Automation_and_Measuring_Systems" ;
+                   sto:hasDBpediaResource "http://dbpedia.org/page/OPC_Foundation" ;
                    sto:hasOfficialResource "https://opcfoundation.org/" ;
                    sto:hasWikipediaArticle "https://en.wikipedia.org/wiki/OPC_Foundation" ;
                    sto:orgName "OPC Foundation"@en ;
@@ -2588,7 +2843,7 @@ sto:ProductionSystemModelData rdf:type owl:NamedIndividual ,
 ###  https://w3id.org/i40/sto#QIF
 sto:QIF rdf:type owl:NamedIndividual ,
                  sto:Standard ;
-        sto:publisher sto:DMSC ;
+        sto:hasPublisher sto:DMSC ;
         sto:hasOfficialResource "http://qifstandards.org/" ;
         rdfs:comment " Quality Information Framework (QIF) standard defines an integrated set of information models which enable the effective exchange of metrology data throughout the entire manufacturing quality measurement process"@en ;
         rdfs:isDefinedBy "http://qifstandards.org/about-qif/" ;
@@ -2606,7 +2861,7 @@ sto:RAMI rdf:type owl:NamedIndividual ;
 
 ###  https://w3id.org/i40/sto#RAMI40
 sto:RAMI40 rdf:type owl:NamedIndividual ,
-                    sto:StandarizationInitiative ;
+                    sto:StandardizationFramework ;
            rdfs:comment "Describes the Reference Architecture Model for Industry 4.0, i.e., the RAMI Initiative."@en ;
            rdfs:label "RAMI 4.0"@en .
 
@@ -2631,19 +2886,20 @@ sto:SCM rdf:type owl:NamedIndividual ,
 ###  https://w3id.org/i40/sto#SCOR
 sto:SCOR rdf:type owl:NamedIndividual ,
                   sto:Standard ;
-         sto:developer sto:APICS ;
          sto:hasClassification sto:SCM ;
+         sto:hasDeveloper sto:APICS ;
          sto:hasDBpediaResource "http://dbpedia.org/page/Supply-chain_operations_reference" ;
          sto:hasOfficialResource "http://www.apics.org/apics-for-business/products-and-services/apics-scc-frameworks/scor" ;
+         sto:hasTag "SCOR"@en ;
          sto:hasWikipediaArticle "https://en.wikipedia.org/wiki/Supply-chain_operations_reference" ;
          rdfs:comment "APICS Supply Chain Operations Reference."@en ;
-         rdfs:label "SCOR"@en ;
-         sto:hasTag "SCOR"@en .
+         rdfs:label "SCOR"@en .
 
 
 ###  https://w3id.org/i40/sto#SE
 sto:SE rdf:type owl:NamedIndividual ,
                 sto:StandardOrganization ;
+       sto:hasHeadquaterIn dbr:Paris ;
        sto:abbreviation "SE" ;
        sto:formationDate "1936-01-01"^^xsd:date ;
        sto:hasDBpediaResource "http://dbpedia.org/page/Schneider_Electric" ;
@@ -2656,20 +2912,27 @@ sto:SE rdf:type owl:NamedIndividual ,
 ###  https://w3id.org/i40/sto#SysML
 sto:SysML rdf:type owl:NamedIndividual ,
                    sto:Standard ;
-          sto:developer sto:OMG ;
-          sto:publisher sto:OMG ;
+          sto:hasDeveloper sto:OMG ;
+          sto:hasPublisher sto:OMG ;
+          sto:relatedTo sto:IEC_62714 ;
           sto:hasDBpediaResource "http://dbpedia.org/resource/Systems_Modeling_Language" ;
           sto:hasOfficialResource "http://sysml.org/" ,
                                   "http://www.omgsysml.org/what-is-sysml.htm" ;
+          sto:hasTag "SysML"@en ;
           sto:hasWikipediaArticle "https://en.wikipedia.org/wiki/Systems_Modeling_Language" ;
-          rdfs:comment "The OMG Systems Modeling Language™ (OMG SysML™) is a general-purpose graphical modeling language for specifying, analyzing, designing, and verifying complex systems that may include hardware, software, information, personnel, procedures, and facilities. In particular, the language provides graphical representations with a semantic foundation for modeling system requirements, behavior, structure, and parametrics, which is used to integrate with other engineering analysis models. It represents a subset of UML 2 with extensions needed to satisfy the requirements of the UML™ for Systems Engineering RFP as indicated in Figure 1. SysML leverages the OMG XML Metadata Interchange (XMI®) to exchange modeling data between tools, and is also intended to be compatible with the evolving ISO 10303-233 systems engineering data interchange standard."@en ;
-          rdfs:label "SysML"@en ;
-          sto:hasTag "Systems Modeling Language"@en .
+          rdfs:comment "The OMG Systems Modeling Language (OMG SysML) is a general-purpose graphical modeling language for specifying, analyzing, designing, and verifying complex systems that may include hardware, software, information, personnel, procedures, and facilities. In particular, the language provides graphical representations with a semantic foundation for modeling system requirements, behavior, structure, and parametrics, which is used to integrate with other engineering analysis models. It represents a subset of UML 2 with extensions needed to satisfy the requirements of the UML for Systems Engineering RFP as indicated in Figure 1. SysML leverages the OMG XML Metadata Interchange (XMI®) to exchange modeling data between tools, and is also intended to be compatible with the evolving ISO 10303-233 systems engineering data interchange standard."@en ;
+          rdfs:label "Systems Modeling Language"@en .
+
+
+###  https://w3id.org/i40/sto#TechnicalCommittee
+sto:TechnicalCommittee rdf:type owl:NamedIndividual ;
+                       sto:abbreviation "TC" .
 
 
 ###  https://w3id.org/i40/sto#UN-CEFACT
 sto:UN-CEFACT rdf:type owl:NamedIndividual ,
                        sto:StandardOrganization ;
+              sto:hasHeadquaterIn dbr:Geneva ;
               sto:abbreviation "UN/CEFACT" ;
               sto:hasDBpediaResource "http://dbpedia.org/page/UN/CEFACT" ;
               sto:hasOfficialResource "https://www.unece.org/cefact/" ;
@@ -2681,6 +2944,7 @@ sto:UN-CEFACT rdf:type owl:NamedIndividual ,
 ###  https://w3id.org/i40/sto#VDMA
 sto:VDMA rdf:type owl:NamedIndividual ,
                   sto:StandardOrganization ;
+         sto:hasHeadquaterIn dbr:Frankfurt ;
          sto:abbreviation "VDMA" ;
          sto:formationDate "1892-11-15"^^xsd:date ;
          sto:hasDBpediaResource "http://dbpedia.org/resource/VDMA" ;
@@ -2695,16 +2959,17 @@ sto:VDMA rdf:type owl:NamedIndividual ,
 sto:VDMA_24582 rdf:type owl:NamedIndividual ,
                         sto:Standard ;
                sto:hasClassification rami:ConditionMonitoring ;
-               sto:publisher sto:VDMA ;
+               sto:hasPublisher sto:VDMA ;
                sto:hasOfficialResource "https://www.vdma.org/documents/105628/2244593/Inhalt+VDMA+24582_en.pdf/" ;
+               sto:hasTag "Condition Monitoring"@en ;
                rdfs:comment "Fieldbus neutral reference architecture for Condition Monitoring in production automation"@en ;
-               rdfs:label "VDMA 24582"@en ;
-               sto:hasTag "Condition Monitoring"@en .
+               rdfs:label "VDMA 24582"@en .
 
 
 ###  https://w3id.org/i40/sto#W3C
 sto:W3C rdf:type owl:NamedIndividual ,
                  sto:StandardOrganization ;
+        sto:hasHeadquaterIn dbr:_Massachusetts ;
         sto:abbreviation "W3C" ;
         sto:formationDate "1994-10-01"^^xsd:date ;
         sto:hasDBpediaResource "http://dbpedia.org/resource/World_Wide_Web_Consortium" ;
@@ -2718,65 +2983,61 @@ sto:W3C rdf:type owl:NamedIndividual ,
 ###  https://w3id.org/i40/sto#W3C_OWL
 sto:W3C_OWL rdf:type owl:NamedIndividual ,
                      sto:Standard ;
-            sto:publisher sto:W3C ;
+            sto:hasPublisher sto:W3C ;
             sto:relatedTo sto:W3C_RDF ;
             sto:hasDBpediaResource "http://dbpedia.org/resource/Web_Ontology_Language" ;
             sto:hasOfficialResource "https://www.w3.org/OWL/" ;
+            sto:hasTag "OWL"@en ;
             sto:hasWikipediaArticle "https://en.wikipedia.org/wiki/Web_Ontology_Language?oldformat=true" ;
-            dcterms:license "Public"@en ;
-            rdfs:comment "The W3C Web Ontology Language (OWL) is a Semantic Web language designed to represent rich and complex knowledge about things, groups of things, and relations between things. OWL is a computational logic-based language such that knowledge expressed in OWL can be exploited by computer programs, e.g., to verify the consistency of that knowledge or to make implicit knowledge explicit. OWL documents, known as ontologies, can be published in the World Wide Web and may refer to or be referred from other OWL ontologies. OWL is part of the W3C’s Semantic Web technology stack, which includes RDF, RDFS, SPARQL, etc."@en ,
-                         "The W3C Web Ontology Language (OWL) is a Semantic Web language designed to represent rich and complex knowledge about things, groups of things, and relations between things. OWL is a computational logic-based language such that knowledge expressed in OWL can be exploited by computer programs, e.g., to verify the consistency of that knowledge or to make implicit knowledge explicit. OWL documents, known as ontologies, can be published in the World Wide Web and may refer to or be referred from other OWL ontologies. OWL is part of the W3C’s Semantic Web technology stack, which includes RDF, RDFS, SPARQL, etc. "@en ;
-            rdfs:label "OWL"@en ;
-            sto:hasTag "OWL"@en .
+            dcterms:hasLicense "Public"@en ;
+            rdfs:comment "The W3C Web Ontology Language (OWL) is a Semantic Web language designed to represent rich and complex knowledge about things, groups of things, and relations between things. OWL is a computational logic-based language such that knowledge expressed in OWL can be exploited by computer programs, e.g., to verify the consistency of that knowledge or to make implicit knowledge explicit. OWL documents, known as ontologies, can be published in the World Wide Web and may refer to or be referred from other OWL ontologies. OWL is part of the W3C’s Semantic Web technology stack, which includes RDF, RDFS, SPARQL, etc."@en ;
+            rdfs:label "Web Ontology Language"@en .
 
 
 ###  https://w3id.org/i40/sto#W3C_RDF
 sto:W3C_RDF rdf:type owl:NamedIndividual ,
                      sto:Standard ;
-            sto:publisher sto:W3C ;
+            sto:hasPublisher sto:W3C ;
             sto:hasDBpediaResource "http://dbpedia.org/resource/Resource_Description_Framework" ;
             sto:hasOfficialResource "https://www.w3.org/RDF/" ;
+            sto:hasTag "RDF"@en ;
             sto:hasWikipediaArticle "https://en.wikipedia.org/wiki/Resource_Description_Framework" ;
-            dcterms:license "Public"@en ;
-            rdfs:comment "RDF is a standard model for data interchange on the Web."@en ,
-                         "RDF is a standard model for data interchange on the Web. RDF has features that facilitate data merging even if the underlying schemas differ, and it specifically supports the evolution of schemas over time without requiring all the data consumers to be changed. "@en ;
-            rdfs:label "RDF"@en ;
-            sto:hasTag "RDF"@en .
+            dcterms:hasLicense "Public"@en ;
+            rdfs:comment "RDF is a standard model for data interchange on the Web. RDF has features that facilitate data merging even if the underlying schemas differ, and it specifically supports the evolution of schemas over time without requiring all the data consumers to be changed. "@en ;
+            rdfs:label "Resource Description Framework"@en .
 
 
 ###  https://w3id.org/i40/sto#W3C_RIF
 sto:W3C_RIF rdf:type owl:NamedIndividual ,
                      sto:Standard ;
-            sto:publisher sto:W3C ;
+            sto:hasPublisher sto:W3C ;
             sto:relatedTo sto:W3C_OWL ;
             sto:hasDBpediaResource "http://dbpedia.org/resource/Rule_Interchange_Format" ;
             sto:hasOfficialResource "https://www.w3.org/TR/rif-overview/" ;
+            sto:hasTag "RIF"@en ;
             sto:hasWikipediaArticle "https://en.wikipedia.org/wiki/Rule_Interchange_Format" ;
-            dcterms:license "Public"@en ;
-            rdfs:comment "The Rule Interchange Format (RIF) is a W3C Recommendation. RIF is part of the infrastructure for the semantic web, along with (principally) SPARQL, RDF and OWL. Although originally envisioned by many as a \"rules layer\" for the semantic web, in reality the design of RIF is based on the observation that there are many \"rules languages\" in existence, and what is needed is to exchange rules between them. "@en ,
-                         "The Rule Interchange Format (RIF) is a W3C Recommendation. RIF is part of the infrastructure for the semantic web, along with (principally) SPARQL, RDF and OWL. Although originally envisioned by many as a rules layer for the semantic web, in reality the design of RIF is based on the observation that there are many rules languages in existence, and what is needed is to exchange rules between them."@en ;
-            rdfs:label "RIF"@en ;
-            sto:hasTag "RIF"@en .
+            dcterms:hasLicense "Public"@en ;
+            rdfs:comment "The Rule Interchange Format (RIF) is a W3C Recommendation. RIF is part of the infrastructure for the semantic web, along with (principally) SPARQL, RDF and OWL. Although originally envisioned by many as a rules layer for the semantic web, in reality the design of RIF is based on the observation that there are many rules languages in existence, and what is needed is to exchange rules between them."@en ;
+            rdfs:label "Rule Interchange Format"@en .
 
 
 ###  https://w3id.org/i40/sto#W3C_SPARQL
 sto:W3C_SPARQL rdf:type owl:NamedIndividual ,
                         sto:Standard ;
-               sto:publisher sto:W3C ;
+               sto:hasPublisher sto:W3C ;
                sto:relatedTo sto:W3C_RDF ;
                sto:hasDBpediaResource "http://dbpedia.org/resource/SPARQL" ;
                sto:hasOfficialResource "https://www.w3.org/SPARQL" ;
+               sto:hasTag "SPARQL"@en ;
                sto:hasWikipediaArticle "https://en.wikipedia.org/wiki/SPARQL" ;
-               dcterms:license "Public"@en ;
+               dcterms:hasLicense "Public"@en ;
                rdfs:comment "The SPARQL Protocol and RDF Query Language (SPARQL) is a query language and protocol for RDF. This document specifies the SPARQL Protocol; it describes a means for conveying SPARQL queries and updates to a SPARQL processing service and returning the results via HTTP to the entity that requested them. This protocol was developed by the W3C SPARQL Working Group, part of the Semantic Web Activity as described in the activity statement ."@en ;
-               rdfs:label "SPARQL"@en ;
-               sto:hasTag "SPARQL"@en .
+               rdfs:label "SPARQL"@en .
 
 
 ###  https://w3id.org/i40/sto#eClass
 sto:eClass rdf:type owl:NamedIndividual ,
                     sto:Standard ;
-           sto:developer sto:eClassAssoc ;
            sto:hasClassification rami:ConnectedWorld ,
                                  rami:ControlDevice ,
                                  rami:Engineering ,
@@ -2784,21 +3045,23 @@ sto:eClass rdf:type owl:NamedIndividual ,
                                  rami:Product ,
                                  rami:Station ,
                                  rami:WorkCenter ;
-           sto:publisher sto:eClassAssoc ;
+           sto:hasDeveloper sto:eClassAssoc ;
+           sto:hasPublisher sto:eClassAssoc ;
            sto:relatedTo sto:IEC_61360 ,
                          sto:ISO_13584 ;
            sto:hasDBpediaResource "http://de.dbpedia.org/page/ECl@ss" ;
            sto:hasOfficialResource "https://www.eclass.eu/eclasscontent/standard/overview.html.en" ;
-           sto:hasWikipediaArticle "https://de.wikipedia.org/wiki/ECl@ss" ;
-           rdfs:comment "eCl@ss is THE cross-industry product data standard for classification and clear description of products and services."@en ;
-           rdfs:label "eClass"@en ;
            sto:hasTag "eClass"@en ;
-           sto:motivation "Global identification, semantic description and automatic product classification"@en .
+           sto:hasWikipediaArticle "https://de.wikipedia.org/wiki/ECl@ss" ;
+           rdfs:comment "eCl@ss is the cross-industry product data standard for classification and clear description of products and services."@en ;
+           rdfs:label "eClass"@en ;
+           sto:hasMotivation "Global identification, semantic description and automatic product classification"@en .
 
 
 ###  https://w3id.org/i40/sto#eClassAssoc
 sto:eClassAssoc rdf:type owl:NamedIndividual ,
                          sto:StandardOrganization ;
+                sto:hasHeadquaterIn dbr:Cologne ;
                 sto:abbreviation "eCl@ss" ,
                                  "eClass" ;
                 sto:formationDate "2000-11-14"^^xsd:date ;
@@ -2812,27 +3075,36 @@ sto:eClassAssoc rdf:type owl:NamedIndividual ,
 sto:ebXML rdf:type owl:NamedIndividual ,
                    sto:Standard ;
           sto:hasClassification sto:BusinessProcessExecution ;
-          sto:publisher sto:OASIS ,
-                        sto:UN-CEFACT ;
+          sto:hasPublisher sto:OASIS ,
+                           sto:UN-CEFACT ;
           sto:hasDBpediaResource "http://dbpedia.org/resource/EbXML" ;
           sto:hasOfficialResource "https://webstore.iec.ch/publication/24433" ;
+          sto:hasTag "ebXML"@en ;
           sto:hasWikipediaArticle "https://en.wikipedia.org/wiki/EbXML" ;
           rdfs:comment "Electronic Business using eXtensible Markup Language, commonly known as e-business XML, or ebXML is a family of XML based standards whose mission is to provide an open, XML-based infrastructure that enables the global use of electronic business information in an interoperable, secure, and consistent manner by all trading partners."@en ;
-          rdfs:label "ebXML"@en ;
-          sto:hasTag "ebXML"@en .
+          rdfs:label "ebXML"@en .
 
 
 #################################################################
 #    Annotations
 #################################################################
 
-dcterms:license dcterms:issued "2004-06-14"^^xsd:date ;
-                rdfs:label "License"@en ;
-                rdfs:comment "A legal document giving official permission to do something with the resource."@en ;
-                dcterms:modified "2017-12-19"^^xsd:date ;
-                dcterms:hasVersion <http://dublincore.org/usage/terms/history/#license-002> ;
-                rdfs:comment "A legal document giving official permission to do something with the resource. In this ontology denotes the license of a Standard."@en ;
-                rdfs:isDefinedBy dcterms: .
+dcterms:hasLicense rdfs:label "has License"@en ;
+                   rdfs:comment "A legal document giving official permission to do something with the resource. In this ontology denotes the license of a Standard."@en ,
+                                "A legal document giving official permission to do something with the resource."@en ;
+                   dcterms:hasVersion <http://dublincore.org/usage/terms/history/#license-002> ;
+                   dcterms:modified "2017-12-19"^^xsd:date ;
+                   rdfs:comment "Represent the license document for a given Standard"@en ;
+                   dcterms:issued "2004-06-14"^^xsd:date ;
+                   rdfs:isDefinedBy dcterms: .
+
+
+sto:TechnicalCommittee skos:note """1.sto:hastitle property needs to be added. Description of the Committee Code
+                                  2. sto:       a property explaining that TC and SC are managed by SMB (Standardization Management Board) needs to be added""" ;
+                       rdfs:label "Technical Committe"@en ;
+                       rdfs:comment "Specifies the representitive code name of the Technical or Sub-Committee that covers a Standard for e.g, TC 1, SC 3C."@en ;
+                       rdfs:seeAlso <http://www.iec.ch/dyn/www/f?p=103:62:9979528650478:::62:FSP_ORG_ID,FSP_LANG_ID:,25> ;
+                       rdfs:isDefinedBy sto:IEC .
 
 
 sto:hasDBpediaResource rdfs:label "has DBpedia Resource"@en ;
@@ -2841,6 +3113,10 @@ sto:hasDBpediaResource rdfs:label "has DBpedia Resource"@en ;
 
 sto:hasDomain rdfs:label "has Domain"@en ;
               rdfs:comment "Describes the domain, in which the standard is used"@en .
+
+
+sto:hasMotivation rdfs:label "has Motivation"@en ;
+                  rdfs:comment "Describes the motivation of the standards"@en .
 
 
 sto:hasOfficialResource rdfs:comment "Standard Official Website"@en ;
@@ -2853,10 +3129,6 @@ sto:hasTag rdfs:label "has Tag"@en ;
 
 sto:hasWikipediaArticle rdfs:label "has Wikipedia Article"@en ;
                         rdfs:comment "Wikipedia Article about the Standard"@en .
-
-
-sto:motivation rdfs:label "Motivation"@en ;
-               rdfs:comment "Describes the motivation of the standards"@en .
 
 
 ###  Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi
