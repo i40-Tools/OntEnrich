@@ -27,7 +27,7 @@ Next, navigate to the `src` folder and execute `enrich.py` with `options.json` a
 python enrich.py --options options.json
 ```
 
-You are able to execute class cleaning (useful for enriched ontology from the dbpedia):
+You are able to execute class cleaning (useful for enriched ontology from the DBpedia):
 ```bash
 python class_cleaning.py --ontology ttl/sto(enriched).ttl
 ```
