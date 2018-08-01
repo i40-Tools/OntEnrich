@@ -351,14 +351,18 @@ sto:DIN_EN_50129 a owl:NamedIndividual,
     sto:hasOfficialResource <https://www.beuth.de/de/norm/din-en-50129/67478433> ;
     sto:hasPublisher sto:DIN .
 
-sto:DIN_EN_50155 a owl:NamedIndividual,
+sto:DIN_EN_50155 a dbont:Company,
+        owl:NamedIndividual,
         sto:Standard ;
     rdfs:label "DIN EN 50155"@en ;
+    dcterms:subject dbrc:EN_standards ;
     dcterms:title "Railway applications - Rolling stock - Electronic equipment"@en ;
+    lingg:hypernym dbres:Equipment ;
     rdfs:comment "Diese Norm wird bei der Konstruktion, Fertigung und Prüfung von auf Schienenfahrzeugen eingebauten elektronischen Betriebsmitteln verwendet. Sie beschreibt außerdem die elektrischen sowie die Umweltbedingungen für den Betrieb. Die Norm gilt für alle elektronischen Betriebsmittel für die Steuerung, die Regelung, den Schutz, die Diagnose, die Versorgung und so weiter, die auf Schienenfahrzeugen installiert sind. Als ein elektronisches Betriebsmittel gilt dabei ein Betriebsmittel, das hauptsächlich aus Halbleiterbauelementen und üblicherweise zugehörigen Bauelementen aufgebaut ist. Auch Sensoren (Strom, Spannung, Geschwindigkeit und so weiter) und bestückte Leiterplatten von Zündeinheiten für leistungselektronische Geräte sind von dieser Norm umfasst. Vollständige Zündeinheiten und leistungselektronische Schaltkreise sind in EN 61287-1 enthalten. Die Norm umfasst die Betriebsbedingungen, die Konstruktionsanforderungen, die Dokumentation und die Prüfung der elektronischen Betriebsmittel sowie die grundlegenden Hardware- und Softwareanforderungen, die für ein leistungsfähiges, zuverlässiges Betriebsmittel als erforderlich erachtet werden. Zuständig ist das DKE/UK 351.1 \"Fahrzeuge\" der DKE Deutsche Kommission Elektrotechnik Elektronik Informationstechnik in DIN und VDE."@de,
         "EN 50155:2017 is an international standard covering electronic equipment used on rolling stock for railway applications. The standard covers aspects of this electronic equipment, including temperature, humidity, shock, vibration, and other parameters. A copy of the standard may be purchased from authorised standards agencies, e.g. BSI in the UK."@en ;
     sto:hasClassification idsram:Certification,
         idsram:Safety ;
+    sto:hasDBpediaResource dbres:EN_50155 ;
     sto:hasOfficialResource <https://www.beuth.de/de/norm/din-en-50155/275256249> ;
     sto:hasWikipediaArticle <https://en.wikipedia.org/wiki/EN_50155> .
 
@@ -380,14 +384,26 @@ sto:DIN_EN_61511 a owl:NamedIndividual,
         idsram:Safety ;
     sto:hasPublisher sto:DIN .
 
-sto:DIN_EN_ISO_13849 a owl:NamedIndividual,
+sto:DIN_EN_ISO_13849 a dbpcy:Abstraction100002137,
+        dbpcy:Code106667317,
+        dbpcy:Communication100033020,
+        dbpcy:Measure100033615,
+        dbpcy:Standard107260623,
+        dbpcy:SystemOfMeasurement113577171,
+        dbpcy:WikicatISOStandards,
+        dbpcy:WikicatSafetyCodes,
+        dbpcy:WrittenCommunication106349220,
+        owl:NamedIndividual,
         sto:Standard ;
     rdfs:label "DIN EN ISO 13849"@en ;
+    dcterms:subject dbrc:ISO_standards,
+        dbrc:Safety_codes ;
     rdfs:comment """ISO 13849 is a safety standard which deals with safety-related design principles of employed control systems to establish different safety Performance Levels (PL). It replaced EN 954-1 in December 2011.\r
     Part 1 defines the general principles for design.\r
     Part 2 describes the validation."""@en ;
     sto:hasClassification idsram:Certification,
         idsram:Safety ;
+    sto:hasDBpediaResource dbres:ISO_13849 ;
     sto:hasPublisher sto:DIN,
         sto:ISO ;
     sto:hasWikipediaArticle <https://en.wikipedia.org/wiki/ISO_13849> .
@@ -3250,12 +3266,40 @@ sto:IEC_TS_62237 a owl:NamedIndividual,
     sto:hasPublisher sto:IEC ;
     sto:relatedTo sto:IEC_62337 .
 
-sto:IEEE_1686 a owl:NamedIndividual,
+sto:IEEE_1686 a dbpcy:Abstraction100002137,
+        dbpcy:Association108049401,
+        dbpcy:Group100031264,
+        dbpcy:NongovernmentalOrganization108009834,
+        dbpcy:Organization108008335,
+        dbpcy:ProfessionalAssociation108242675,
+        dbpcy:SocialGroup107950920,
+        dbpcy:WikicatInternationalNongovernmentalOrganizations,
+        dbpcy:WikicatProfessionalAssociations,
+        dbpcy:WikicatStandardsOrganizations,
+        dbpcy:YagoLegalActor,
+        dbpcy:YagoLegalActorGeo,
+        dbpcy:YagoPermanentlyLocatedEntity,
+        dbont:Agent,
+        dbont:Organisation,
+        schema:Organization,
+        dul:Agent,
+        dul:SocialPerson,
+        owl:NamedIndividual,
+        owl:Thing,
+        wike:Q24229398,
+        wike:Q43229,
         sto:Standard ;
     rdfs:label "IEEE 1686"@en ;
+    dcterms:subject dbrc:Emerging_technologies,
+        dbrc:Institute_of_Electrical_and_Electronics_Engineers,
+        dbrc:Renewable_energy_technology,
+        dbrc:Smart_grid,
+        dbrc:Standards_organizations ;
     dcterms:title "Standard for Intelligent Electronic Devices Cyber Security Capabilities"@en ;
+    lingg:hypernym dbres:Initiative ;
     rdfs:comment "The functions and features to be provided in intelligent electronic devices (IEDs) to accommodate critical infrastructure protection programs are defined in this standard. Security regarding the access, operation, configuration, firmware revision and data retrieval from an IED are addressed. Communications for the purpose of power system protection (teleprotection) are not addressed in this standard."@en ;
     sto:hasClassification idsram:Security ;
+    sto:hasDBpediaResource dbres:IEEE_Smart_Grid ;
     sto:hasDeveloper sto:IEEE ;
     sto:hasPublisher sto:IEEE ;
     sto:hasWikipediaArticle <https://en.wikipedia.org/wiki/IEEE_Smart_Grid> .
@@ -3510,12 +3554,20 @@ sto:ISO_19440 a owl:NamedIndividual,
     sto:hasPublisher sto:ISO ;
     sto:relatedTo sto:BPMN .
 
-sto:ISO_19770 a owl:NamedIndividual,
+sto:ISO_19770 a dbpcy:Abstraction100002137,
+        dbpcy:Measure100033615,
+        dbpcy:Standard107260623,
+        dbpcy:SystemOfMeasurement113577171,
+        <http://dbpedia.org/class/yago/WikicatISO/IECStandards>,
+        owl:NamedIndividual,
         sto:Standard ;
     rdfs:label "ISO/IEC 19770"@en ;
+    dcterms:subject <http://dbpedia.org/resource/Category:ISO/IEC_standards>,
+        dbrc:Information_technology_management ;
     dcterms:title "Information technology — Software asset management"@en ;
     rdfs:comment "International standards in the ISO/IEC 19770 family of standards for IT asset management (ITAM) address both the processes and technology for managing software assets and related IT assets. Broadly speaking, the standard family belongs to the set of Software Asset Management (or SAM) standards and is integrated with other Management System Standards."@en ;
     sto:hasClassification iira:Security ;
+    sto:hasDBpediaResource <http://dbpedia.org/resource/ISO/IEC_19770> ;
     sto:hasDeveloper sto:ISO ;
     sto:hasPublicationDate "2017-12-01"^^xsd:date ;
     sto:hasPublisher sto:IEC,
@@ -3693,12 +3745,24 @@ sto:ISO_27001 a owl:NamedIndividual,
         sto:ISO ;
     sto:hasWikipediaArticle <https://en.wikipedia.org/wiki/ISO/IEC_27001> .
 
-sto:ISO_27017 a owl:NamedIndividual,
+sto:ISO_27017 a dbpcy:Abstraction100002137,
+        dbpcy:Measure100033615,
+        dbpcy:Standard107260623,
+        dbpcy:SystemOfMeasurement113577171,
+        dbpcy:WikicatComputerSecurityStandards,
+        dbpcy:WikicatENStandards,
+        dbpcy:WikicatIECStandards,
+        <http://dbpedia.org/class/yago/WikicatISO/IECStandards>,
+        dbpcy:WikicatISOStandards,
+        owl:NamedIndividual,
         sto:Standard ;
     rdfs:label "ISO/IEC 27017"@en ;
     dc11:title "Code of practice for information security controls based on ISO/IEC 27002 for cloud services"@en ;
+    dcterms:subject <http://dbpedia.org/resource/Category:ISO/IEC_standards>,
+        dbrc:Information_technology_management ;
     rdfs:comment "The ISO/IEC 270172 standard provides guidance on the information security elements of cloud computing. It assists with the implementation of cloud-specific information security controls, supplementing the guidance in ISO 27000 series standards."@en ;
     sto:hasClassification iira:Security ;
+    sto:hasDBpediaResource <http://dbpedia.org/resource/ISO/IEC_27000-series> ;
     sto:hasDomain sto:ITSecurity ;
     sto:hasOfficialResource <https://www.iso.org/standard/43757.html> ;
     sto:hasPublicationDate "2015-12-01"^^xsd:date ;
@@ -3749,16 +3813,27 @@ sto:ISO_29134 a owl:NamedIndividual,
     sto:hasPublisher sto:IEC,
         sto:ISO .
 
-sto:ISO_42010 a owl:NamedIndividual,
+sto:ISO_42010 a dbpcy:Abstraction100002137,
+        dbpcy:Measure100033615,
+        dbpcy:Standard107260623,
+        dbpcy:SystemOfMeasurement113577171,
+        <http://dbpedia.org/class/yago/WikicatISO/IECStandards>,
+        dbont:Work,
+        owl:NamedIndividual,
         sto:Standard ;
     rdfs:label "ISO/IEC 42010"@en ;
+    dcterms:subject dbrc:IEEE_standards,
+        <http://dbpedia.org/resource/Category:ISO/IEC_standards>,
+        dbrc:Software_architecture ;
     dcterms:title "Systems and software engineering — Architecture description"@en ;
+    lingg:hypernym dbres:Standard ;
     rdfs:comment """ISO/IEC/IEEE 42010:2011 defines requirements on the description of system, software and enterprise architectures. It aims to standardise the practice of architecture description by defining standard terms, presenting a conceptual foundation for expressing, communicating and reviewing architectures and specifying requirements that apply to architecture descriptions, architecture frameworks and architecture description languages.\r
 \r
 Following its predecessor, IEEE Std 1471, the standard makes a strict distinction between Architectures and Architecture Descriptions.\r
 \r
 The description of ISO/IEC/IEEE 42010 in this article is based upon the standard published in 2011."""@en ;
     sto:domainName "Reference Architecture Description"@en ;
+    sto:hasDBpediaResource <http://dbpedia.org/resource/ISO/IEC_42010> ;
     sto:hasOfficialResource <https://www.iso.org/standard/50508.html> ;
     sto:hasPublisher sto:IEC,
         sto:ISO ;
@@ -4273,12 +4348,30 @@ This specification is an alternative to, but does not obsolete, the HTTP/1.1 mes
         idsram:SystemLayer ;
     sto:hasPublisher sto:IETF .
 
-sto:RFC_768 a owl:NamedIndividual,
+sto:RFC_768 a dbpcy:Abstraction100002137,
+        dbpcy:Communication100033020,
+        dbpcy:Direction106786629,
+        dbpcy:Measure100033615,
+        dbpcy:Message106598915,
+        dbpcy:Protocol106665108,
+        dbpcy:Rule106652242,
+        dbpcy:Standard107260623,
+        dbpcy:SystemOfMeasurement113577171,
+        dbpcy:WikicatInternetProtocols,
+        dbpcy:WikicatInternetStandards,
+        dbpcy:WikicatTransportLayerProtocols,
+        owl:NamedIndividual,
+        owl:Thing,
         sto:Standard ;
     rdfs:label "RFC 768"@en ;
+    dcterms:subject dbrc:Internet_Standards,
+        dbrc:Internet_protocols,
+        dbrc:Transport_layer_protocols ;
     dcterms:title "User Datagram Protocol (UDP)"@en ;
+    lingg:hypernym dbres:Members ;
     rdfs:comment "In computer networking, the User Datagram Protocol (UDP) is one of the core members of the Internet protocol suite. The protocol was designed by David P. Reed in 1980 and formally defined in RFC 768. With UDP, computer applications can send messages, in this case referred to as datagrams, to other hosts on an Internet Protocol (IP) network. Prior communications are not required in order to set up communication channels or data paths."@en ;
     sto:hasClassification iira:TansportLayer ;
+    sto:hasDBpediaResource dbres:User_Datagram_Protocol ;
     sto:hasOfficialResource <https://tools.ietf.org/html/rfc768> ;
     sto:hasPublisher sto:IETF ;
     sto:hasWikipediaArticle <https://en.wikipedia.org/wiki/User_Datagram_Protocol> .
@@ -6204,13 +6297,25 @@ sto:ISO_19439 a dbpcy:Abstraction100002137,
 
 sto:ISO_24760 a owl:NamedIndividual .
 
-sto:ISO_27018 a owl:NamedIndividual,
+sto:ISO_27018 a dbpcy:Abstraction100002137,
+        dbpcy:Measure100033615,
+        dbpcy:Standard107260623,
+        dbpcy:SystemOfMeasurement113577171,
+        dbpcy:WikicatComputerSecurityStandards,
+        dbpcy:WikicatENStandards,
+        dbpcy:WikicatIECStandards,
+        <http://dbpedia.org/class/yago/WikicatISO/IECStandards>,
+        dbpcy:WikicatISOStandards,
+        owl:NamedIndividual,
         sto:Standard ;
     rdfs:label "ISO/IEC 27018"@en ;
     dc11:title "Information technology -- Security techniques -- Code of practice for protection of personally identifiable information (PII) in public clouds acting as PII processors"@en ;
+    dcterms:subject <http://dbpedia.org/resource/Category:ISO/IEC_standards>,
+        dbrc:Information_technology_management ;
     rdfs:comment "ISO/IEC 27018:2014 establishes commonly accepted control objectives, controls and guidelines for implementing measures to protect Personally Identifiable Information (PII) in accordance with the privacy principles in ISO/IEC 29100 for the public cloud computing environment."@en ;
     sto:hasClassification iira:Privacy,
         iira:Security ;
+    sto:hasDBpediaResource <http://dbpedia.org/resource/ISO/IEC_27000-series> ;
     sto:hasOfficialResource <https://www.iso.org/standard/61498.html> ;
     sto:hasPublicationDate "2014-08-01"^^xsd:date ;
     sto:hasPublisher sto:IEC,
@@ -6229,16 +6334,28 @@ sto:ISO_27031 a owl:NamedIndividual,
     sto:hasPublisher sto:IEC,
         sto:ISO .
 
-sto:ISO_27036 a owl:NamedIndividual,
+sto:ISO_27036 a dbpcy:Abstraction100002137,
+        dbpcy:Measure100033615,
+        dbpcy:Standard107260623,
+        dbpcy:SystemOfMeasurement113577171,
+        dbpcy:WikicatComputerSecurityStandards,
+        dbpcy:WikicatENStandards,
+        dbpcy:WikicatIECStandards,
+        <http://dbpedia.org/class/yago/WikicatISO/IECStandards>,
+        dbpcy:WikicatISOStandards,
+        owl:NamedIndividual,
         sto:Standard ;
     rdfs:label "ISO/IEC 27036"@en ;
     dc11:title "Information security for supplier relationships"@en ;
+    dcterms:subject <http://dbpedia.org/resource/Category:ISO/IEC_standards>,
+        dbrc:Information_technology_management ;
     rdfs:comment """ISO/IEC 27036-4:2016 provides cloud service customers and cloud service providers with guidance on\r
 \r
 a) gaining visibility into the information security risks associated with the use of cloud services and managing those risks effectively, and\r
 \r
 b) responding to risks specific to the acquisition or provision of cloud services that can have an information security impact on organizations using these services."""@en ;
     sto:hasClassification iira:Security ;
+    sto:hasDBpediaResource <http://dbpedia.org/resource/ISO/IEC_27000-series> ;
     sto:hasOfficialResource <https://www.iso.org/standard/59689.html> ;
     sto:hasPublicationDate "2016-10-01"^^xsd:date ;
     sto:hasPublisher sto:IEC,
